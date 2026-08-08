@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aplicaciones</title>
-<link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones</title>
+    <link rel="stylesheet" href="../css/aplicaciones.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <header>
     <nav class="navbar">
@@ -25,8 +27,9 @@
         </ul>
     </nav>
 </header>
+
 <body>
-    <ul>
+    <!-- <ul>
         <li>Chatbots inteligentes</li>
         <li>Asistentes virtuales</li>
         <li>Generación automática de código</li>
@@ -35,7 +38,345 @@
         <li>Agentes inteligentes</li>
         <li>Empresas</li>
         <li>Automatización de procesos</li>
-    </ul>
+    </ul>  -->
+
+    <main>
+        <h1> Aplicaciones y Casos de Uso de la Inteligencia Artificial Nativa</h1>
+
+        <p>La inteligencia artificial cambio mucho nuestra forma de vivir y trabajar. Esto se debe a que las
+            plataformas de desarrollo de inteligencia artificial se utilizan cada vez más. Estas herramientas utilizan
+            modelos muy grandes para crear sistemas que entienden muy bien el contexto en el que se utilizan.
+
+            Queremos analizar cómo se utilizan estas tecnologías en la actualidad. Para hacerlo, dividimos nuestro
+            análisis en cinco partes importantes: cómo los chatbots mejoraron gracias a la recuperación de datos,
+            cómo la programación dio un giro con la generación automática de código, el impacto de la inteligencia
+            artificial en la medicina, los debates éticos en la educación y cómo los agentes autónomos se coordinan para
+            automatizar empresas.</p>
+
+        <h2>Chatbots Inteligentes y Asistentes Virtuales: De la Memoria Paramétrica a la Acción Razonada</h2>
+
+        <p>A lo largo del tiempo, los sistemas para charlar con máquinas fueron cambiando un montón. Si hacemos un poco
+            de memoria, los primeros chatbots eran súper cuadrados: funcionaban con árboles de decisión básicos, donde
+            si no le decías la palabra exacta, el sistema no te entendía nada y te tiraba un error. Hoy en día, fuimos
+            dejando atrás esos modelos tan rígidos para meternos de lleno en la era de los Modelos de Lenguaje de Gran
+            Escala (LLMs), como GPT-4 o Claude. Estos modelos entienden el contexto casi como un humano, escriben re
+            bien y arman oraciones impecables. Pero ojo, no todo es color de rosa. Aunque son unos genios redactando,
+            usar estos modelos por sí solos tiene bastantes limitaciones. Cuando les pedimos que manejen datos duros,
+            fechas exactas, cálculos matemáticos o tareas que requieren conocimientos súper actualizados y específicos
+            de una empresa, es donde empiezan a hacer agua.</p>
+
+        <h3>1.1 El Problema de la Memoria Paramétrica y la Solución RAG</h3>
+
+        <p>Los LLMs clásicos guardan todo lo que saben sobre el mundo directamente en las conexiones de su red neuronal,
+            algo que los expertos llaman "memoria paramétrica". Imaginate que es como un estudiante que se estudió toda
+            la biblioteca de memoria pero a la hora del examen no tiene los libros a mano para consultar. El tema es que
+            esto tiene tres grandes problemas para usarse en la vida real. Primero, es carísimo y re complicado
+            actualizar lo que el modelo sabe; si querés que aprenda algo que pasó ayer, prácticamente tenés que
+            entrenarlo de nuevo, lo cual cuesta millones de dólares y meses de procesamiento. Segundo, el modelo no te
+            puede decir de dónde sacó la información, o sea, no hay forma de rastrear la fuente para chequear si es
+            confiable. Y tercero, cuando no sabe algo, el modelo está programado para siempre darte una respuesta.
+            Entonces, en vez de admitir "no sé", te inventa un dato que suena re creíble pero es cualquier cosa; a esto
+            en la jerga se le dice "alucinación". En un entorno corporativo o universitario, que un bot te invente una
+            ley o un dato médico es un peligro enorme.</p>
+
+        <p>Para superar estos desafíos, las empresas y los investigadores se enfocaron en un sistema llamado Generación
+            Aumentada por Recuperación, también conocido como RAG. Este concepto fue presentado por Lewis y su equipo en
+            el año 2020. Básicamente, combina la memoria del modelo con una base de datos externa que se puede consultar
+            y verificar fácilmente en tiempo real.</p>
+
+        <p>En esencia, RAG cambia la forma en que funciona el sistema. Cuando un usuario hace una pregunta, el sistema
+            no intenta adivinar la respuesta utilizando solo su propia información. En lugar de eso, utiliza un buscador
+            inteligente para buscar información en una base de datos externa. En las primeras pruebas, se utilizaron
+            millones de fragmentos de Wikipedia almacenados como vectores, que son básicamente coordenadas matemáticas
+            que ayudan a la máquina a entender qué temas están relacionados. El sistema busca los documentos que se
+            parecen más a la pregunta del usuario, selecciona los mejores resultados y se los pasa al modelo de
+            lenguaje. Luego, el modelo utiliza su capacidad para redactar y crea la respuesta final basándose
+            exclusivamente en la información que se le ha proporcionado.</p>
+
+        <h3>1.2 La Sinergia entre Razonamiento y Acción: El Ecosistema ReAct</h3>
+
+        <p>RAG resolvió el problema de los datos estáticos, pero ahora a los asistentes virtuales se les pide mucho más.
+            Queremos que usen herramientas, que se comuniquen con otros sistemas, que naveguen por internet y que
+            planeen tareas complejas paso a paso. Es en este momento cuando entra en juego el paradigma ReAct, una idea
+            nueva que presentaron Yao y sus compañeros en 2023.
+        </p>
+
+        <p>Antes, en el mundo de la IA, la capacidad de pensar paso a paso (como hacer un cálculo lógico) y la capacidad
+            de ejecutar acciones (como apretar un botón) se investigaban por separado. ReAct vino a patear el tablero
+            haciendo que el modelo alterne entre "pensar en voz alta" y ejecutar acciones reales de forma combinada.
+
+            Es medio como hacemos los humanos cuando nos hablamos a nosotros mismos para organizarnos ante un problema
+            difícil. ReAct deja que el modelo mantenga un "monólogo interno". Por ejemplo, si le pedís que te compre un
+            vuelo barato, el modelo primero "piensa": Bueno, tengo que buscar vuelos a Madrid para el viernes. Esa es la
+            fase de razonamiento, que le sirve para ir armando su plan y acomodarse si algo sale mal (razonar para
+            actuar).</p>
+
+
+        <h2>2. Generación Automática de Código: Productividad, Paradojas y Deuda de Vulnerabilidad</h2>
+
+        <p>Meter inteligencia artificial generativa en los entornos de programación fue sin duda el mayor cambio que
+            tuvo el desarrollo de software en la última década. Hoy en día, herramientas como GitHub Copilot funcionan
+            como un compañero de trabajo: te sugieren pedazos de código, te completan funciones muy complejas o
+            directamente te arman todo a partir de un simple comentario en texto. Pero hay que tener cuidado, porque
+            detrás de toda esta velocidad increíble para programar, se esconden cuestiones organizativas bastante
+            complicadas y algunos riesgos de seguridad importantes.</p>
+
+        <h3>2.1 Evidencia Empírica del Salto de Productividad</h3>
+
+        <p>Para saber cuánto ayudan realmente estas herramientas, algunos investigadores de Microsoft y el MIT, como
+            Peng y sus colegas en el año 2023, hicieron una prueba con un grupo de personas. En esta prueba, les
+            pidieron a algunos desarrolladores de software que hicieran un servidor HTTP en JavaScript lo más rápido que
+            pudieran, desde el principio.</p>
+        <p>Los resultados del estudio mostraron lo que la empresa había prometido: el grupo que recibió ayuda con la
+            herramienta Copilot terminó la tarea de arquitectura un 55,8% más rápido que el grupo que no recibió ayuda.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Grupo Experimental</th>
+                    <th>Tiempo Promedio de Finalización</th>
+                    <th>Mejora Relativa de Productividad</th>
+                    <th>Intervalo de Confianza (95%)</th>
+                    <th>Valor p</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grupo de Control (Desarrollo Tradicional)</td>
+                    <td>160,89 minutos</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Grupo de Tratamiento (Con IA Copilot)</td>
+                    <td>71,17 minutos</td>
+                    <td>Reducción del 55,8% en el tiempo</td>
+                    <td>[21%, 89%]</td>
+                    <td>0.0017</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 La Paradoja de la Productividad de la IA</h3>
+
+        <p>A pesar de los resultados claros que se obtienen en experimentos controlados, los Directores Financieros y
+            los líderes de ingeniería se encontraron con un problema en las empresas al implementar tecnologías de
+            inteligencia artificial a gran escala. Esto se conoce como la “Paradoja de la Productividad de la IA". Según
+            las encuestas de la industria, el 76 por ciento de las empresas dice que la inteligencia artificial
+            mejoro sus operaciones, pero solo el 19 por ciento ha reducido su cantidad de empleados.</p>
+
+        <p>Un desarrollador puede producir un 55 por ciento más de código por semana gracias a la ayuda de algoritmos.
+            Según la lógica financiera común, esto debería llevar a una reducción grande del personal. Sin embargo, esto
+            no sucede porque las empresas tienen formas de reasignar el trabajo extra que queda. Por ejemplo, pueden
+            ampliar el alcance de los proyectos, utilizando el tiempo libre para iniciar más proyectos técnicos. También
+            pueden invertir tiempo en mejorar la calidad y verificar cuidadosamente el código que se genera.</p>
+
+        <h3>2.3 Deuda de Vulnerabilidad: Los Riesgos de Seguridad Algorítmica</h3>
+
+        <p>El aumento en la velocidad con que se entrega software genera, sin duda, un riesgo importante: la pérdida de
+            seguridad en la arquitectura. Perry y otros investigadores de la Universidad de Stanford realizaron un
+            estudio muy amplio que se enfocó solo en cómo los asistentes de inteligencia artificial afectan la seguridad
+            del código que se produce.</p>
+
+        <p>Los resultados revelan que la IA no es infalible. Los participantes que usaron la inteligencia artificial
+            lograron soluciones correctas en un 67% de los casos. Esto representa una caída importante comparado con el
+            79% de éxito del grupo de control, que no contó con ayuda de la IA. Lo más preocupante fue un sesgo
+            cognitivo llamado “delegación cognitiva". Los usuarios mostraron una mayor probabilidad de creer que el
+            código que escribieron era completamente seguro. Esta creencia generó una peligrosa “deuda de
+            vulnerabilidad".</p>
+
+        <h2>3. Aplicaciones en el Sector Salud: Visión Artificial y Diagnóstico Aumentado</h2>
+
+        <p>La inteligencia artificial en los hospitales ya dejó de ser solo algo administrativo, como dar turnos o hacer
+            facturas. Ahora se mete de lleno en lo que es la medicina, donde las decisiones de una computadora pueden
+            afectar directamente la salud y la vida de las personas.
+
+            El sector médico genera mucha información muy complicada, como radiografías en tres dimensiones, historias
+            clínicas de muchos años y estudios genéticos muy grandes. Esto hace que sea el lugar ideal para utilizar
+            técnicas avanzadas de aprendizaje de máquinas.
+
+            Hoy en día, es común ver a una computadora analizando imágenes con mucha precisión o leyendo un lenguaje
+            médico especializado. Esto está cambiando por completo la forma en que se diagnostican enfermedades de
+            manera temprana. La inteligencia artificial en los hospitales está permitiendo que los médicos tomen
+            decisiones más informadas y precisas, lo que puede salvar vidas.</p>
+
+        <h3>3.1 Superando las Limitaciones Humanas: La Arquitectura de CheXNet</h3>
+
+        <p>Un gran avance en el uso de la inteligencia artificial para los diagnósticos médicos fue la creación de
+            sistemas especializados en leer radiografías. Detectar una neumonía, por ejemplo, es muy complicado. Las
+            manchas en las radiografías de tórax pueden ser confusas y a veces se confunden con las costillas o parecen
+            tumores benignos. De hecho, incluso los médicos radiólogos con años de experiencia pueden tener opiniones
+            diferentes, lo que retrasa el inicio de los tratamientos y cuesta muchas vidas al año.
+
+            Un equipo de Stanford creó CheXNet, un algoritmo que detecta enfermedades respiratorias con la misma
+            precisión que un experto. CheXNet no es un programa común, sino una red neuronal grande con 121 capas que
+            procesan datos una tras otra. Para entender el logro técnico, es importante saber que cuando las redes
+            tienen muchas capas, pueden “olvidarse” de la imagen original a medida que procesan la información. Sin
+            embargo, CheXNet utiliza “conexiones densas", donde cada capa recibe información fresca de todas las
+            anteriores, lo que resuelve este problema y permite que la red aprenda hasta el más mínimo detalle de la
+            placa.
+
+            CheXNet se entrenó con más de 112 mil radiografías de pacientes reales que los Institutos Nacionales de
+            Salud de EE.UU. tenían de dominio público. Estas imágenes ya estaban etiquetadas por otra inteligencia
+            artificial que había leído los informes médicos originales escritos por doctores, marcando hasta 14
+            enfermedades de tórax distintas.
+
+            El mayor desafío en salud es que la mayoría de los estudios dan “normal". Hay muchas más radiografías sanas
+            que enfermas. Si no se ajusta bien, la inteligencia artificial puede cometer errores y, para tener un
+            porcentaje de acierto alto, simplemente predice que todos los pacientes están sanos. Para evitar esto, los
+            desarrolladores de CheXNet la obligaron matemáticamente a penalizar mucho más sus propios errores cuando se
+            equivocaba en detectar una enfermedad real, lo que la fuerza a prestar especial atención a los pulmones
+            enfermos.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Perfil Diagnóstico</th>
+                    <th>Métrica F1 (Detección de Neumonía)</th>
+                    <th>Intervalo de Confianza (95%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Promedio Radiólogos Humanos</td>
+                    <td>0.387</td>
+                    <td>[0.330 - 0.442]</td>
+                </tr>
+                <tr>
+                    <td>CheXNet (Modelo de IA)</td>
+                    <td>0.435</td>
+                    <td>[0.387 - 0.481]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3.2 La Frontera del Diagnóstico Conversacional</h3>
+
+        <p>Los grandes modelos de lenguaje están empezando a usarse en el razonamiento clínico profundo. Hay proyectos
+            importantes respaldados por grandes empresas tecnológicas, como Med-PaLM o AMIE, que están probando usar la
+            inteligencia artificial conversacional para hablar con los pacientes o ayudar a los médicos.
+
+            No se trata de buscar síntomas en internet. La idea es que estos sistemas puedan hacer preguntas a los
+            pacientes, como lo haría un doctor en su consultorio. Pueden leer historiales clínicos largos en un
+            instante, comparar los síntomas con la bibliografía médica más reciente y proporcionar posibles
+            diagnósticos.
+
+            Para que te hagas una idea, estos modelos han sido probados en exámenes reales, como el USMLE, y han
+            obtenido excelentes resultados. En algunos casos, pareció que la inteligencia artificial tenía más empatía y
+            paciencia que algunos médicos. Sin embargo, la comunidad científica está siendo cuidadosa.
+
+            Para implementar esto en un hospital real, hay que superar muchos obstáculos. Primero, hay que realizar
+            ensayos clínicos rigurosos. Segundo, hay que asegurarse de que la inteligencia artificial no sea
+            discriminatoria. Si el modelo se entrenó con datos de hombres blancos, podría tener dificultades para
+            diagnosticar problemas en mujeres u otras minorías. Tercero, hay que establecer regulaciones legales claras.
+            Si el modelo conversacional prescribe un remedio incorrecto, ¿quién es responsable, el hospital, el
+            fabricante del software o el médico que aprobó el chat?</p>
+
+        <h2>4. Educación: La Disrupción Pedagógica y la Gobernanza Ética</h2>
+
+        <p>La llegada de la inteligencia artificial a las escuelas causó un gran cambio. Por un lado, la gente está
+            emocionada porque puede mejorar la forma en que enseñamos y aprenden los estudiantes. Con esta tecnología,
+            se puede personalizar el aprendizaje de manera radical. Imagina tener un tutor virtual que nota que a un
+            estudiante le cuesta entender algo y se adapta a su ritmo. Al mismo tiempo, esto reduce la carga de trabajo
+            de los profesores, ya que la inteligencia artificial puede ayudar a crear planes de evaluación, planificar
+            las clases y corregir pruebas. Sin embargo, hacer un cambio tan grande sin control puede tener consecuencias
+            sociales graves.</p>
+
+        <h3>4.1 La Respuesta Institucional: Directrices de la UNESCO</h3>
+        <p>Como plataformas como ChatGPT llegaron rápidamente a los celulares de los estudiantes y a las aulas, mucho
+            más rápido de lo que los Ministerios de Educación del mundo pudieron manejar, los colegios se quedaron un
+            poco sin rumbo. Frente a esta situación, la UNESCO tuvo que tomar la delantera y en 2023 publicó un marco
+            importante: la “Orientación sobre la IA generativa en la educación y la investigación". Este documento
+            señala que la diferencia entre lo rápido que innovan las empresas privadas, las “EdTech", y lo lento que
+            actúa el Estado deja a las escuelas y a los niños muy expuestos a riesgos.
+
+            La principal idea que propone la UNESCO, basada en el histórico Consenso de Beijing, es clara: el desarrollo
+            y uso de la IA debe estar “centrado en el humano". Esto quiere decir que la tecnología no debe reemplazar al
+            profesor, sino ayudarlo. Además, la UNESCO hace hincapié en la equidad. Existe un temor real de que la IA
+            aumente la brecha digital: las escuelas con más recursos tendrán tutores algorítmicos de alta calidad, y las
+            que tienen menos van a quedar cada vez más atrás. También piden que se cuide la diversidad cultural,
+            advirtiendo que casi todos estos modelos están entrenados con textos, cultura y valores de Estados Unidos o
+            Europa, lo que con el tiempo puede imponer una visión del mundo muy sesgada en los estudiantes de otras
+            regiones.
+
+            Por eso, piden a los gobiernos que establezcan edades límite para usar estas herramientas y que obliguen a
+            las empresas a demostrar de forma clara que sus IAs son éticas y pedagógicas antes de incluirlas en las
+            computadoras de un colegio.</p>
+
+        <h3>4.2 Riesgos Subyacentes: Atrofia Cognitiva y la Privacidad de Datos</h3>
+        <ul>
+            <li><strong>Atrofia Cognitiva:</strong> Si un alumno se acostumbra sistemáticamente a pedirle a la IA que le
+                resuelva los problemas de matemática, le haga los resúmenes de historia o le redacte los ensayos de
+                literatura, corremos el altísimo riesgo de que, a la larga, esas habilidades intelectuales y analíticas
+                jamás se desarrollen o se oxiden. A este fenómeno se lo llama "atrofia cognitiva".</li>
+            <li><strong>Privacidad de Datos:</strong> Las encuestas de los docentes muestran una preocupación ética
+                respecto a la recolección de datos escolares. Esta recolección es masiva y opaca, y la realizan
+                corporaciones. Esto genera inquietud entre los docentes. La recolección masiva y opaca de datos
+                escolares por parte de corporaciones es un tema delicado. Las encuestas docentes ilustran claramente
+                esta preocupación ética.</li>
+        </ul>
+
+        <h2>5. Aplicaciones en Empresas y Automatización Orquestada</h2>
+        <p>En el mundo corporativo y de los negocios, el uso de la tecnología ya evolucionó muchísimo. Dejamos muy atrás
+            a esos típicos robots de software que solo servían para automatizar tareas repetitivas y aburridas. Hoy las
+            empresas apuntan a operaciones analíticas, donde el sistema pueda deducir información y adaptarse sobre la
+            marcha para procesar montañas de datos desordenados (contratos, emails, manuales).</p>
+
+        <h3>5.1 La Evolución Corporativa del Paradigma RAG</h3>
+        <p>Antes, las empresas usaron la tecnología RAG para buscar información de forma segura en sus documentos
+            privados. Esto sucedió en tres etapas.
+
+            La primera etapa se llama RAG Ingenuo. Fue el primer intento de hacer esto. Sin embargo, solo buscaba
+            similitudes básicas entre la pregunta y el texto. Esto no funcionaba bien cuando se trataba de datos de
+            diferentes archivos o documentos con formatos complicados.
+
+            Luego vino la segunda etapa, que es el RAG Avanzado. En esta etapa, se mejoró la forma en que se buscaba la
+            información. Se empezó a ordenar y limpiar la información de manera más cuidadosa. También se mejoró la
+            forma en que se entendían los textos, respetando los párrafos y utilizando herramientas avanzadas para
+            entender términos técnicos especializados. Además, se aplicaron técnicas como crear “documentos ideales”
+            para afinar la búsqueda.
+
+            Finalmente, hay el RAG Modular, que es lo que utilizan las empresas más avanzadas hoy en día. Este sistema
+            es muy flexible y permite a la inteligencia artificial hacer búsquedas repetidas para investigar más a fondo
+            o dirigir las consultas a diferentes bases de datos, dependiendo de lo que el usuario necesite.</p>
+
+        <h3>5.2 Orquestación Multi-Agente: El Futuro de la Automatización</h3>
+        <p>La frontera final en la automatización ya no se trata de un humano dando órdenes a un chatbot solo. Ahora
+            estamos avanzando hacia la interacción entre máquinas, formando equipos o grupos de inteligencias
+            artificiales, que es lo que se conoce como “sistemas multi-agente", y utilizando plataformas como AutoGen.
+
+            Imagina que necesitas averiguar por qué se detuvo un envío en la aduana. En lugar de intercambiar correos
+            electrónicos durante semanas entre tres departamentos diferentes, se le asigna esta tarea a un equipo de
+            inteligencias artificiales.
+
+            Un “Agente Programador” busca la falla logística en la base de datos y le pasa el problema a un “Agente
+            Financiero", que es muy estricto, para que calcule las pérdidas de dinero. Luego, un “Agente Legal” revisa
+            las normas de aduana y redacta el informe final.
+
+            Lo mejor de este sistema es que los agentes discuten entre ellos y se supervisan. Si hay un cálculo que no
+            coincide, el Agente Legal se lo devuelve al Agente Financiero para que lo revise. Esto ya no se trata solo
+            de procesar facturas, sino de agregar capacidad de planificación estratégica y validación cruzada
+            directamente en el centro de operaciones de las empresas.</p>
+
+        <h2>Conclusiones</h2>
+        <p>Este recorrido muestra que las plataformas de inteligencia artificial ya son muy importantes en la economía
+            actual. Gracias a tecnologías como RAG y ReAct, los modelos mejoraron mucho y superaron sus limitaciones.
+            Ahora tienen la precisión necesaria para ser muy efectivos en el mercado.
+
+            Sin embargo, no debemos olvidar los riesgos. El aumento de productividad al programar puede generar
+            problemas de seguridad. Si delegamos demasiadas tareas a la inteligencia artificial, podemos cometer errores
+            graves. De la misma manera, en la salud y la educación, dejar que la inteligencia artificial tome decisiones
+            importantes sin supervisión puede generar discriminación y hacer que los estudiantes pierdan su capacidad de
+            pensar de manera crítica.
+
+            En resumen, para que este sistema funcione bien a largo plazo, no basta con tener los mejores algoritmos. El
+            verdadero éxito de la inteligencia artificial dependerá de las reglas éticas y legales que creamos como
+            sociedad. Necesitamos establecer reglas claras para dirigir esta revolución hacia un buen camino.</p>
+
+    </main>
 </body>
 <script src="../js/script.js"></script>
+
 </html>
