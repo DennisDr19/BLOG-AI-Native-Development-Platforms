@@ -26,22 +26,136 @@
     </nav>
 </header>
 <body>
-    <h3>Ventajas</h3>
-    <ul>
-        <li>Mayor productividad</li>
-        <li>Automatización</li>
-        <li>Escalabilidad</li>
-        <li>Integración sencilla</li>
-    </ul>
-    <h3>Desventajas</h3>
-    <ul>
-        <li>Costos</li>
-        <li>Privacidad</li>
-        <li>Seguridad</li>
-        <li>Sesgos</li>
-        <li>Alucinaciones</li>
-        <li>Dependencia del proveedor</li>
-    </ul>
+    <h2>Sección 6. Ventajas y desafíos</h2>
+    <section>
+        <h3>Ventajas</h3>
+        <h4>Mayor productividad</h4>
+        <p>Uno de los grandes atractivos de las plataformas nativas de IA es su capacidad para liberar a los desarrolladores de las tareas rutinarias como generar código base, redactar documentación, crear pruebas o rastrear errores. Al delegar este trabajo repetitivo, el equipo puede enfocarse en lo que realmente aporta valor: la arquitectura, el diseño y la resolución de problemas complejos.</p>
+        <ul>
+            <li><strong>¿Qué dicen los datos?</strong> Un estudio de Peng et al. mostró que desarrolladores respaldados por asistentes de IA completaron la creación de un servidor HTTP en JavaScript un <strong>55.8% más rápido</strong> que aquellos que trabajaron sin apoyo.</li>
+            <li><strong>La realidad del día a día:</strong> Este incremento no es una regla universal. Investigaciones posteriores revelan que el impacto varía según la complejidad del proyecto, la experiencia del profesional y el contexto que se le da al modelo. De hecho, en sistemas complejos y consolidados, algunos desarrolladores séniores tardaron más al apoyarse en IA. La verdadera productividad no se mide solo por la velocidad para tirar líneas de código, sino por su calidad, seguridad y mantenibilidad.</li>
+        </ul>
+        <h4>Automatización</h4>
+        <p>La IA permite automatizar procesos que antes requerían intervención humana continua, tales como:</p>
+        <ul>
+            <li>Clasificación, resumen y extracción de datos en documentos masivos.</li>
+            <li>Filtrado inicial de solicitudes y generación de respuestas para asistentes virtuales.</li>
+            <li>Creación de reportes, traducción de contenidos y desarrollo de pruebas de software.</li>
+        </ul>
+        <p><strong>Control indispensable:</strong> Automatizar no significa "desconectar" al humano. En sectores sensibles como salud, finanzas, educación o seguridad, la IA debe actuar como un copiloto de soporte; ninguna decisión crítica debe tomarse sin una validación humana previa.</p>
+        <h4>Escalabilidad</h4>
+        <p>Las plataformas en la nube permiten ajustar los recursos de IA al ritmo de la demanda. Un bot puede empezar respondiendo a diez usuarios en una fase de prueba y, sin cambiar la infraestructura base, pasar a atender a miles de personas simultáneamente. Esto evita que las empresas tengan que realizar grandes inversiones iniciales en servidores especializados.</p>
+        <p><strong>El costo oculto:</strong> Escalar en la nube no es gratis. Procesar volúmenes masivos de tokens, imágenes o documentos incrementa rápidamente la factura. La literatura sobre modelos de lenguaje confirma que el tamaño de la arquitectura, el volumen de peticiones y la longitud de las respuestas impactan directamente tanto el presupuesto como el consumo energético.</p>
+        <h4>Integración sencilla</h4>
+        <p>Integrar IA en una aplicación es hoy más sencillo que nunca. En lugar de entrenar un modelo desde cero, los desarrolladores pueden conectarse a modelos preentrenados usando APIs y SDKs tradicionales, aprovechando herramientas de autenticación, almacenamiento vectorial y monitoreo ya listas para usar.</p>
+        <p>Esta facilidad acelera radicalmente el desarrollo de prototipos. Sin embargo, una integración rápida no sustituye una buena arquitectura: el sistema sigue necesitando mecanismos sólidos para el manejo de errores, auditoría, control de acceso y protección de datos.</p>
+    </section>
+    <section>
+        <h3>Desafíos</h3>
+        <h4>Costos</h4>
+        <p>Aunque probar estas tecnologías suele ser gratuito o muy barato al inicio, llevar un proyecto a producción exige considerar múltiples costos acumulativos:</p>
+        <ul>
+            <li><strong>Consumo de recursos:</strong> Procesamiento de tokens (entrada y salida), generación de <em>embeddings</em> y uso de bases de datos vectoriales.</li>
+            <li><strong>Infraestructura y soporte:</strong> Monitoreo, trazabilidad, transferencia de datos y personal especializado.</li>
+        </ul>
+        <p>Usar siempre el modelo más grande y potente rara vez es rentable. En muchos escenarios resulta más eficiente optar por modelos pequeños optimizados, arquitecturas RAG (recuperación aumentada por generación) o modelos locales dedicados a tareas específicas.</p>
+        <h4>Privacidad</h4>
+        <p>Usar servicios de terceros implica enviar datos a servidores ajenos. Esto representa un riesgo directo cuando se maneja información sensible, como registros médicos, finanzas, código fuente propietario o documentos institucionales.</p>
+        <p>Entre los riesgos principales destacan la exposición accidental de datos, el almacenamiento no autorizado por parte del proveedor o la extracción de información confidencial mediante ciberataques. Para mitigar esto, es obligatorio aplicar técnicas de anonimización, cifrado, minimización de datos y una revisión rigurosa de las políticas de privacidad del proveedor antes de integrar cualquier API.</p>
+        <h4>Seguridad</h4>
+        <p>Las aplicaciones impulsadas por IA introducen vectores de ataque inéditos. El más conocido es la <strong>inyección de instrucciones (<em>prompt injection</em>)</strong>, donde un usuario manipula el texto de entrada para engañar al modelo y alterar su comportamiento.</p>
+        <p>El riesgo se multiplica cuando la IA tiene permisos para ejecutar código, consultar bases de datos o enviar correos. Para evitar filtraciones o acciones no autorizadas, es indispensable aplicar el principio de mínimo privilegio, aislar entornos y exigir aprobación humana para operaciones sensibles.</p>
+        <h4>Sesgos</h4>
+        <p>Los modelos de lenguaje aprenden del contenido disponible en internet, por lo que pueden absorber y amplificar prejuicios, estereotipos o vacíos de información.</p>
+        <p>Esto impacta directamente en aplicaciones de selección de personal, asignación de beneficios o evaluaciones académicas, dado que el sesgo cambia según el idioma, la cultura o la formulación de la pregunta. Mitigarlo exige auditorías continuas, equipos de prueba diversos y un monitoreo permanente del sistema en producción.</p>
+        <h4>Alucinaciones</h4>
+        <p>Se habla de "alucinación" cuando un modelo genera respuestas falsas o inexactas con total fluidez y apariencia de certeza. Un modelo puede inventar referencias bibliográficas, citar leyes inexistentes o entregar código con errores sutiles.</p>
+        <p>Aunque técnicas como la arquitectura RAG o la consulta de fuentes externas reducen su frecuencia, <strong>ningún modelo actual garantiza un 0% de alucinaciones</strong>. Por esta razón, el contenido generado por IA no debe asumirse como verdadero sin verificación técnica o supervisión humana.</p>
+        <h4>Dependencia del proveedor</h4>
+        <p>Acoplar un producto a la infraestructura de un solo proveedor de IA genera una gran vulnerabilidad. Si la empresa proveedora sube sus precios, cambia los términos del servicio, modifica la API o descontinúa un modelo, la migración puede volverse compleja y costosa.</p>
+        <p>Para conservar la independencia, la mejor estrategia es construir capas de abstracción en el código, usar formatos portables y adoptar modelos de código abierto siempre que sea posible.</p>
+    </section>
+    <section>
+        <h3>Resumen de ventajas y desafíos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Beneficio</th>
+                    <th>Riesgo asociado</th>
+                    <th>Medida recomendada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Productividad</td>
+                    <td>Reduce el tiempo dedicado a tareas repetitivas</td>
+                    <td>Dependencia excesiva y errores no detectados</td>
+                    <td>Revisión humana y métricas de calidad</td>
+                </tr>
+                <tr>
+                    <td>Automatización</td>
+                    <td>Permite procesar actividades a gran escala</td>
+                    <td>Decisiones incorrectas sin supervisión</td>
+                    <td>Mantener aprobación humana en procesos críticos</td>
+                </tr>
+                <tr>
+                    <td>Escalabilidad</td>
+                    <td>Ajusta recursos según la demanda</td>
+                    <td>Incremento inesperado de costos</td>
+                    <td>Límites de consumo y monitoreo</td>
+                </tr>
+                <tr>
+                    <td>Integración</td>
+                    <td>Uso rápido mediante APIs y SDK</td>
+                    <td>Acoplamiento con un proveedor</td>
+                    <td>Arquitectura desacoplada</td>
+                </tr>
+                <tr>
+                    <td>Privacidad</td>
+                    <td>Procesamiento avanzado de información</td>
+                    <td>Exposición de datos sensibles</td>
+                    <td>Anonimización, cifrado y minimización</td>
+                </tr>
+                <tr>
+                    <td>Seguridad</td>
+                    <td>Apoyo en detección y análisis</td>
+                    <td>Prompt injection y uso indebido de herramientas</td>
+                    <td>Mínimo privilegio y auditoría</td>
+                </tr>
+                <tr>
+                    <td>Sesgos</td>
+                    <td>Personalización y análisis automatizado</td>
+                    <td>Discriminación o resultados inequitativos</td>
+                    <td>Pruebas de equidad y conjuntos diversos</td>
+                </tr>
+                <tr>
+                    <td>Alucinaciones</td>
+                    <td>Generación rápida de respuestas</td>
+                    <td>Información falsa presentada como verdadera</td>
+                    <td>RAG, fuentes verificables y validación</td>
+                </tr>
+                <tr>
+                    <td>Proveedor</td>
+                    <td>Acceso rápido a infraestructura avanzada</td>
+                    <td>Dificultad para migrar</td>
+                    <td>Estándares abiertos y portabilidad</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Bibliografía en formato APA 7</h3>
+        <ul>
+            <li>Gallegos, I. O., Rossi, R. A., Barrow, J., Tanjim, M. M., Kim, S., Dernoncourt, F., Yu, T., Zhang, R., & Ahmed, N. K. (2024). <em>Bias and fairness in large language models: A survey.</em> <strong>Computational Linguistics, 50</strong>(3), 1097–1179. <a href="https://doi.org/10.1162/coli_a_00524">https://doi.org/10.1162/coli_a_00524</a></li>
+            <li>Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., & Liu, T. (2025). <em>A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions.</em> <strong>ACM Transactions on Information Systems, 43</strong>(2), Article 42. <a href="https://doi.org/10.1145/3703155">https://doi.org/10.1145/3703155</a></li>
+            <li>Opara-Martins, J., Sahandi, R., & Tian, F. (2016). <em>Critical analysis of vendor lock-in and its impact on cloud computing migration: A business perspective.</em> <strong>Journal of Cloud Computing, 5</strong>, Article 4. <a href="https://doi.org/10.1186/s13677-016-0054-z">https://doi.org/10.1186/s13677-016-0054-z</a></li>
+            <li>Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). <em>The impact of AI on developer productivity: Evidence from GitHub Copilot.</em> <strong>arXiv.</strong> <a href="https://doi.org/10.48550/arXiv.2302.06590">https://doi.org/10.48550/arXiv.2302.06590</a></li>
+            <li>Rawte, V., Sheth, A., & Das, A. (2023). <em>A survey of hallucination in large foundation models.</em> <strong>arXiv.</strong> <a href="https://doi.org/10.48550/arXiv.2309.05922">https://doi.org/10.48550/arXiv.2309.05922</a></li>
+            <li>Samsi, S., Zhao, D., McDonald, J., Li, B., Michaleas, A., Jones, M., Bergeron, W., Kepner, J., Tiwari, D., & Gadepally, V. (2023). <em>From words to watts: Benchmarking the energy costs of large language model inference.</em> <strong>arXiv.</strong> <a href="https://doi.org/10.48550/arXiv.2310.03003">https://doi.org/10.48550/arXiv.2310.03003</a></li>
+            <li>Yao, Y., Duan, J., Xu, K., Cai, Y., Sun, Z., & Zhang, Y. (2024). <em>A survey on large language model security and privacy: The good, the bad, and the ugly.</em> <strong>High-Confidence Computing, 4</strong>(2), Article 100211. <a href="https://doi.org/10.1016/j.hcc.2024.100211">https://doi.org/10.1016/j.hcc.2024.100211</a></li>
+        </ul>
+    </section>
 </body>
 <script src="../js/script.js"></script>
 </html>
