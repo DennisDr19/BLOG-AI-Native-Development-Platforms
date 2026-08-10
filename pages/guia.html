@@ -4,205 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía para comenzar - AI Native Platforms</title>
-    <link rel="stylesheet" href="../style.css">
-
-    <style>
-    /* ===== ESTILOS ADICIONALES PARA GUÍA ===== */
-    /* Esto arregla el problema sin modificar style.css */
-    
-    /* Fondo y fuente general */
-    body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background: #f0f2f5;
-        margin: 0;
-        padding: 20px;
-        color: #333;
-    }
-    
-    /* Contenedor principal con fondo blanco */
-    .container {
-        max-width: 1100px;
-        margin: 30px auto;
-        background: white;
-        padding: 30px 40px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-    
-    /* Títulos */
-    h1 {
-        color: #1a237e;
-        font-size: 2.4em;
-        border-bottom: 4px solid #0d47a1;
-        padding-bottom: 15px;
-        margin-top: 0;
-    }
-    
-    h2 {
-        color: #0d47a1;
-        font-size: 1.8em;
-        margin-top: 45px;
-        border-left: 6px solid #0d47a1;
-        padding-left: 18px;
-    }
-    
-    h3 {
-        color: #1a237e;
-        font-size: 1.3em;
-        margin-top: 30px;
-    }
-    
-    h4 {
-        color: #333;
-        font-size: 1.1em;
-        margin-top: 25px;
-    }
-    
-    /* Párrafos */
-    p {
-        line-height: 1.8;
-        color: #333;
-        margin: 18px 0;
-        font-size: 1.05em;
-    }
-    
-    /* Listas */
-    ul, ol {
-        line-height: 1.8;
-        padding-left: 28px;
-        color: #333;
-    }
-    
-    ul ul, ol ul {
-        margin-top: 5px;
-    }
-    
-    li {
-        margin: 8px 0;
-        font-size: 1.05em;
-    }
-    
-    /* ===== TABLAS ===== */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 0.95em;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    
-    table thead th {
-        background-color: #0d47a1;
-        color: white;
-        padding: 14px 18px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 1em;
-    }
-    
-    table tbody td {
-        border: 1px solid #e0e0e0;
-        padding: 12px 18px;
-        vertical-align: top;
-    }
-    
-    table tbody tr:nth-child(even) {
-        background-color: #f8f9fa;
-    }
-    
-    table tbody tr:hover {
-        background-color: #e3f2fd;
-    }
-    
-    /* ===== BLOQUES DE CÓDIGO ===== */
-    pre {
-        background-color: #1e1e1e;
-        color: #d4d4d4;
-        padding: 20px 24px;
-        border-radius: 10px;
-        overflow-x: auto;
-        font-family: 'Courier New', Consolas, monospace;
-        font-size: 0.9em;
-        line-height: 1.7;
-        border-left: 5px solid #0d47a1;
-        margin: 25px 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    code {
-        font-family: 'Courier New', Consolas, monospace;
-        background-color: #f0f0f0;
-        padding: 2px 8px;
-        border-radius: 4px;
-        color: #c62828;
-        font-size: 0.9em;
-    }
-    
-    pre code {
-        background-color: transparent;
-        padding: 0;
-        color: #d4d4d4;
-        font-size: 1em;
-    }
-    
-    /* ===== HR (líneas separadoras) ===== */
-    hr {
-        border: none;
-        border-top: 2px dashed #d0d0d0;
-        margin: 45px 0;
-    }
-    
-    /* ===== ENLACES ===== */
-    a {
-        color: #0d47a1;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-        color: #1565c0;
-    }
-    
-    /* ===== BIBLIOGRAFÍA ===== */
-    .bibliografia li {
-        margin-bottom: 14px;
-        line-height: 1.7;
-    }
-    
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-        body {
-            padding: 10px;
-        }
-        
-        .container {
-            padding: 18px 20px;
-            margin: 15px auto;
-        }
-        
-        h1 { font-size: 1.8em; }
-        h2 { font-size: 1.4em; }
-        h3 { font-size: 1.1em; }
-        p, li { font-size: 0.95em; }
-        
-        table {
-            font-size: 0.82em;
-        }
-        
-        table thead th,
-        table tbody td {
-            padding: 8px 10px;
-        }
-        
-        pre {
-            font-size: 0.78em;
-            padding: 14px 16px;
-        }
-    }
-</style>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aplicaciones.css">
 </head>
 
 <header>
@@ -224,355 +28,353 @@
 </header>
 
 <body>
-    <main class="container">
-        <!-- Título principal -->
-        <h1>📘 Sección 8. Guía para comenzar</h1>
+    <main>
+        <!-- ===== CONTENEDOR PRINCIPAL ===== -->
+        <div class="container">
+            <!-- Título principal -->
+            <h1>📘 Sección 8. Guía para comenzar</h1>
 
-        <p>
-            La adopción de plataformas de desarrollo nativas de IA representa un cambio fundamental en la forma de construir software,
-            integrando inteligencia artificial en cada capa del ciclo de vida de desarrollo: desde la generación de código hasta el
-            despliegue y monitoreo. Esta guía práctica está diseñada para quienes desean dar sus primeros pasos en este ecosistema,
-            proporcionando un camino claro desde la selección de la plataforma adecuada hasta la creación del primer proyecto y la
-            identificación de recursos para el aprendizaje continuo.
-        </p>
+            <p>
+                La adopción de plataformas de desarrollo nativas de IA representa un cambio fundamental en la forma de construir software,
+                integrando inteligencia artificial en cada capa del ciclo de vida de desarrollo: desde la generación de código hasta el
+                despliegue y monitoreo. Esta guía práctica está diseñada para quienes desean dar sus primeros pasos en este ecosistema,
+                proporcionando un camino claro desde la selección de la plataforma adecuada hasta la creación del primer proyecto y la
+                identificación de recursos para el aprendizaje continuo.
+            </p>
 
-        <hr>
+            <hr>
 
-        <!-- ============================================================ -->
-        <!-- 1. CÓMO ELEGIR UNA PLATAFORMA                                   -->
-        <!-- ============================================================ -->
-        <h2>1. Cómo elegir una plataforma</h2>
+            <!-- ============================================================ -->
+            <!-- 1. CÓMO ELEGIR UNA PLATAFORMA                                   -->
+            <!-- ============================================================ -->
+            <h2>1. Cómo elegir una plataforma</h2>
 
-        <p>
-            La elección de la plataforma de desarrollo de IA es una decisión estratégica que impacta directamente la velocidad,
-            el costo y la escalabilidad de los proyectos. El mercado ha evolucionado significativamente con la irrupción de la
-            IA agentiva, que ha redefinido los límites de lo que una plataforma debe ofrecer.
-        </p>
+            <p>
+                La elección de la plataforma de desarrollo de IA es una decisión estratégica que impacta directamente la velocidad,
+                el costo y la escalabilidad de los proyectos. El mercado ha evolucionado significativamente con la irrupción de la
+                IA agentiva, que ha redefinido los límites de lo que una plataforma debe ofrecer.
+            </p>
 
-        <h3>Criterios de selección fundamentales</h3>
+            <h3>Criterios de selección fundamentales</h3>
 
-        <ul>
-            <li>
-                <strong>Alineación con el caso de uso.</strong> Forrester Research advierte que
-                <em>"forzar cada caso de uso a una única plataforma significa que la mayoría de ellos terminan fuera de su zona de afinidad"</em>.
-                Las organizaciones obtienen el máximo valor al implementar cada caso de uso en la plataforma cuyo punto fuerte mejor
-                se adapte a sus necesidades.
-                <ul>
-                    <li><strong>Procesamiento de lenguaje natural:</strong> OpenAI y Anthropic ofrecen modelos de frontera de alto rendimiento.</li>
-                    <li><strong>Cargas de trabajo en AWS:</strong> Amazon CodeWhisperer proporciona optimizaciones específicas.</li>
-                    <li><strong>Entornos empresariales:</strong> Azure AI Foundry o Google Vertex AI integran capacidades de MLOps y cumplimiento normativo.</li>
-                </ul>
-            </li>
+            <ul>
+                <li>
+                    <strong>Alineación con el caso de uso.</strong> Forrester Research advierte que
+                    <em>"forzar cada caso de uso a una única plataforma significa que la mayoría de ellos terminan fuera de su zona de afinidad"</em>.
+                    Las organizaciones obtienen el máximo valor al implementar cada caso de uso en la plataforma cuyo punto fuerte mejor
+                    se adapte a sus necesidades.
+                    <ul>
+                        <li><strong>Procesamiento de lenguaje natural:</strong> OpenAI y Anthropic ofrecen modelos de frontera de alto rendimiento.</li>
+                        <li><strong>Cargas de trabajo en AWS:</strong> Amazon CodeWhisperer proporciona optimizaciones específicas.</li>
+                        <li><strong>Entornos empresariales:</strong> Azure AI Foundry o Google Vertex AI integran capacidades de MLOps y cumplimiento normativo.</li>
+                    </ul>
+                </li>
 
-            <li>
-                <strong>Arquitectura y flexibilidad.</strong> La mayoría de los proveedores permiten <strong>traer los modelos de su elección</strong> 
-                (bring your own model), lo que evita el vendor lock-in y permite intercambiar modelos a medida que surgen mejores alternativas
-                sin necesidad de re-platformizar.
-            </li>
+                <li>
+                    <strong>Arquitectura y flexibilidad.</strong> La mayoría de los proveedores permiten <strong>traer los modelos de su elección</strong> 
+                    (bring your own model), lo que evita el vendor lock-in y permite intercambiar modelos a medida que surgen mejores alternativas
+                    sin necesidad de re-platformizar.
+                </li>
 
-            <li>
-                <strong>Nivel de abstracción y curva de aprendizaje.</strong> Las plataformas varían desde entornos de desarrollo de alto nivel
-                ideales para prototipado rápido —como Replit, que combina editor, entorno de ejecución e infraestructura de hosting en una
-                interfaz única— hasta soluciones más especializadas para grandes bases de código, como Cody de Sourcegraph.
-            </li>
+                <li>
+                    <strong>Nivel de abstracción y curva de aprendizaje.</strong> Las plataformas varían desde entornos de desarrollo de alto nivel
+                    ideales para prototipado rápido —como Replit, que combina editor, entorno de ejecución e infraestructura de hosting en una
+                    interfaz única— hasta soluciones más especializadas para grandes bases de código, como Cody de Sourcegraph.
+                </li>
 
-            <li>
-                <strong>Costos y modelo de precios.</strong>
-                <ul>
-                    <li><strong>OpenAI:</strong> Nivel gratuito con 3 solicitudes por minuto para modelos mini.</li>
-                    <li><strong>Hugging Face:</strong> Modelos pre-entrenados gratuitos con niveles Pro desde $9/mes.</li>
-                    <li><strong>Consideración adicional:</strong> No solo el costo por token, sino también infraestructura, almacenamiento y gobernanza.</li>
-                </ul>
-            </li>
+                <li>
+                    <strong>Costos y modelo de precios.</strong>
+                    <ul>
+                        <li><strong>OpenAI:</strong> Nivel gratuito con 3 solicitudes por minuto para modelos mini.</li>
+                        <li><strong>Hugging Face:</strong> Modelos pre-entrenados gratuitos con niveles Pro desde $9/mes.</li>
+                        <li><strong>Consideración adicional:</strong> No solo el costo por token, sino también infraestructura, almacenamiento y gobernanza.</li>
+                    </ul>
+                </li>
 
-            <li>
-                <strong>Seguridad y privacidad.</strong> Para empresas con requisitos de soberanía de datos, plataformas como Tabnine ofrecen
-                modelos que se ejecutan completamente dentro de la VPC del cliente. También se debe considerar la implementación de controles
-                de acceso de privilegio mínimo, revisión humana de código generado y registros de auditoría.
-            </li>
-        </ul>
+                <li>
+                    <strong>Seguridad y privacidad.</strong> Para empresas con requisitos de soberanía de datos, plataformas como Tabnine ofrecen
+                    modelos que se ejecutan completamente dentro de la VPC del cliente. También se debe considerar la implementación de controles
+                    de acceso de privilegio mínimo, revisión humana de código generado y registros de auditoría.
+                </li>
+            </ul>
 
-        <h3>Evaluación práctica</h3>
+            <h3>Evaluación práctica</h3>
 
-        <p>
-            Se recomienda comenzar con un <strong>proyecto piloto de alcance limitado</strong> para evaluar la plataforma en condiciones reales.
-        </p>
+            <p>
+                Se recomienda comenzar con un <strong>proyecto piloto de alcance limitado</strong> para evaluar la plataforma en condiciones reales.
+            </p>
 
-        <ul>
-            <li>Definir criterios de evaluación que integren aspectos técnicos, funcionales, de madurez MLOps, éticos y económicos.</li>
-            <li>Utilizar una matriz de evaluación con checklists estandarizados.</li>
-            <li>Realizar pruebas comparativas con escenarios representativos del caso de uso objetivo.</li>
-        </ul>
+            <ul>
+                <li>Definir criterios de evaluación que integren aspectos técnicos, funcionales, de madurez MLOps, éticos y económicos.</li>
+                <li>Utilizar una matriz de evaluación con checklists estandarizados.</li>
+                <li>Realizar pruebas comparativas con escenarios representativos del caso de uso objetivo.</li>
+            </ul>
 
-        <hr>
+            <hr>
 
-        <!-- ============================================================ -->
-        <!-- 2. REQUISITOS BÁSICOS                                          -->
-        <!-- ============================================================ -->
-        <h2>2. Requisitos básicos</h2>
+            <!-- ============================================================ -->
+            <!-- 2. REQUISITOS BÁSICOS                                          -->
+            <!-- ============================================================ -->
+            <h2>2. Requisitos básicos</h2>
 
-        <h3>Conocimientos previos</h3>
+            <h3>Conocimientos previos</h3>
 
-        <p>
-            A diferencia del desarrollo de software tradicional, las plataformas nativas de IA están democratizando el acceso a la programación,
-            permitiendo que personas sin experiencia profunda en codificación puedan construir aplicaciones sofisticadas.
-        </p>
+            <p>
+                A diferencia del desarrollo de software tradicional, las plataformas nativas de IA están democratizando el acceso a la programación,
+                permitiendo que personas sin experiencia profunda en codificación puedan construir aplicaciones sofisticadas.
+            </p>
 
-        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-            <thead>
-                <tr style="background-color: #f2f2f2;">
-                    <th style="border: 1px solid #ddd; padding: 8px;">Nivel</th>
-                    <th style="border: 1px solid #ddd; padding: 8px;">Conocimientos requeridos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>Principiante</strong></td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">
-                        <ul>
-                            <li>Curiosidad y disposición para aprender</li>
-                            <li>Capacidad para describir problemas en lenguaje natural</li>
-                            <li>Comprensión básica de cómo interactuar con interfaces web</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>Intermedio</strong></td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">
-                        <ul>
-                            <li>Conocimientos básicos de Python (variables, funciones, estructuras de datos)</li>
-                            <li>Familiaridad con el manejo de APIs REST</li>
-                            <li>Comprensión de conceptos como variables de entorno y control de versiones</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nivel</th>
+                        <th>Conocimientos requeridos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Principiante</strong></td>
+                        <td>
+                            <ul>
+                                <li>Curiosidad y disposición para aprender</li>
+                                <li>Capacidad para describir problemas en lenguaje natural</li>
+                                <li>Comprensión básica de cómo interactuar con interfaces web</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intermedio</strong></td>
+                        <td>
+                            <ul>
+                                <li>Conocimientos básicos de Python (variables, funciones, estructuras de datos)</li>
+                                <li>Familiaridad con el manejo de APIs REST</li>
+                                <li>Comprensión de conceptos como variables de entorno y control de versiones</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <h3>Equipamiento y herramientas</h3>
+            <h3>Equipamiento y herramientas</h3>
 
-        <ul>
-            <li><strong>Hardware:</strong> Computadora con conexión a internet estable. No se requieren especificaciones técnicas avanzadas, ya que el procesamiento pesado ocurre en la nube.</li>
-            <li><strong>Software fundamental:</strong>
-                <ul>
-                    <li>Navegador web moderno</li>
-                    <li>Editor de código (VS Code es altamente recomendado por su integración con GitHub Copilot)</li>
-                    <li>Python instalado (versión 3.8 o superior)</li>
-                </ul>
-            </li>
-            <li><strong>Cuentas necesarias:</strong>
-                <ul>
-                    <li>Cuenta en la plataforma de IA elegida para obtener claves de API</li>
-                    <li>Cuenta en un entorno de desarrollo en la nube (Replit, GitHub Codespaces) — opcional para evitar configuraciones locales</li>
-                </ul>
-            </li>
-        </ul>
+            <ul>
+                <li><strong>Hardware:</strong> Computadora con conexión a internet estable. No se requieren especificaciones técnicas avanzadas, ya que el procesamiento pesado ocurre en la nube.</li>
+                <li><strong>Software fundamental:</strong>
+                    <ul>
+                        <li>Navegador web moderno</li>
+                        <li>Editor de código (VS Code es altamente recomendado por su integración con GitHub Copilot)</li>
+                        <li>Python instalado (versión 3.8 o superior)</li>
+                    </ul>
+                </li>
+                <li><strong>Cuentas necesarias:</strong>
+                    <ul>
+                        <li>Cuenta en la plataforma de IA elegida para obtener claves de API</li>
+                        <li>Cuenta en un entorno de desarrollo en la nube (Replit, GitHub Codespaces) — opcional para evitar configuraciones locales</li>
+                    </ul>
+                </li>
+            </ul>
 
-        <hr>
+            <hr>
 
-        <!-- ============================================================ -->
-        <!-- 3. OBTENER UNA API KEY                                          -->
-        <!-- ============================================================ -->
-        <h2>3. Obtener una API Key</h2>
+            <!-- ============================================================ -->
+            <!-- 3. OBTENER UNA API KEY                                          -->
+            <!-- ============================================================ -->
+            <h2>3. Obtener una API Key</h2>
 
-        <p>
-            La API Key (clave de interfaz de programación de aplicaciones) es el mecanismo de autenticación que permite a las aplicaciones
-            comunicarse con los modelos de IA de los proveedores.
-        </p>
+            <p>
+                La API Key (clave de interfaz de programación de aplicaciones) es el mecanismo de autenticación que permite a las aplicaciones
+                comunicarse con los modelos de IA de los proveedores.
+            </p>
 
-        <h3>Pasos generales para la obtención</h3>
+            <h3>Pasos generales para la obtención</h3>
 
-        <ol>
-            <li><strong>Registro en la plataforma:</strong> Crear una cuenta en el proveedor de servicios de IA (OpenAI, Google AI Studio, Azure AI Foundry, Anthropic, Hugging Face, etc.).</li>
-            <li><strong>Verificación de identidad:</strong> La mayoría de los proveedores requieren verificación de correo electrónico y, en algunos casos, número de teléfono o método de pago.</li>
-            <li><strong>Navegación a la sección de API:</strong> En el panel de control, localizar la sección de "API Keys", "Credenciales" o "Claves de acceso".</li>
-            <li><strong>Generación de la clave:</strong> Crear una nueva clave, asignándole un nombre descriptivo.</li>
-            <li><strong>Almacenamiento seguro:</strong> La clave se muestra solo una vez; debe copiarse y almacenarse de forma segura (gestor de contraseñas o variables de entorno).</li>
-        </ol>
+            <ol>
+                <li><strong>Registro en la plataforma:</strong> Crear una cuenta en el proveedor de servicios de IA (OpenAI, Google AI Studio, Azure AI Foundry, Anthropic, Hugging Face, etc.).</li>
+                <li><strong>Verificación de identidad:</strong> La mayoría de los proveedores requieren verificación de correo electrónico y, en algunos casos, número de teléfono o método de pago.</li>
+                <li><strong>Navegación a la sección de API:</strong> En el panel de control, localizar la sección de "API Keys", "Credenciales" o "Claves de acceso".</li>
+                <li><strong>Generación de la clave:</strong> Crear una nueva clave, asignándole un nombre descriptivo.</li>
+                <li><strong>Almacenamiento seguro:</strong> La clave se muestra solo una vez; debe copiarse y almacenarse de forma segura (gestor de contraseñas o variables de entorno).</li>
+            </ol>
 
-        <h3>Consideraciones por plataforma</h3>
+            <h3>Consideraciones por plataforma</h3>
 
-        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-            <thead>
-                <tr style="background-color: #f2f2f2;">
-                    <th style="border: 1px solid #ddd; padding: 8px;">Plataforma</th>
-                    <th style="border: 1px solid #ddd; padding: 8px;">Consideraciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>OpenAI Platform</strong></td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">Nivel gratuito con créditos suficientes para aprendizaje y prototipado. Para nivel superior (Tier-1), depósito mínimo de $5.</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>Azure AI Foundry</strong></td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">Onboarding simplificado con plantillas de aplicación preconstruidas.</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>Hugging Face</strong></td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">Acceso gratuito a miles de modelos pre-entrenados, con inferencia mediante API o descarga local.</td>
-                </tr>
-            </tbody>
-        </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plataforma</th>
+                        <th>Consideraciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>OpenAI Platform</strong></td>
+                        <td>Nivel gratuito con créditos suficientes para aprendizaje y prototipado. Para nivel superior (Tier-1), depósito mínimo de $5.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure AI Foundry</strong></td>
+                        <td>Onboarding simplificado con plantillas de aplicación preconstruidas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hugging Face</strong></td>
+                        <td>Acceso gratuito a miles de modelos pre-entrenados, con inferencia mediante API o descarga local.</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <h3>Buenas prácticas de seguridad</h3>
+            <h3>Buenas prácticas de seguridad</h3>
 
-        <ul>
-            <li><strong>Nunca incluir claves en código fuente:</strong> Utilizar variables de entorno (archivos <code>.env</code>).</li>
-            <li><strong>Rotación periódica:</strong> Regenerar claves regularmente y revocar las que ya no se utilicen.</li>
-            <li><strong>Permisos granulares:</strong> Crear claves con permisos específicos (solo lectura, solo ciertos modelos, etc.).</li>
-        </ul>
+            <ul>
+                <li><strong>Nunca incluir claves en código fuente:</strong> Utilizar variables de entorno (archivos <code>.env</code>).</li>
+                <li><strong>Rotación periódica:</strong> Regenerar claves regularmente y revocar las que ya no se utilicen.</li>
+                <li><strong>Permisos granulares:</strong> Crear claves con permisos específicos (solo lectura, solo ciertos modelos, etc.).</li>
+            </ul>
 
-        <hr>
+            <hr>
 
-        <!-- ============================================================ -->
-        <!-- 4. CREAR EL PRIMER PROYECTO                                    -->
-        <!-- ============================================================ -->
-        <h2>4. Crear el primer proyecto</h2>
+            <!-- ============================================================ -->
+            <!-- 4. CREAR EL PRIMER PROYECTO                                    -->
+            <!-- ============================================================ -->
+            <h2>4. Crear el primer proyecto</h2>
 
-        <p>
-            El enfoque recomendado para principiantes es seguir un flujo de <strong>"vibe coding"</strong> o codificación por vibración,
-            que prioriza la transformación rápida de ideas en prototipos funcionales mediante ciclos cortos de construcción, prueba e iteración.
-        </p>
+            <p>
+                El enfoque recomendado para principiantes es seguir un flujo de <strong>"vibe coding"</strong> o codificación por vibración,
+                que prioriza la transformación rápida de ideas en prototipos funcionales mediante ciclos cortos de construcción, prueba e iteración.
+            </p>
 
-        <h3>Flujo de desarrollo recomendado</h3>
+            <h3>Flujo de desarrollo recomendado</h3>
 
-        <h4>Paso 1: Definir el proyecto concreto</h4>
-        <p>Ejemplos adecuados para un primer proyecto:</p>
-        <ul>
-            <li>Un chatbot CLI (interfaz de línea de comandos) que responda preguntas</li>
-            <li>Un asistente de estudio que responda preguntas sobre un tema específico</li>
-            <li>Un generador de contenido para redes sociales</li>
-        </ul>
-        <p><strong>Clave:</strong> Mantener el alcance reducido — <em>"¿Puedo hacer que esto funcione en 30 minutos?"</em></p>
+            <h4>Paso 1: Definir el proyecto concreto</h4>
+            <p>Ejemplos adecuados para un primer proyecto:</p>
+            <ul>
+                <li>Un chatbot CLI (interfaz de línea de comandos) que responda preguntas</li>
+                <li>Un asistente de estudio que responda preguntas sobre un tema específico</li>
+                <li>Un generador de contenido para redes sociales</li>
+            </ul>
+            <p><strong>Clave:</strong> Mantener el alcance reducido — <em>"¿Puedo hacer que esto funcione en 30 minutos?"</em></p>
 
-        <h4>Paso 2: Configurar el entorno de desarrollo</h4>
+            <h4>Paso 2: Configurar el entorno de desarrollo</h4>
 
-        <p><strong>Opción A — Entorno local:</strong></p>
-        <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code># Instalar Python y las bibliotecas necesarias
-pip install openai flask python-dotenv</code></pre>
-        <p>Crear un archivo <code>.env</code> para almacenar la API Key.</p>
+            <p><strong>Opción A — Entorno local:</strong></p>
+            <pre><code># Instalar Python y las bibliotecas necesarias
+        pip install openai flask python-dotenv</code></pre>
+            <p>Crear un archivo <code>.env</code> para almacenar la API Key.</p>
 
-        <p><strong>Opción B — Entorno en la nube (Recomendado para principiantes):</strong></p>
-        <p>Replit ofrece un entorno de desarrollo listo para usar sin configuración local, con capacidades de IA integradas, despliegue instantáneo y colaboración en tiempo real.</p>
+            <p><strong>Opción B — Entorno en la nube (Recomendado para principiantes):</strong></p>
+            <p>Replit ofrece un entorno de desarrollo listo para usar sin configuración local, con capacidades de IA integradas, despliegue instantáneo y colaboración en tiempo real.</p>
 
-        <h4>Paso 3: Implementar la funcionalidad básica</h4>
-        <p>Para un chatbot CLI simple:</p>
-        <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>import os
-import openai
-from dotenv import load_dotenv
+            <h4>Paso 3: Implementar la funcionalidad básica</h4>
+            <p>Para un chatbot CLI simple:</p>
+            <pre><code>import os
+        import openai
+        from dotenv import load_dotenv
 
-load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
+        load_dotenv()
+        openai.api_key = os.getenv('OPENAI_API_KEY')
 
-def chat_with_ai(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return response.choices[0].message['content']
+        def chat_with_ai(prompt):
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response.choices[0].message['content']
 
-while True:
-    user_input = input("Tú: ")
-    if user_input.lower() == 'salir':
-        break
-    respuesta = chat_with_ai(user_input)
-    print(f"IA: {respuesta}")</code></pre>
+        while True:
+            user_input = input("Tú: ")
+            if user_input.lower() == 'salir':
+                break
+            respuesta = chat_with_ai(user_input)
+            print(f"IA: {respuesta}")</code></pre>
 
-        <h4>Paso 4: Probar e iterar</h4>
-        <p>Ejecutar la aplicación, probar diferentes entradas y observar el comportamiento.</p>
+            <h4>Paso 4: Probar e iterar</h4>
+            <p>Ejecutar la aplicación, probar diferentes entradas y observar el comportamiento.</p>
 
-        <h4>Paso 5: Desplegar y compartir</h4>
-        <p>El despliegue en plataformas como Vercel o Replit es inmediato y proporciona una URL pública.</p>
+            <h4>Paso 5: Desplegar y compartir</h4>
+            <p>El despliegue en plataformas como Vercel o Replit es inmediato y proporciona una URL pública.</p>
 
-        <h3>Errores comunes y cómo evitarlos</h3>
-        <ul>
-            <li><strong>Claves API expuestas:</strong> Verificar que el archivo <code>.env</code> esté en <code>.gitignore</code>.</li>
-            <li><strong>Errores de conexión:</strong> Asegurar una conexión a internet estable.</li>
-            <li><strong>Proyectos demasiado ambiciosos:</strong> Comenzar con la funcionalidad mínima viable (MVP).</li>
-            <li><strong>Contar exclusivamente con la revisión automatizada:</strong> No reemplaza las pruebas manuales del comportamiento real.</li>
-        </ul>
+            <h3>Errores comunes y cómo evitarlos</h3>
+            <ul>
+                <li><strong>Claves API expuestas:</strong> Verificar que el archivo <code>.env</code> esté en <code>.gitignore</code>.</li>
+                <li><strong>Errores de conexión:</strong> Asegurar una conexión a internet estable.</li>
+                <li><strong>Proyectos demasiado ambiciosos:</strong> Comenzar con la funcionalidad mínima viable (MVP).</li>
+                <li><strong>Contar exclusivamente con la revisión automatizada:</strong> No reemplaza las pruebas manuales del comportamiento real.</li>
+            </ul>
 
-        <hr>
+            <hr>
 
-        <!-- ============================================================ -->
-        <!-- 5. RECURSOS PARA APRENDER                                      -->
-        <!-- ============================================================ -->
-        <h2>5. Recursos para aprender</h2>
+            <!-- ============================================================ -->
+            <!-- 5. RECURSOS PARA APRENDER                                      -->
+            <!-- ============================================================ -->
+            <h2>5. Recursos para aprender</h2>
 
-        <h3>Documentación oficial</h3>
-        <ul>
-            <li><strong>OpenAI Platform:</strong> <em>Developer Quickstart</em> — guía paso a paso para la primera llamada a la API.</li>
-            <li><strong>Microsoft Learn:</strong> <em>Azure AI Foundry</em> — tutoriales para construir agentes y aplicaciones en minutos.</li>
-            <li><strong>Google Cloud:</strong> <em>Vertex AI Documentation</em> — guías para modelos, pipelines y MLOps.</li>
-            <li><strong>Hugging Face:</strong> <em>Hugging Face Course</em> — curso gratuito sobre transformers y modelos de NLP.</li>
-        </ul>
+            <h3>Documentación oficial</h3>
+            <ul>
+                <li><strong>OpenAI Platform:</strong> <em>Developer Quickstart</em> — guía paso a paso para la primera llamada a la API.</li>
+                <li><strong>Microsoft Learn:</strong> <em>Azure AI Foundry</em> — tutoriales para construir agentes y aplicaciones en minutos.</li>
+                <li><strong>Google Cloud:</strong> <em>Vertex AI Documentation</em> — guías para modelos, pipelines y MLOps.</li>
+                <li><strong>Hugging Face:</strong> <em>Hugging Face Course</em> — curso gratuito sobre transformers y modelos de NLP.</li>
+            </ul>
 
-        <h3>Comunidades y foros</h3>
-        <ul>
-            <li><strong>OpenAI Developer Community:</strong> Foro activo donde principiantes y expertos comparten experiencias.</li>
-            <li><strong>GitHub:</strong> Repositorios con ejemplos prácticos y frameworks como <em>AI Dev Swarm</em>.</li>
-        </ul>
+            <h3>Comunidades y foros</h3>
+            <ul>
+                <li><strong>OpenAI Developer Community:</strong> Foro activo donde principiantes y expertos comparten experiencias.</li>
+                <li><strong>GitHub:</strong> Repositorios con ejemplos prácticos y frameworks como <em>AI Dev Swarm</em>.</li>
+            </ul>
 
-        <h3>Libros especializados</h3>
-        <ul>
-            <li><em>Building AI Agents in .NET</em> (Manning) — enfoque práctico incluyendo obtención y protección de claves API.</li>
-        </ul>
+            <h3>Libros especializados</h3>
+            <ul>
+                <li><em>Building AI Agents in .NET</em> (Manning) — enfoque práctico incluyendo obtención y protección de claves API.</li>
+            </ul>
 
-        <h3>Plataformas educativas</h3>
-        <ul>
-            <li><strong>Replit y GUVI:</strong> Tutoriales interactivos para aprender desarrollando prototipos en tiempo real.</li>
-            <li><strong>Bootcamps especializados:</strong> Programas como <em>Prompt to Product</em> ofrecen proyectos estructurados.</li>
-        </ul>
+            <h3>Plataformas educativas</h3>
+            <ul>
+                <li><strong>Replit y GUVI:</strong> Tutoriales interactivos para aprender desarrollando prototipos en tiempo real.</li>
+                <li><strong>Bootcamps especializados:</strong> Programas como <em>Prompt to Product</em> ofrecen proyectos estructurados.</li>
+            </ul>
 
-        <h3>Estrategia de aprendizaje recomendada</h3>
-        <ol>
-            <li><strong>Comenzar con un tutorial guiado:</strong> Seguir el Quickstart de la plataforma elegida.</li>
-            <li><strong>Construir un proyecto propio:</strong> Aplicar los conocimientos a un caso de uso personal, manteniendo el alcance pequeño.</li>
-            <li><strong>Iterar y expandir:</strong> Añadir funcionalidades progresivamente (chatbot CLI → interfaz web con Flask → integración con bases de datos vectoriales para RAG).</li>
-            <li><strong>Participar en la comunidad:</strong> Compartir proyectos en GitHub y aprender de las experiencias de otros.</li>
-        </ol>
+            <h3>Estrategia de aprendizaje recomendada</h3>
+            <ol>
+                <li><strong>Comenzar con un tutorial guiado:</strong> Seguir el Quickstart de la plataforma elegida.</li>
+                <li><strong>Construir un proyecto propio:</strong> Aplicar los conocimientos a un caso de uso personal, manteniendo el alcance pequeño.</li>
+                <li><strong>Iterar y expandir:</strong> Añadir funcionalidades progresivamente (chatbot CLI → interfaz web con Flask → integración con bases de datos vectoriales para RAG).</li>
+                <li><strong>Participar en la comunidad:</strong> Compartir proyectos en GitHub y aprender de las experiencias de otros.</li>
+            </ol>
 
-        <hr>
+            <hr>
 
-        <!-- ============================================================ -->
-        <!-- BIBLIOGRAFÍA                                                   -->
-        <!-- ============================================================ -->
-        <h2>Bibliografía</h2>
+            <!-- ============================================================ -->
+            <!-- BIBLIOGRAFÍA                                                   -->
+            <!-- ============================================================ -->
+            <h2>Bibliografía</h2>
 
-        <ul style="line-height: 1.8;">
-            <li>
-                OpenAI. (2024). <em>Developer quickstart</em>. OpenAI Platform Documentation.
-                <a href="https://platform.openai.com/docs/quickstart" target="_blank">https://platform.openai.com/docs/quickstart</a>
-            </li>
-            <li>
-                Forrester Research. (2026). <em>The Forrester Wave™: AI Platforms, Q3 2026</em>.
-                <a href="https://www.forrester.com/blogs/the-forrester-wave-ai-platforms-q3-2026-is-live-prepare-to-recalibrate/" target="_blank">https://www.forrester.com/blogs/the-forrester-wave-ai-platforms-q3-2026-is-live-prepare-to-recalibrate/</a>
-            </li>
-            <li>
-                Microsoft. (2025). <em>Build AI agents and apps fast with Azure AI Foundry</em>. Microsoft Learn.
-                <a href="https://learn.microsoft.com/en-us/shows/sip-and-sync-with-azure/build-ai-agents-and-apps-fast-with-azure-ai-foundry" target="_blank">https://learn.microsoft.com/en-us/shows/sip-and-sync-with-azure/build-ai-agents-and-apps-fast-with-azure-ai-foundry</a>
-            </li>
-            <li>
-                Royett, O. (2026). <em>AI-native development platforms: Self-writing and self-repairing software empowering non-coders</em>.
-                <a href="https://www.oswaldosrm.com/single-post/ai-native-development-platforms-self-writing-and-self-repairing-software-empowering-non-coders" target="_blank">https://www.oswaldosrm.com/single-post/ai-native-development-platforms-self-writing-and-self-repairing-software-empowering-non-coders</a>
-            </li>
-            <li>
-                UnblockDevs. (2026). <em>AI-native development platforms: Complete guide 2026</em>.
-                <a href="https://unblockdevs.com/blog/ai-native-development-platforms-complete-guide" target="_blank">https://unblockdevs.com/blog/ai-native-development-platforms-complete-guide</a>
-            </li>
-            <li>
-                Very Good Ventures. (2026). <em>Getting started with Wingspan: AI-assisted Flutter development</em>.
-                <a href="https://verygood.ventures/blog/wingspan-tutorial-demo-fishtracker/" target="_blank">https://verygood.ventures/blog/wingspan-tutorial-demo-fishtracker/</a>
-            </li>
-        </ul>
-
+            <ul>
+                <li>
+                    OpenAI. (2024). <em>Developer quickstart</em>. OpenAI Platform Documentation.
+                    <a href="https://platform.openai.com/docs/quickstart" target="_blank">https://platform.openai.com/docs/quickstart</a>
+                </li>
+                <li>
+                    Forrester Research. (2026). <em>The Forrester Wave™: AI Platforms, Q3 2026</em>.
+                    <a href="https://www.forrester.com/blogs/the-forrester-wave-ai-platforms-q3-2026-is-live-prepare-to-recalibrate/" target="_blank">https://www.forrester.com/blogs/the-forrester-wave-ai-platforms-q3-2026-is-live-prepare-to-recalibrate/</a>
+                </li>
+                <li>
+                    Microsoft. (2025). <em>Build AI agents and apps fast with Azure AI Foundry</em>. Microsoft Learn.
+                    <a href="https://learn.microsoft.com/en-us/shows/sip-and-sync-with-azure/build-ai-agents-and-apps-fast-with-azure-ai-foundry" target="_blank">https://learn.microsoft.com/en-us/shows/sip-and-sync-with-azure/build-ai-agents-and-apps-fast-with-azure-ai-foundry</a>
+                </li>
+                <li>
+                    Royett, O. (2026). <em>AI-native development platforms: Self-writing and self-repairing software empowering non-coders</em>.
+                    <a href="https://www.oswaldosrm.com/single-post/ai-native-development-platforms-self-writing-and-self-repairing-software-empowering-non-coders" target="_blank">https://www.oswaldosrm.com/single-post/ai-native-development-platforms-self-writing-and-self-repairing-software-empowering-non-coders</a>
+                </li>
+                <li>
+                    UnblockDevs. (2026). <em>AI-native development platforms: Complete guide 2026</em>.
+                    <a href="https://unblockdevs.com/blog/ai-native-development-platforms-complete-guide" target="_blank">https://unblockdevs.com/blog/ai-native-development-platforms-complete-guide</a>
+                </li>
+                <li>
+                    Very Good Ventures. (2026). <em>Getting started with Wingspan: AI-assisted Flutter development</em>.
+                    <a href="https://verygood.ventures/blog/wingspan-tutorial-demo-fishtracker/" target="_blank">https://verygood.ventures/blog/wingspan-tutorial-demo-fishtracker/</a>
+                </li>
+            </ul>
+        </div>
+        <!-- ===== FIN DEL CONTAINER ===== -->
     </main>
-
-    <footer style="background-color: #333; color: white; text-align: center; padding: 15px; margin-top: 30px;">
-        <p>&copy; 2026 AI Native Platforms Blog - Todos los derechos reservados</p>
-    </footer>
-
-    <script src="../js/script.js"></script>
 </body>
+<script src="../js/script.js"></script>
 </html>
