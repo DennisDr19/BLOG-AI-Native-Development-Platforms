@@ -1,40 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Herramientas</title>
-<link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas - AI Platforms</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aplicaciones.css">
 </head>
-<header>
-    <nav class="navbar">
-        <a href="../index.html" class="logo">
-            AI Platforms
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="introduccion.html">Introducción</a></li>
-            <li><a href="arquitectura.html">Arquitectura</a></li>
-            <li><a href="plataformas.html">Plataformas</a></li>
-            <li><a href="herramientas.html">Herramientas</a></li>
-            <li><a href="aplicaciones.html">Aplicaciones</a></li>
-            <li><a href="ventajas.html">Ventajas y desafios</a></li>
-            <li><a href="tendencias.html">Tendencias</a></li>
-            <li><a href="guia.html">Guía</a></li>
-            <li><a href="bibliografia.html">Bibliografía</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
-    <ul>
-        <li>LangChain</li>
-        <li>LlamaIndex</li>
-        <li>Semantic Kernel</li>
-        <li>Ollama</li>
-        <li>Docker para IA</li>
-        <li>Agentes inteligentes</li>
-        <li>Vercel AI SDK</li>
-    </ul>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+                AI Platforms
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="arquitectura.html">Arquitectura</a></li>
+                <li><a href="plataformas.html">Plataformas</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a href="ventajas.html">Ventajas y desafios</a></li>
+                <li><a href="tendencias.html">Tendencias</a></li>
+                <li><a href="guia.html">Guía</a></li>
+                <li><a href="bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h1>Sección 4. Herramientas para desarrollar aplicaciones con IA</h1>
+            
+            <article class="card">
+                <h2>LangChain</h2>
+                <p>Descripción y arquitectura: Es un framework multipropósito (disponible en Python y JavaScript/TypeScript) diseñado para orquestar y encadenar modelos de lenguaje (LLMs) con fuentes de datos externas, herramientas de cálculo y memoria conversacional.
+Componentes principales:
+
+Chains y LCEL (LangChain Expression Language): Permiten construir flujos de trabajo declarativos y modulares.
+
+Agents & Tools: Mecanismos donde el LLM decide dinámicamente qué herramientas ejecutar (búsqueda web, ejecución de código, llamadas a APIs).
+
+LangGraph: Extensión clave para la construcción de agentes cíclicos y de estado (stateful multi-agent systems), superando las limitaciones de los flujos estrictamente secuenciales.
+
+Casos de uso clave: Agentes autónomos multitarea, flujos de trabajo con múltiples herramientas y sistemas conversacionales avanzados.</p>
+            </article>
+
+            <article class="card">
+                <h2>LlamaIndex</h2>
+                <p>Descripción y arquitectura: Framework especializado en el manejo de datos para IA (data-first framework). Se enfoca en la ingesta, estructuración, indexación y recuperación eficiente de información heterogénea para arquitecturas RAG (Retrieval-Augmented Generation).
+
+Funcionalidades destacadas:
+
+Data Connectors (LlamaHub): Carga de datos desde PDFs, Notion, Slack, bases de datos SQL y NoSQL, APIs, etc.
+
+Data Indexing: Estructuración de datos no estructurados en índices de vectores, árboles, grafos o documentos relacionales.
+
+Query Engines & Routers: Algoritmos avanzados de recuperación semántica, reranking y síntesis de respuestas adaptadas al contexto.
+
+Casos de uso clave: Motores de búsqueda semántica corporativos, asistentes para análisis de documentos técnicos o financieros y bases de conocimiento internas.</p>
+            </article>
+
+            <article class="card">
+                <h2>Semantic Kernel</h2>
+                <p>Descripción y arquitectura: SDK open-source desarrollado por Microsoft que permite integrar fácilmente capacidades de IA en lenguajes de programación tradicionales como C# (.NET), Python y Java.
+
+Conceptos clave:
+
+Kernel: El núcleo que orquesta los servicios de IA, plugins y datos.
+
+Plugins (Native & Semantic Functions): Permiten encapsular tanto prompts en lenguaje natural como código nativo de la aplicación para que el modelo pueda ejecutarlos.
+
+Planner: Módulo que genera planes de ejecución dinámicos a partir del objetivo planteado por el usuario, seleccionando y ordenando los plugins necesarios.
+
+Memory & Connectors: Integración nativa con bases de datos vectoriales y servicios empresariales de Azure.
+
+Casos de uso clave: Modernización de aplicaciones empresariales existentes en el entorno Microsoft/Azure que requieren alto grado de tipado y rigor de ingeniería de software.</p>
+            </article>
+
+            <article class="card">
+                <h2>Ollama</h2>
+                <p>Descripción y runtime: Herramienta y entorno de ejecución local que simplifica la descarga, configuración, gestión y ejecución de modelos de lenguaje open-source (como Llama 3, Mistral, Gemma, Phi o DeepSeek) directamente en el hardware local.
+
+Características principales:
+
+Facilidad de despliegue: Gestión de modelos mediante comandos sencillos en la CLI (similar al flujo de Docker: ollama run llama3).
+
+Cuantización y optimización: Soporte para ejecuciones eficientes en GPU y CPU (a través de llama.cpp) reduciendo el uso de memoria RAM/VRAM.
+
+API compatible: Ofrece una API REST nativa que incluye compatibilidad con la especificación de OpenAI, lo que permite intercambiar proveedores en la nube por ejecuciones locales sin cambiar gran parte del código.
+
+Casos de uso clave: Prototipado offline, aplicaciones con altos requerimientos de privacidad y cumplimiento regulatorio, y reducción de costes operativos durante la etapa de desarrollo.</p>
+            </article>
+
+            <article class="card">
+                <h2>Docker para IA</h2>
+                <p>Descripción e infraestructura: Uso de la tecnología de contenedorización para empaquetar de forma homogénea modelos de IA, bases de datos vectoriales, agentes y controladores en entornos aislados y reproducibles.
+
+Aspectos técnicos esenciales:
+
+Aceleración por GPU: Integración con NVIDIA Container Toolkit (nvidia-docker) para permitir que los contenedores accedan a los recursos de la GPU física.
+
+Despliegue de bases de datos vectoriales: Orquestación rápida con Docker Compose para instancias locales de Chroma, Qdrant, Milvus, Weaviate o PGVector.
+
+Reproducibilidad: Eliminación de los problemas de compatibilidad entre dependencias de Python, versiones de CUDA y bibliotecas del sistema ("funciona en mi máquina").
+
+Casos de uso clave: Pipelines de CI/CD para modelos de IA, arquitecturas de microservicios e infraestructura de despliegue escalar en la nube (Kubernetes, AWS ECS, GCP Cloud Run).</p>
+            </article>
+
+            <article class="card">
+                <h2>Vercel AI SDK</h2>
+                <p>Descripción y ecosistema frontend: Biblioteca de código abierto diseñada para desarrolladores TypeScript/JavaScript (React, Next.js, Vue, Svelte, Node.js) que simplifica la conexión de interfaces de usuario web con modelos de lenguaje.
+
+Módulos principales:
+
+AI SDK Core: Interfaz unificada para llamar a múltiples proveedores de LLMs (OpenAI, Anthropic, Google Gemini, Groq, Ollama) usando una sintaxis estandarizada (generateText, streamText, generateObject).
+
+AI SDK UI: Hooks y utilidades orientadas al frontend (useChat, useCompletion) que gestionan automáticamente el streaming de respuestas, el estado de la conversación y la renderización en tiempo real.
+
+Generación de UI estructurada: Capacidad para que la IA responda no solo con texto, sino con componentes interactivos de la interfaz (React Server Components).
+
+Casos de uso clave: Desarrollo rápido de chat-apps, interfaces generativas en tiempo real y aplicaciones web full-stack potenciadas por IA.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
 </body>
-<script src="../js/script.js"></script>
 </html>
