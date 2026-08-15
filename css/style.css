@@ -1,17 +1,8 @@
-/* =========================
-   CONFIGURACIÓN GENERAL
-   ========================= */
-
 body {
     color: #333;
     background-color: #f9f9f9;
     margin: 0;
 }
-
-
-/* =========================
-   ENCABEZADO
-   ========================= */
 
 header {
     background-color: #0d47a1;
@@ -65,11 +56,6 @@ header {
     text-decoration: underline;
 }
 
-
-/* =========================
-   CONTENIDO PRINCIPAL
-   ========================= */
-
 main {
     background-color: white;
 
@@ -83,11 +69,6 @@ main {
 
     line-height: 1.7;
 }
-
-
-/* =========================
-   TÍTULOS
-   ========================= */
 
 h1,
 h2,
@@ -124,21 +105,11 @@ h4 {
     margin-top: 20px;
 }
 
-
-/* =========================
-   PÁRRAFOS
-   ========================= */
-
 p {
     margin-bottom: 15px;
 
     text-align: justify;
 }
-
-
-/* =========================
-   LISTAS
-   ========================= */
 
 ul {
     margin-bottom: 20px;
@@ -151,11 +122,6 @@ ol {
 li {
     margin-bottom: 10px;
 }
-
-
-/* =========================
-   TABLAS
-   ========================= */
 
 table {
     width: 100%;
@@ -187,11 +153,6 @@ td {
     padding: 12px;
 }
 
-
-/* =========================
-   ENLACES
-   ========================= */
-
 main a {
     color: #0d47a1;
 
@@ -201,11 +162,6 @@ main a {
 main a:hover {
     text-decoration: underline;
 }
-
-
-/* =========================
-   CÓDIGO
-   ========================= */
 
 code {
     background-color: #f2f2f2;
@@ -236,11 +192,6 @@ pre code {
 
     padding: 0;
 }
-
-
-/* =========================
-   RESPONSIVE
-   ========================= */
 
 @media (max-width: 900px) {
 
@@ -291,5 +242,4 @@ pre code {
     td {
         padding: 8px;
     }
-
 }
