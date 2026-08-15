@@ -1,40 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arquitectura</title>
-<link rel="stylesheet" href="../css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Arquitectura de una Plataforma de IA</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<header>
-    <nav class="navbar">
-        <a href="../index.html" class="logo">
-            AI Platforms
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="introduccion.html">Introducción</a></li>
-            <li><a href="arquitectura.html">Arquitectura</a></li>
-            <li><a href="plataformas.html">Plataformas</a></li>
-            <li><a href="herramientas.html">Herramientas</a></li>
-            <li><a href="aplicaciones.html">Aplicaciones</a></li>
-            <li><a href="ventajas.html">Ventajas y desafios</a></li>
-            <li><a href="tendencias.html">Tendencias</a></li>
-            <li><a href="guia.html">Guía</a></li>
-            <li><a href="bibliografia.html">Bibliografía</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
-    <ul>
-        <li>Modelos de lenguaje (LLM).</li>
-        <li>APIs de IA</li>
-        <li>Embeddings</li>
-        <li>Bases de datos vectoriales</li>
-        <li>RAG (Retrieval-Augmented Generation)</li>
-        <li>Agentes inteligentes</li>
-        <li>Flujo general de funcionamiento</li>
-    </ul>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+            AI Platforms
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="arquitectura.html">Arquitectura</a></li>
+                <li><a href="plataformas.html">Plataformas</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a href="ventajas.html">Ventajas y desafios</a></li>
+                <li><a href="tendencias.html">Tendencias</a></li>
+                <li><a href="guia.html">Guía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Arquitectura de una Plataforma de Inteligencia Artificial</h1>
+        <p>La arquitectura de una plataforma de Inteligencia Artificial (IA) moderna está compuesta por diversos componentes interconectados que interactúan de forma coordinada para recibir, procesar y contextualizar información, ejecutar acciones y generar respuestas precisas. A diferencia de una integración simple que solo conecta a un modelo de lenguaje, una plataforma completa integra interfaces de comunicación, bases de datos avanzadas, búsqueda semántica y capacidades de orquestación.</p>
+
+        <h1 id="componentes">Componentes Principales</h1>
+        <h3>Modelos de Lenguaje de Gran Escala (LLM)</h3>
+        <p>El LLM (Large Language Model) actúa como el motor de razonamiento y generación del sistema. Su función es interpretar instrucciones en lenguaje natural, estructurar información, resumir texto y redactar respuestas coherentes.</p>
+        <ul>
+            <li><strong>Funciones clave:</strong> Comprensión de intenciones, razonamiento lógico, transformación de texto, soporte para agentes y síntesis contextual.</li>
+            <li><strong>Consideraciones:</strong> Sus respuestas dependen fuertemente de la calidad del contexto entregado (prompting). Para evitar alucinaciones en entornos profesionales o técnicos, el LLM debe complementarse con fuentes de información externas validadas.</li>
+        </ul>
+
+        <h3>APIs de IA</h3>
+        <p>Una API (Application Programming Interface) es la interfaz de comunicación que permite a las aplicaciones web, móviles o empresariales consumir modelos y servicios de IA sin necesidad de gestionarlos localmente.</p>
+        <ul>
+            <li><strong>Elementos de integración:</strong> Endpoints, métodos de autenticación (API Keys/OAuth), parámetros de control (como temperatura o límite de tokens) y manejo de errores o límites de consumo.</li>
+        </ul>
+
+        <h3>Embeddings</h3>
+        <p>Los embeddings son representaciones vectoriales (numéricas) del lenguaje. Transforman frases o documentos completos en vectores de alta dimensión donde la distancia geométrica entre puntos refleja su similitud semántica.</p>
+        <ul>
+            <li><strong>Aplicación:</strong> Permite realizar búsquedas por significado en lugar de coincidencia exacta de palabras clave (por ejemplo, relacionar "mantenimiento vehicular" con "cómo cambiar el aceite").</li>
+        </ul>
+
+        <h3>Bases de Datos Vectoriales</h3>
+        <p>Sistemas de almacenamiento optimizados para indexar, consultar y recuperar vectores a gran escala utilizando algoritmos de búsqueda por vecinos más cercanos (p. ej., Cosine Similarity, HNSW).</p>
+        <ul>
+            <li><strong>Funcionalidad:</strong> Guardan los fragmentos de documentos (chunks) junto con sus embeddings y metadatos asociados (fechas, origen, autoría).</li>
+        </ul>
+
+        <h3>Agentes Inteligentes</h3>
+        <p>Componentes de software que utilizan al LLM como motor de decisión para planificar y ejecutar tareas de múltiples pasos de manera autónoma.</p>
+        <ul>
+            <li><strong>Capacidades:</strong> Un agente puede consultar APIs externas, ejecutar código, iterar sobre resultados y seleccionar herramientas según el objetivo fijado.</li>
+        </ul>
+
+        <h1 id="ciclo-datos">Profundización: Ciclo de Vida de los Datos en una Arquitectura RAG</h1>
+        <p>RAG (Retrieval-Augmented Generation) es el patrón arquitectónico que conecta al LLM con bases de conocimiento externas sin necesidad de reentrenar el modelo.</p>
+
+        <h4>Fase I: Ingestión e Indexación de Datos (Offline / Asíncrono)</h4>
+        <ol>
+            <li><strong>Extracción e Ingestión:</strong> Conexión con las fuentes originales (archivos PDF, bases de datos SQL, documentación web, repositorios).</li>
+            <li><strong>Fragmentación (Chunking):</strong> Los documentos masivos se dividen en bloques manejables (chunks) para adaptarse a la ventana de contexto del modelo. Se aplican estrategias de solapamiento (overlap) para no perder el contexto entre cortes.</li>
+            <li><strong>Vectorización (Embedding):</strong> Cada chunk pasa por un modelo de embeddings que lo convierte en un vector numérico.</li>
+            <li><strong>Almacenamiento e Indexación:</strong> Los vectores se guardan en la base de datos vectorial con sus metadatos correspondientes.</li>
+        </ol>
+
+        <h4>Fase II: Recuperación y Generación (Online / En tiempo real)</h4>
+        <ol>
+            <li><strong>Vectorización de la Consulta:</strong> Cuando el usuario plantea una pregunta, esta se convierte a un vector en tiempo real usando el mismo modelo de embeddings.</li>
+            <li><strong>Recuperación (Retrieval):</strong> La base de datos vectorial compara el vector de la consulta con los vectores almacenados y extrae los chunks más relevantes semánticamente.</li>
+            <li><strong>Aumentación del Prompt (Augmentation):</strong> El sistema construye una instrucción (prompt) enriquecida que combina la pregunta original del usuario con la información recuperada de la base de datos.</li>
+            <li><strong>Generación (Generation):</strong> El LLM procesa la pregunta junto al contexto verificado y genera una respuesta fundamentada.</li>
+        </ol>
+
+        <h1 id="comparativa">Comparativa Técnica: Embeddings Estáticos vs. Dinámicos</h1>
+        <p>Para comprender cómo los sistemas interpretan la información, es fundamental diferenciar la evolución de las representaciones vectoriales:</p>
+
+        <table>
+            <tr>
+                <th>Característica</th>
+                <th>Embeddings Estáticos</th>
+                <th>Embeddings Dinámicos (Contextuales)</th>
+            </tr>
+            <tr>
+                <td>Tecnologías Típicas</td>
+                <td>Word2Vec, GloVe, FastText</td>
+                <td>BERT, Ada (OpenAI), Gecko (Google), Cohere Embed</td>
+            </tr>
+            <tr>
+                <td>Representación</td>
+                <td>Asignan un único vector fijo a cada palabra, independientemente de su contexto.</td>
+                <td>Generan vectores variables e interconectados según el contexto de la oración completa.</td>
+            </tr>
+            <tr>
+                <td>Manejo de Polisemia</td>
+                <td>Deficiente. La palabra "banco" tiene la misma coordenada matemática si se habla de una entidad financiera o de un asiento.</td>
+                <td>Excelente. Representa "banco" de forma completamente distinta según el sentido semántico de la frase.</td>
+            </tr>
+            <tr>
+                <td>Nivel de Procesamiento</td>
+                <td>Basado en tablas de búsqueda directa o redes neuronales superficiales.</td>
+                <td>Basado en arquitecturas profundas tipo Transformer con mecanismos de atención (Self-Attention).</td>
+            </tr>
+            <tr>
+                <td>Costo y Latencia</td>
+                <td>Extremadamente bajo. Carga rápida y mínimo uso de memoria.</td>
+                <td>Mayor costo computacional y latencia en tiempo de inferencia.</td>
+            </tr>
+            <tr>
+                <td>Uso en Plataformas de IA</td>
+                <td>Clasificación simple o búsquedas léxicas livianas.</td>
+                <td>Fundamentales para RAG, búsqueda semántica avanzada y bases vectoriales modernas.</td>
+            </tr>
+            </table>
+
+        <h1 id="flujo">Flujo General de Funcionamiento de la Plataforma</h1>
+        <p>Un flujo integral en una arquitectura modular opera de la siguiente manera:</p>
+        <ol>
+            <li><strong>Entrada:</strong> El usuario envía la solicitud desde la interfaz gráfica web o móvil.</li>
+            <li><strong>Recepción y Autenticación:</strong> La API de backend valida la sesión y enruta la solicitud.</li>
+            <li><strong>Capa de Orquestación / Agente:</strong> Un agente analiza si la consulta se puede responder directamente o requiere datos externos o herramientas.</li>
+            <li><strong>Búsqueda RAG:</strong> Si se requiere información del dominio, la consulta se vectoriza, se busca en la base de datos vectorial y se recupera el contexto relevante.</li>
+            <li><strong>Ejecución de Herramientas:</strong> Si el agente identifica una acción específica (ej. consultar el estado de un pedido vía API REST), ejecuta la función y obtiene el resultado.</li>
+            <li><strong>Inferencia en el LLM:</strong> El modelo de lenguaje recibe las instrucciones del sistema, el contexto de la base vectorial y la salida de las herramientas.</li>
+            <li><strong>Respuesta al Usuario:</strong> La aplicación valida y formatea el resultado final para presentarlo en la interfaz web.</li>
+        </ol>
+
+        <section id="bibliografia" class="seccion">
+            <h1>Bibliografía</h1>
+            <ul>
+                <li>
+                    Google Cloud. (2026).
+                    <em>Generative AI on Vertex AI: RAG</em>.
+                    <br>
+                    <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/"
+                    target="_blank">
+                        https://docs.cloud.google.com/vertex-ai/generative-ai/docs/
+                    </a>
+                </li>
+                <li>
+                    Microsoft Learn. (2026).
+                    <em>Develop a RAG solution on Azure: Generate embeddings phase</em>.
+                    <br>
+                    <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-generate-embeddings"
+                    target="_blank">
+                        https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-generate-embeddings
+                    </a>
+                </li>
+                <li>    
+                    Microsoft Learn. (2026).
+                    <em>Develop an agentic RAG solution</em>.
+                    Azure Architecture Center.
+                    <br>
+                        <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-agentic"
+                        target="_blank">
+                            https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-agentic
+                        </a>
+                    </li>
+                <li>    
+                    OpenAI. (2026).
+                    <em>Developer quickstart</em>.
+                    OpenAI API Documentation.
+                    <br>
+                        <a href="https://platform.openai.com/docs/quickstart/make-your-first-api-request"
+                        target="_blank">
+                            https://platform.openai.com/docs/quickstart/make-your-first-api-request
+                    </a>
+                </li>
+                <li>
+                    OpenAI. (2026).
+                    <em>Vector store files</em>.
+                    OpenAI API Reference.
+                    <br>
+                        <a href="https://platform.openai.com/docs/api-reference/vector-stores-files"
+                        target="_blank">
+                            https://platform.openai.com/docs/api-reference/vector-stores-files
+                        </a>
+                </li>
+            </ul>
+        </section>
+</main>
 </body>
-<script src="../js/script.js"></script>
 </html>
