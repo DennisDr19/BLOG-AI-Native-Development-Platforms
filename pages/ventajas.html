@@ -6,1635 +6,1271 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Análisis de las ventajas y desafíos de las plataformas de desarrollo nativas de inteligencia artificial: productividad, automatización, escalabilidad, costos, seguridad, sesgos, alucinaciones y guardrails.">
+          content="Ventajas y desafíos de las plataformas AI-Native: productividad, automatización, escalabilidad, costos, privacidad, seguridad, sesgos, alucinaciones, guardrails y dependencia del proveedor.">
 
     <title>Ventajas y desafíos - AI Platforms</title>
 
-    <!-- Se conserva el CSS general utilizado por todo el proyecto -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <!-- =========================================================
-         MENÚ PRINCIPAL
-         Conserva la misma estructura de las demás páginas
-    ========================================================== -->
+<header>
+    <nav class="navbar">
 
-    <header>
-        <nav class="navbar">
+        <a href="../index.html" class="logo">
+            AI Platforms
+        </a>
 
-            <a href="../index.html" class="logo">
-                AI Platforms
-            </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="arquitectura.html">Arquitectura</a></li>
+            <li><a href="plataformas.html">Plataformas</a></li>
+            <li><a href="herramientas.html">Herramientas</a></li>
+            <li><a href="aplicaciones.html">Aplicaciones</a></li>
+            <li><a href="ventajas.html">Ventajas y desafíos</a></li>
+            <li><a href="tendencias.html">Tendencias</a></li>
+            <li><a href="guia.html">Guía</a></li>
+        </ul>
 
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="introduccion.html">Introducción</a></li>
-                <li><a href="arquitectura.html">Arquitectura</a></li>
-                <li><a href="plataformas.html">Plataformas</a></li>
-                <li><a href="herramientas.html">Herramientas</a></li>
-                <li><a href="aplicaciones.html">Aplicaciones</a></li>
-                <li><a href="ventajas.html">Ventajas y desafíos</a></li>
-                <li><a href="tendencias.html">Tendencias</a></li>
-                <li><a href="guia.html">Guía</a></li>
-            </ul>
+    </nav>
+</header>
 
-        </nav>
-    </header>
 
+<main class="contenido">
 
     <!-- =========================================================
-         CONTENIDO PRINCIPAL
+         SECCIÓN 6
     ========================================================== -->
 
-    <main class="contenido">
+    <section id="ventajas-desafios" class="seccion">
 
-        <!-- =====================================================
-             SECCIÓN 6 - INTRODUCCIÓN
-        ====================================================== -->
+        <h1>Sección 6. Ventajas y desafíos</h1>
 
-        <section id="ventajas-desafios" class="seccion">
-
-            <h1>Sección 6. Ventajas y desafíos</h1>
-
-            <div class="introduccion">
-
-                <h2>La IA puede aportar mucho, pero también exige control</h2>
-
-                <p>
-                    Las plataformas de desarrollo nativas de inteligencia artificial
-                    están cambiando la manera en que se construye software. Hoy un
-                    desarrollador puede utilizar modelos generativos para crear una
-                    primera versión de código, documentar funciones, generar pruebas,
-                    analizar información, automatizar procesos o incorporar asistentes
-                    inteligentes sin tener que entrenar un modelo desde cero.
-                </p>
-
-                <p>
-                    Sin embargo, adoptar inteligencia artificial no significa que un
-                    proyecto sea automáticamente más rápido, económico o seguro. Cuando
-                    una aplicación pasa de una demostración a un entorno de producción,
-                    aparecen preguntas mucho más importantes: ¿cuánto cuesta atender
-                    miles de solicitudes?, ¿qué ocurre con los datos que se envían al
-                    modelo?, ¿cómo se evita que una respuesta falsa llegue al usuario?,
-                    ¿qué sucede si el sistema ejecuta una acción incorrecta?, ¿cómo se
-                    reduce la dependencia de un único proveedor?
-                </p>
-
-                <p>
-                    Por esta razón, las ventajas y los desafíos deben analizarse de
-                    manera conjunta. La productividad, la automatización, la
-                    escalabilidad y la facilidad de integración representan
-                    oportunidades importantes, pero solo generan valor cuando se
-                    acompañan de controles sobre costos, privacidad, seguridad,
-                    sesgos, alucinaciones y dependencia tecnológica.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             VENTAJAS
-        ====================================================== -->
-
-        <section id="ventajas" class="seccion">
-
-            <h1>Ventajas</h1>
-
-
-            <!-- =================================================
-                 1. PRODUCTIVIDAD
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>1. Mayor productividad</h2>
-
-                <p>
-                    Una de las razones por las que las plataformas AI-Native han
-                    ganado tanta atención es su capacidad para apoyar tareas que
-                    normalmente consumen una cantidad considerable de tiempo.
-                    Durante el desarrollo de software, un asistente de IA puede
-                    proponer estructuras de código, explicar funciones existentes,
-                    generar casos de prueba, redactar documentación técnica,
-                    transformar datos o ayudar a localizar posibles errores.
-                </p>
-
-                <p>
-                    El beneficio no consiste solamente en escribir código más rápido.
-                    Cuando estas herramientas se utilizan correctamente, pueden
-                    permitir que el equipo dedique una mayor parte de su tiempo a
-                    tareas que requieren análisis humano, como comprender el problema,
-                    revisar decisiones de arquitectura, validar requisitos,
-                    identificar riesgos y evaluar la calidad de una solución.
-                </p>
-
-                <h3>¿Qué muestran los estudios?</h3>
-
-                <p>
-                    Un trabajo ampliamente citado es el de Peng, Kalliamvakou,
-                    Cihon y Demirer (2023). Los investigadores realizaron un
-                    experimento controlado en el que los participantes debían crear
-                    un servidor HTTP utilizando JavaScript. El grupo que contó con
-                    GitHub Copilot completó la tarea aproximadamente un
-                    <strong>55,8 % más rápido</strong> que el grupo que trabajó sin
-                    esta herramienta.
-                </p>
-
-                <p>
-                    Este resultado es relevante porque demuestra que la IA puede
-                    reducir considerablemente el tiempo empleado en determinadas
-                    tareas de programación. Sin embargo, sería incorrecto concluir
-                    que cualquier desarrollador obtiene automáticamente una mejora
-                    del 55,8 % al utilizar inteligencia artificial.
-                </p>
-
-                <p>
-                    La evidencia posterior muestra precisamente que el contexto
-                    importa. Paradis et al. (2024), en un ensayo realizado en un
-                    entorno empresarial, encontraron una reducción estimada cercana
-                    al <strong>21 % en el tiempo de desarrollo</strong>.
-                </p>
-
-                <p>
-                    Por otro lado, Becker, Rush, Barnes y Rein (2025) estudiaron
-                    desarrolladores experimentados trabajando sobre repositorios
-                    maduros que conocían previamente. En ese contexto, el uso de
-                    herramientas de IA produjo aproximadamente un
-                    <strong>19 % más de tiempo para completar las tareas</strong>.
-                </p>
-
-                <h3>¿Por qué los resultados pueden ser diferentes?</h3>
-
-                <p>
-                    Una tarea nueva, pequeña y claramente definida puede ser un
-                    escenario ideal para un asistente de código. En cambio, cuando
-                    se trabaja con una aplicación grande que tiene años de evolución,
-                    reglas de negocio, dependencias internas y convenciones propias,
-                    el desarrollador necesita revisar cuidadosamente cada propuesta
-                    de la IA.
-                </p>
-
-                <p>
-                    En estos casos, aceptar una sugerencia incorrecta puede generar
-                    más trabajo posteriormente. Por ello, una medición seria de
-                    productividad no debería basarse únicamente en la cantidad de
-                    líneas de código generadas.
-                </p>
-
-                <h3>Indicadores más útiles para medir productividad</h3>
-
-                <ul>
-                    <li>Tiempo necesario para completar una tarea.</li>
-                    <li>Número de errores detectados después de la implementación.</li>
-                    <li>Cantidad de retrabajo necesario.</li>
-                    <li>Cobertura y calidad de las pruebas.</li>
-                    <li>Mantenibilidad del código generado.</li>
-                    <li>Tiempo invertido en revisar las respuestas de la IA.</li>
-                    <li>Calidad final del producto entregado.</li>
-                </ul>
-
-                <p>
-                    En consecuencia, la IA puede aumentar significativamente la
-                    productividad, pero su impacto depende del tipo de tarea, la
-                    experiencia del profesional, el contexto disponible y el nivel
-                    de calidad exigido.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 2. AUTOMATIZACIÓN
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>2. Automatización</h2>
-
-                <p>
-                    Otra ventaja importante de las plataformas AI-Native es que
-                    permiten automatizar procesos que anteriormente dependían de
-                    intervención humana constante.
-                </p>
-
-                <p>
-                    Una diferencia importante respecto de muchas automatizaciones
-                    tradicionales es que los modelos actuales pueden trabajar con
-                    lenguaje natural y con información que no siempre se encuentra
-                    perfectamente estructurada.
-                </p>
-
-                <p>
-                    Esto permite utilizarlos como parte de procesos donde existen
-                    documentos, correos electrónicos, conversaciones, formularios,
-                    informes y diferentes fuentes de información.
-                </p>
-
-                <h3>Ejemplos de automatización</h3>
-
-                <ul>
-                    <li>
-                        Clasificación automática de documentos y solicitudes.
-                    </li>
-
-                    <li>
-                        Extracción de información relevante desde textos extensos.
-                    </li>
-
-                    <li>
-                        Elaboración automática de resúmenes.
-                    </li>
-
-                    <li>
-                        Preparación de borradores de informes.
-                    </li>
-
-                    <li>
-                        Generación inicial de respuestas para asistentes virtuales.
-                    </li>
-
-                    <li>
-                        Traducción y transformación de contenidos.
-                    </li>
-
-                    <li>
-                        Organización y categorización de información.
-                    </li>
-
-                    <li>
-                        Generación inicial de casos de prueba para software.
-                    </li>
-
-                    <li>
-                        Apoyo en procesos de documentación técnica.
-                    </li>
-                </ul>
-
-                <p>
-                    Esto puede permitir que una organización procese mayores
-                    cantidades de información sin aumentar en la misma proporción
-                    el trabajo manual requerido.
-                </p>
-
-                <h3>La importancia del Human-in-the-Loop</h3>
-
-                <p>
-                    Automatizar no debería significar eliminar completamente a la
-                    persona del proceso. Existen escenarios en los que una decisión
-                    incorrecta puede tener consecuencias importantes.
-                </p>
-
-                <p>
-                    En áreas como salud, educación, finanzas, contratación,
-                    seguridad o procesos administrativos sensibles, resulta
-                    recomendable aplicar un enfoque
-                    <strong>Human-in-the-Loop (HITL)</strong>.
-                </p>
-
-                <p>
-                    Bajo este enfoque, la inteligencia artificial realiza el trabajo
-                    inicial, analiza información o propone una decisión, pero una
-                    persona conserva la capacidad de validar o rechazar el resultado
-                    antes de ejecutar una acción crítica.
-                </p>
-
-                <p>
-                    Por lo tanto, una automatización responsable no es
-                    necesariamente aquella que elimina todas las intervenciones
-                    humanas. Es aquella que automatiza lo repetitivo y conserva el
-                    juicio humano donde realmente es necesario.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 3. ESCALABILIDAD
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>3. Escalabilidad</h2>
-
-                <p>
-                    Las plataformas nativas de IA permiten que una aplicación
-                    comience como un prototipo pequeño y posteriormente pueda
-                    atender un volumen considerablemente mayor de usuarios.
-                </p>
-
-                <p>
-                    Por ejemplo, un asistente interno podría comenzar atendiendo a
-                    diez personas durante una prueba piloto. Si demuestra su utilidad,
-                    posteriormente puede convertirse en un servicio utilizado por
-                    cientos o miles de usuarios.
-                </p>
-
-                <p>
-                    La infraestructura en la nube facilita este proceso porque los
-                    recursos pueden ajustarse de acuerdo con la demanda, evitando que
-                    una organización tenga que adquirir desde el primer día toda la
-                    infraestructura necesaria para su máximo nivel de utilización.
-                </p>
-
-                <h3>Escalabilidad técnica</h3>
-
-                <p>
-                    La escalabilidad técnica se refiere a la capacidad del sistema
-                    para mantener un funcionamiento adecuado cuando aumenta el número
-                    de usuarios o peticiones.
-                </p>
-
-                <p>
-                    Para lograrlo deben considerarse aspectos como concurrencia,
-                    tiempos de respuesta, límites de las APIs, disponibilidad,
-                    almacenamiento, procesamiento de datos y capacidad de los
-                    servicios utilizados.
-                </p>
-
-                <h3>Escalabilidad económica</h3>
-
-                <p>
-                    Existe además una segunda dimensión que en algunas ocasiones se
-                    ignora: la <strong>escalabilidad económica</strong>.
-                </p>
-
-                <p>
-                    Un sistema puede ser técnicamente capaz de atender un millón de
-                    solicitudes, pero eso no significa que resulte económicamente
-                    sostenible hacerlo.
-                </p>
-
-                <p>
-                    Samsi et al. (2023) muestran que la inferencia de grandes modelos
-                    de lenguaje implica costos computacionales y energéticos que
-                    dependen, entre otros factores, del tamaño del modelo, del
-                    hardware utilizado y de las características del procesamiento.
-                </p>
-
-                <p>
-                    Por ello, una arquitectura escalable debe contemplar desde el
-                    principio tanto la capacidad técnica como el consumo de recursos.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 4. INTEGRACIÓN
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>4. Integración sencilla</h2>
-
-                <p>
-                    Hace algunos años, incorporar capacidades avanzadas de
-                    inteligencia artificial podía requerir grandes conjuntos de
-                    datos, hardware especializado y equipos completos dedicados al
-                    entrenamiento de modelos.
-                </p>
-
-                <p>
-                    Actualmente, muchos desarrolladores pueden acceder a modelos
-                    preentrenados mediante <strong>APIs y SDK</strong>. Esto
-                    facilita incorporar funcionalidades como generación de texto,
-                    análisis de documentos, visión artificial, asistentes
-                    conversacionales o clasificación de información dentro de
-                    aplicaciones tradicionales.
-                </p>
-
-                <p>
-                    Esta facilidad disminuye la barrera de entrada y permite crear
-                    prototipos rápidamente utilizando herramientas y lenguajes
-                    conocidos.
-                </p>
-
-                <h3>Integrar rápidamente no significa estar listo para producción</h3>
-
-                <p>
-                    Lograr que una llamada a una API genere una respuesta es
-                    relativamente sencillo. El verdadero desafío aparece cuando el
-                    sistema debe operar de manera estable durante meses o años.
-                </p>
-
-                <p>
-                    Una solución de producción necesita mecanismos adicionales para:
-                </p>
-
-                <ul>
-                    <li>Manejo de errores.</li>
-                    <li>Autenticación y autorización.</li>
-                    <li>Control de acceso.</li>
-                    <li>Monitoreo.</li>
-                    <li>Trazabilidad.</li>
-                    <li>Auditoría.</li>
-                    <li>Control de costos.</li>
-                    <li>Protección de datos.</li>
-                    <li>Recuperación ante fallos.</li>
-                </ul>
-
-                <p>
-                    También es conveniente separar la lógica principal de la
-                    aplicación de las tecnologías específicas de un proveedor.
-                    Esto facilita cambiar de modelo o plataforma posteriormente sin
-                    reconstruir todo el sistema.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <!-- =====================================================
-             DESAFÍOS
-        ====================================================== -->
-
-        <section id="desafios" class="seccion">
-
-            <h1>Desafíos</h1>
-
-
-            <!-- =================================================
-                 1. COSTOS
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>1. Costos y gestión de tokens</h2>
-
-                <p>
-                    Uno de los errores más comunes al experimentar con inteligencia
-                    artificial consiste en evaluar solamente el costo inicial de una
-                    prueba de concepto.
-                </p>
-
-                <p>
-                    Durante las primeras pruebas el consumo puede ser muy pequeño,
-                    pero cuando una aplicación comienza a ser utilizada de manera
-                    permanente por cientos o miles de usuarios, los costos pueden
-                    crecer rápidamente.
-                </p>
-
-                <h3>¿De dónde provienen los costos?</h3>
-
-                <p>
-                    En muchos servicios de modelos de lenguaje, una parte del costo
-                    está directamente relacionada con la cantidad de
-                    <strong>tokens de entrada y salida</strong>.
-                </p>
-
-                <p>
-                    Una conversación extensa, un documento innecesariamente grande o
-                    una respuesta demasiado larga incrementan la cantidad de
-                    información que el modelo debe procesar.
-                </p>
-
-                <p>
-                    Sin embargo, el modelo no representa el único costo de una
-                    solución AI-Native.
-                </p>
-
-                <ul>
-                    <li>Tokens de entrada.</li>
-                    <li>Tokens de salida.</li>
-                    <li>Generación de embeddings.</li>
-                    <li>Almacenamiento de documentos.</li>
-                    <li>Bases de datos vectoriales.</li>
-                    <li>Procesamiento previo de información.</li>
-                    <li>Transferencia de datos.</li>
-                    <li>Monitoreo y observabilidad.</li>
-                    <li>Evaluaciones automáticas.</li>
-                    <li>Guardrails.</li>
-                    <li>Infraestructura adicional.</li>
-                    <li>Personal encargado de operar y mantener la solución.</li>
-                </ul>
-
-                <h3>No medir únicamente el costo por llamada</h3>
-
-                <p>
-                    El costo por solicitud puede ser un indicador engañoso. Un modelo
-                    barato que genere respuestas deficientes podría requerir más
-                    llamadas, más correcciones y mayor intervención humana.
-                </p>
-
-                <p>
-                    Por esta razón, una métrica más útil puede ser el
-                    <strong>costo por tarea correctamente resuelta</strong>.
-                </p>
-
-                <h3>Buenas prácticas para controlar costos</h3>
-
-                <ul>
-                    <li>
-                        Registrar el número de tokens consumidos por cada proceso.
-                    </li>
-
-                    <li>
-                        Definir presupuestos máximos y alertas.
-                    </li>
-
-                    <li>
-                        Limitar la longitud de las respuestas.
-                    </li>
-
-                    <li>
-                        Evitar enviar historiales completos cuando no sean necesarios.
-                    </li>
-
-                    <li>
-                        Implementar mecanismos de caché para resultados repetidos
-                        cuando el caso de uso lo permita.
-                    </li>
-
-                    <li>
-                        Utilizar modelos pequeños para tareas simples.
-                    </li>
-
-                    <li>
-                        Reservar modelos de mayor capacidad para problemas que
-                        realmente lo requieran.
-                    </li>
-
-                    <li>
-                        Recuperar solamente los fragmentos relevantes de un documento
-                        en lugar de enviar archivos completos.
-                    </li>
-
-                    <li>
-                        Monitorear conjuntamente calidad, latencia y costo.
-                    </li>
-                </ul>
-
-                <p>
-                    En producción, utilizar siempre el modelo más grande no es
-                    necesariamente la mejor decisión. Una arquitectura eficiente
-                    utiliza el nivel de capacidad necesario para cada tarea y evita
-                    consumir recursos que no aportan una mejora real al resultado.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 2. PRIVACIDAD
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>2. Privacidad</h2>
-
-                <p>
-                    Cuando una aplicación utiliza servicios externos de inteligencia
-                    artificial, parte de la información puede ser enviada fuera de
-                    la infraestructura de la organización.
-                </p>
-
-                <p>
-                    Esto resulta especialmente sensible cuando se trabaja con datos
-                    personales, información financiera, historias clínicas,
-                    documentos institucionales, código fuente privado, contratos o
-                    información confidencial.
-                </p>
-
-                <p>
-                    Yao et al. (2024), en su revisión sobre seguridad y privacidad de
-                    grandes modelos de lenguaje, describen diferentes riesgos
-                    relacionados con la exposición de datos, ataques contra modelos
-                    y tratamiento de información sensible.
-                </p>
-
-                <p>
-                    Además, Carlini et al. (2021) demostraron experimentalmente que
-                    determinados modelos de lenguaje pueden memorizar y posteriormente
-                    revelar fragmentos presentes en sus datos de entrenamiento.
-                </p>
-
-                <h3>Medidas para reducir riesgos de privacidad</h3>
-
-                <ul>
-                    <li>
-                        Aplicar minimización de datos: enviar únicamente la
-                        información necesaria.
-                    </li>
-
-                    <li>
-                        Anonimizar o seudonimizar información cuando sea posible.
-                    </li>
-
-                    <li>
-                        Utilizar cifrado durante la transmisión y almacenamiento.
-                    </li>
-
-                    <li>
-                        Establecer controles de acceso.
-                    </li>
-
-                    <li>
-                        Definir políticas claras de retención.
-                    </li>
-
-                    <li>
-                        Conocer dónde son procesados los datos.
-                    </li>
-
-                    <li>
-                        Revisar las políticas y condiciones del proveedor.
-                    </li>
-
-                    <li>
-                        Evaluar modelos privados o locales cuando la sensibilidad
-                        de la información lo justifique.
-                    </li>
-                </ul>
-
-                <p>
-                    Por lo tanto, la privacidad debe considerarse desde la etapa de
-                    diseño y no únicamente después de que la aplicación ha sido
-                    desplegada.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 3. SEGURIDAD
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>3. Seguridad</h2>
-
-                <p>
-                    Las aplicaciones basadas en grandes modelos de lenguaje
-                    introducen vectores de ataque que no aparecen de la misma forma
-                    en el software tradicional.
-                </p>
-
-                <p>
-                    Uno de los ejemplos más conocidos es el
-                    <strong>Prompt Injection</strong>. En este tipo de ataque, una
-                    persona introduce contenido especialmente diseñado para intentar
-                    modificar las instrucciones originales del sistema.
-                </p>
-
-                <p>
-                    Liu et al. (2023) muestran que las aplicaciones integradas con
-                    modelos de lenguaje pueden ser manipuladas mediante instrucciones
-                    maliciosas, especialmente cuando combinan información del usuario
-                    con instrucciones internas del sistema.
-                </p>
-
-                <h3>El riesgo aumenta cuando la IA puede actuar</h3>
-
-                <p>
-                    Un chatbot que solamente genera texto puede producir una
-                    respuesta incorrecta. Pero un agente conectado con herramientas
-                    externas puede tener capacidad para enviar correos, consultar
-                    bases de datos, modificar archivos o ejecutar otras operaciones.
-                </p>
-
-                <p>
-                    En estos escenarios, una manipulación puede dejar de ser
-                    solamente un problema de contenido y convertirse en una acción
-                    real dentro de la infraestructura.
-                </p>
-
-                <h3>Principio de mínimo privilegio</h3>
-
-                <p>
-                    El modelo debería tener acceso exclusivamente a las funciones y
-                    datos necesarios para realizar su trabajo.
-                </p>
-
-                <p>
-                    La decisión de la IA de ejecutar una acción
-                    <strong>no debe equivaler automáticamente a una autorización</strong>.
-                    La autenticación y autorización deben ser realizadas mediante
-                    controles independientes del modelo.
-                </p>
-
-                <h3>Controles recomendados</h3>
-
-                <ul>
-                    <li>Aplicar mínimo privilegio.</li>
-                    <li>Limitar las herramientas disponibles.</li>
-                    <li>Validar parámetros antes de ejecutar acciones.</li>
-                    <li>Separar generación de texto y autorización.</li>
-                    <li>Registrar operaciones importantes.</li>
-                    <li>Mantener trazabilidad.</li>
-                    <li>
-                        Solicitar confirmación humana para acciones de alto impacto.
-                    </li>
-                    <li>
-                        Probar periódicamente ataques de Prompt Injection.
-                    </li>
-                </ul>
-
-                <p>
-                    El perfil de riesgos de IA generativa del NIST (Autio et al.,
-                    2024) también plantea la necesidad de gestionar los riesgos de
-                    estos sistemas durante todo su ciclo de vida y no únicamente
-                    durante la etapa de desarrollo.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 4. SESGOS
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>4. Sesgos</h2>
-
-                <p>
-                    Los modelos de inteligencia artificial aprenden patrones a
-                    partir de grandes conjuntos de información. Cuando esos datos
-                    contienen desigualdades, estereotipos o representaciones
-                    incompletas de determinadas poblaciones, el comportamiento del
-                    modelo también puede reflejarlos.
-                </p>
-
-                <p>
-                    Gallegos et al. (2024) explican que los grandes modelos de
-                    lenguaje pueden presentar distintos tipos de sesgos y que la
-                    evaluación de equidad no puede reducirse a una única prueba.
-                </p>
-
-                <p>
-                    Este problema adquiere especial importancia cuando la
-                    inteligencia artificial participa en procesos relacionados con:
-                </p>
-
-                <ul>
-                    <li>Selección de personal.</li>
-                    <li>Evaluaciones académicas.</li>
-                    <li>Asignación de beneficios.</li>
-                    <li>Servicios financieros.</li>
-                    <li>Atención de ciudadanos.</li>
-                    <li>Procesos de clasificación de personas.</li>
-                </ul>
-
-                <h3>¿Cómo reducir el riesgo?</h3>
-
-                <ul>
-                    <li>
-                        Construir conjuntos de prueba diversos.
-                    </li>
-
-                    <li>
-                        Comparar resultados entre diferentes grupos de usuarios.
-                    </li>
-
-                    <li>
-                        Identificar sistemáticamente patrones de error.
-                    </li>
-
-                    <li>
-                        Mantener revisión humana cuando las decisiones puedan
-                        afectar derechos o beneficios.
-                    </li>
-
-                    <li>
-                        Repetir las evaluaciones cada vez que cambie el modelo,
-                        el prompt o los datos utilizados.
-                    </li>
-                </ul>
-
-                <p>
-                    La ausencia de un problema durante una prueba inicial no
-                    garantiza que el sistema permanezca libre de sesgos durante toda
-                    su operación.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 5. ALUCINACIONES
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>5. Alucinaciones</h2>
-
-                <p>
-                    Uno de los desafíos más importantes de los modelos generativos
-                    es que pueden producir información incorrecta utilizando un
-                    lenguaje completamente convincente.
-                </p>
-
-                <p>
-                    Este fenómeno suele denominarse
-                    <strong>alucinación</strong>.
-                </p>
-
-                <p>
-                    Un modelo puede inventar una referencia bibliográfica, mencionar
-                    una norma que no existe, atribuir una afirmación a una fuente que
-                    nunca la realizó o generar un fragmento de código aparentemente
-                    correcto pero técnicamente defectuoso.
-                </p>
-
-                <p>
-                    Huang et al. (2025) presentan una revisión amplia del fenómeno y
-                    sus diferentes categorías. Rawte, Sheth y Das (2023) también
-                    estudian los principales tipos de alucinación y estrategias
-                    utilizadas para detectarlas y reducirlas.
-                </p>
-
-                <h3>RAG ayuda, pero no garantiza una respuesta correcta</h3>
-
-                <p>
-                    Una estrategia utilizada para mejorar la fundamentación de las
-                    respuestas consiste en recuperar información desde fuentes
-                    externas antes de generar el resultado.
-                </p>
-
-                <p>
-                    Este enfoque se conoce como
-                    <strong>Retrieval-Augmented Generation (RAG)</strong>.
-                    Lewis et al. (2020) mostraron cómo un modelo generativo puede
-                    combinar su conocimiento paramétrico con información recuperada
-                    desde una fuente externa.
-                </p>
-
-                <p>
-                    Dentro de esta sección, RAG resulta relevante como mecanismo de
-                    apoyo para reducir respuestas basadas únicamente en la memoria
-                    interna del modelo.
-                </p>
-
-                <p>
-                    Sin embargo, es importante no presentar RAG como una solución
-                    absoluta. Si el sistema recupera información incorrecta, poco
-                    relevante o incompleta, el modelo todavía puede producir una
-                    respuesta equivocada.
-                </p>
-
-
-                <!-- =============================================
-                     GUARDRAILS
-                ============================================== -->
-
-                <h2>Guardrails: barreras para controlar el comportamiento de la IA</h2>
-
-                <p>
-                    Una de las mejoras más importantes al llevar una aplicación de
-                    inteligencia artificial a producción consiste en implementar
-                    <strong>Guardrails</strong>.
-                </p>
-
-                <p>
-                    Los Guardrails son controles colocados alrededor del modelo para
-                    supervisar lo que recibe, las acciones que puede ejecutar y el
-                    contenido que finalmente llega al usuario.
-                </p>
-
-                <p>
-                    No deben entenderse como una única herramienta. En una
-                    arquitectura real suelen existir varias capas de protección.
-                </p>
-
-
-                <h3>1. Validación de entrada</h3>
-
-                <p>
-                    Antes de enviar una solicitud al modelo, la aplicación puede
-                    verificar si contiene datos sensibles, instrucciones prohibidas,
-                    contenido fuera del alcance o patrones relacionados con intentos
-                    de manipulación.
-                </p>
-
-
-                <h3>2. Grounding con fuentes confiables</h3>
-
-                <p>
-                    Cuando una respuesta debe basarse en documentos específicos,
-                    resulta conveniente proporcionar al modelo información
-                    verificable.
-                </p>
-
-                <p>
-                    La aplicación puede recuperar fragmentos de manuales,
-                    procedimientos, bases de conocimiento o documentos autorizados
-                    y utilizarlos como contexto.
-                </p>
-
-
-                <h3>3. Validación de salida</h3>
-
-                <p>
-                    La respuesta generada tampoco debería entregarse siempre de forma
-                    automática. Puede verificarse antes de mostrarla al usuario.
-                </p>
-
-                <p>Entre los controles posibles se encuentran:</p>
-
-                <ul>
-                    <li>Validación de formato.</li>
-                    <li>Detección de información sensible.</li>
-                    <li>Comprobación de campos obligatorios.</li>
-                    <li>Validación de referencias.</li>
-                    <li>Comparación con las fuentes recuperadas.</li>
-                    <li>Detección de contenido no autorizado.</li>
-                </ul>
-
-
-                <h3>4. Capacidad de abstención</h3>
-
-                <p>
-                    Un sistema responsable debe tener la posibilidad de reconocer que
-                    no dispone de información suficiente.
-                </p>
-
-                <p>
-                    En lugar de inventar una respuesta, puede indicar claramente:
-                </p>
-
-                <p>
-                    <strong>
-                        “No existe información verificable suficiente para responder
-                        esta consulta con seguridad.”
-                    </strong>
-                </p>
-
-                <p>
-                    La capacidad de no responder puede ser más valiosa que generar una
-                    respuesta aparentemente completa pero falsa.
-                </p>
-
-
-                <h3>5. Human-in-the-Loop</h3>
-
-                <p>
-                    Determinadas respuestas pueden enviarse a revisión humana antes
-                    de ser utilizadas.
-                </p>
-
-                <p>
-                    Esto resulta especialmente importante cuando una respuesta tiene
-                    consecuencias médicas, jurídicas, financieras, académicas,
-                    administrativas o de seguridad.
-                </p>
-
-
-                <h3>6. Control de herramientas</h3>
-
-                <p>
-                    Si el modelo puede utilizar herramientas externas, cada
-                    herramienta debe disponer de permisos propios y controles
-                    independientes.
-                </p>
-
-                <p>
-                    Un mensaje escrito por un usuario no debe poder otorgar nuevos
-                    permisos a la IA.
-                </p>
-
-                <p>
-                    En otras palabras:
-                    <strong>
-                        el modelo puede proponer una acción, pero el sistema debe
-                        decidir si está autorizado para ejecutarla.
-                    </strong>
-                </p>
-
-
-                <h3>7. Evaluación continua</h3>
-
-                <p>
-                    Los propios Guardrails también necesitan ser evaluados.
-                </p>
-
-                <p>
-                    Un sistema demasiado permisivo puede dejar pasar contenido
-                    peligroso, mientras que uno demasiado restrictivo puede bloquear
-                    solicitudes completamente válidas.
-                </p>
-
-                <p>
-                    Por ello resulta importante evaluar:
-                </p>
-
-                <ul>
-                    <li>Falsos positivos.</li>
-                    <li>Falsos negativos.</li>
-                    <li>Tasa de alucinaciones.</li>
-                    <li>Calidad de las respuestas.</li>
-                    <li>Resultados frente a Prompt Injection.</li>
-                    <li>Porcentaje de respuestas correctamente fundamentadas.</li>
-                </ul>
-
-
-                <h3>Defensa en profundidad</h3>
-
-                <p>
-                    Ningún mecanismo por sí solo garantiza que una aplicación
-                    generativa sea completamente segura o libre de errores.
-                </p>
-
-                <p>
-                    Una estrategia más robusta combina varias capas:
-                </p>
-
-                <ol>
-                    <li>Validación de entrada.</li>
-                    <li>Fuentes verificables.</li>
-                    <li>RAG cuando corresponda.</li>
-                    <li>Instrucciones claras al modelo.</li>
-                    <li>Validación de salida.</li>
-                    <li>Control de herramientas.</li>
-                    <li>Mínimo privilegio.</li>
-                    <li>Capacidad de abstención.</li>
-                    <li>Supervisión humana.</li>
-                    <li>Monitoreo continuo.</li>
-                </ol>
-
-                <p>
-                    Este enfoque se conoce en seguridad como
-                    <strong>defensa en profundidad</strong>: no depender de una sola
-                    barrera, sino combinar diferentes controles para reducir el
-                    impacto de un fallo.
-                </p>
-
-            </article>
-
-
-            <!-- =================================================
-                 6. VENDOR LOCK-IN
-            ================================================== -->
-
-            <article class="plataforma">
-
-                <h2>6. Dependencia del proveedor</h2>
-
-                <p>
-                    Adoptar rápidamente una plataforma propietaria puede acelerar el
-                    desarrollo, pero también puede generar una dependencia técnica
-                    considerable.
-                </p>
-
-                <p>
-                    Este fenómeno se conoce como
-                    <strong>Vendor Lock-in</strong>.
-                </p>
-
-                <p>
-                    Una aplicación puede quedar muy ligada a las APIs, formatos,
-                    modelos, SDK, mecanismos de autenticación o servicios exclusivos
-                    de un proveedor.
-                </p>
-
-                <p>
-                    Si posteriormente ese proveedor aumenta sus precios, modifica las
-                    condiciones del servicio, cambia una API o descontinúa un modelo,
-                    la migración puede convertirse en un proceso complejo.
-                </p>
-
-                <p>
-                    Opara-Martins, Sahandi y Tian (2016) analizaron el impacto del
-                    Vendor Lock-in dentro de servicios cloud y destacan la
-                    importancia de la interoperabilidad y la portabilidad para
-                    reducir este tipo de dependencia.
-                </p>
-
-                <h3>Estrategias para reducir la dependencia</h3>
-
-                <ul>
-                    <li>
-                        Mantener la lógica de negocio separada del SDK del proveedor.
-                    </li>
-
-                    <li>
-                        Crear una capa de abstracción para interactuar con los modelos.
-                    </li>
-
-                    <li>
-                        Utilizar formatos de datos ampliamente soportados.
-                    </li>
-
-                    <li>
-                        Evitar almacenar información únicamente en formatos
-                        propietarios.
-                    </li>
-
-                    <li>
-                        Mantener pruebas que puedan ejecutarse con modelos
-                        alternativos.
-                    </li>
-
-                    <li>
-                        Evaluar soluciones comerciales y modelos abiertos.
-                    </li>
-
-                    <li>
-                        Diseñar desde el inicio una posible estrategia de migración.
-                    </li>
-                </ul>
-
-                <p>
-                    El objetivo no consiste necesariamente en evitar proveedores
-                    comerciales, sino en evitar que toda la arquitectura dependa de
-                    una decisión imposible de cambiar posteriormente.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <!-- =====================================================
-             TABLA COMPARATIVA
-        ====================================================== -->
-
-        <section id="comparacion" class="seccion">
-
-            <h1>Resumen de ventajas, riesgos y medidas recomendadas</h1>
+        <div class="introduccion">
 
             <p>
-                La siguiente tabla sintetiza los principales beneficios y riesgos
-                analizados. Su propósito es mostrar que cada capacidad de una
-                plataforma AI-Native debería acompañarse de un mecanismo de control.
+                Las plataformas de desarrollo construidas sobre inteligencia
+                artificial ofrecen beneficios notables, pero también conllevan
+                riesgos que exigen un análisis riguroso antes de desplegarlas en
+                entornos reales. En una fase de pruebas inicial, conectar una API,
+                solicitar una respuesta y obtener un resultado funcional resulta
+                sencillo. Sin embargo, la complejidad aumenta cuando esa misma
+                solución debe escalar para atender a miles de usuarios, manejar
+                datos confidenciales, mantener los costos bajo control y operar
+                con altos estándares de seguridad.
             </p>
 
-            <table>
+            <p>
+                En el ámbito del desarrollo de software, estas herramientas agilizan
+                tareas que tradicionalmente consumen bastante tiempo, como redactar
+                borradores de código, documentar funciones, preparar entornos de
+                prueba, analizar datos o identificar errores. Esto no implica la
+                desaparición del rol del desarrollador; más bien, el esfuerzo se
+                desplaza. Se dedica menos tiempo a la escritura desde cero y se
+                invierte más en auditar, validar y determinar si las propuestas
+                generadas por la IA se adecúan al contexto del proyecto.
+            </p>
 
-                <thead>
-                    <tr>
-                        <th>Aspecto</th>
-                        <th>Beneficio</th>
-                        <th>Riesgo asociado</th>
-                        <th>Medida recomendada</th>
-                    </tr>
-                </thead>
+        </div>
 
-                <tbody>
-
-                    <tr>
-                        <td><strong>Productividad</strong></td>
-                        <td>
-                            Reduce tiempo dedicado a ciertas tareas repetitivas.
-                        </td>
-                        <td>
-                            Código incorrecto, dependencia excesiva o incremento
-                            del retrabajo.
-                        </td>
-                        <td>
-                            Medir tiempo, calidad, errores y mantenibilidad.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Automatización</strong></td>
-                        <td>
-                            Permite procesar actividades a gran escala.
-                        </td>
-                        <td>
-                            Ejecución automática de decisiones equivocadas.
-                        </td>
-                        <td>
-                            Human-in-the-Loop en operaciones críticas.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Escalabilidad</strong></td>
-                        <td>
-                            Facilita crecer según la demanda.
-                        </td>
-                        <td>
-                            Incremento de costos y consumo computacional.
-                        </td>
-                        <td>
-                            Monitoreo, límites y planificación de capacidad.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Integración</strong></td>
-                        <td>
-                            Permite utilizar IA mediante APIs y SDK.
-                        </td>
-                        <td>
-                            Acoplamiento con tecnologías específicas.
-                        </td>
-                        <td>
-                            Arquitectura desacoplada.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Costos</strong></td>
-                        <td>
-                            Posibilidad de pagar de acuerdo con el consumo.
-                        </td>
-                        <td>
-                            Crecimiento inesperado del uso de tokens y recursos.
-                        </td>
-                        <td>
-                            Presupuestos, caching, límites, selección de modelos
-                            y observabilidad.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Privacidad</strong></td>
-                        <td>
-                            Capacidad para analizar grandes cantidades de
-                            información.
-                        </td>
-                        <td>
-                            Exposición de datos sensibles.
-                        </td>
-                        <td>
-                            Minimización, anonimización, cifrado y control de acceso.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Seguridad</strong></td>
-                        <td>
-                            Modelos capaces de interactuar con herramientas externas.
-                        </td>
-                        <td>
-                            Prompt Injection y ejecución de operaciones no autorizadas.
-                        </td>
-                        <td>
-                            Mínimo privilegio, autorización independiente y
-                            Guardrails.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Sesgos</strong></td>
-                        <td>
-                            Automatización y personalización de análisis.
-                        </td>
-                        <td>
-                            Resultados discriminatorios o inequitativos.
-                        </td>
-                        <td>
-                            Pruebas de equidad, conjuntos diversos y monitoreo.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Alucinaciones</strong></td>
-                        <td>
-                            Generación rápida y flexible de contenido.
-                        </td>
-                        <td>
-                            Información falsa presentada con apariencia de certeza.
-                        </td>
-                        <td>
-                            RAG, grounding, Guardrails, abstención, validación y
-                            supervisión humana.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><strong>Proveedor</strong></td>
-                        <td>
-                            Acceso rápido a infraestructura y modelos avanzados.
-                        </td>
-                        <td>
-                            Vendor Lock-in.
-                        </td>
-                        <td>
-                            Abstracción, interoperabilidad y formatos portables.
-                        </td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-        <!-- =====================================================
-             CONCLUSIÓN
-        ====================================================== -->
-
-        <section id="conclusion" class="seccion">
-
-            <h1>Conclusión</h1>
-
-            <div class="introduccion">
-
-                <p>
-                    Las plataformas de desarrollo nativas de inteligencia artificial
-                    ofrecen oportunidades importantes para mejorar la productividad,
-                    automatizar procesos, escalar servicios e incorporar capacidades
-                    inteligentes sin desarrollar toda la infraestructura desde cero.
-                </p>
-
-                <p>
-                    No obstante, los beneficios no deben analizarse únicamente desde
-                    la velocidad con la que puede construirse una aplicación. Cuando
-                    una solución llega a producción también debe demostrar que puede
-                    operar de forma segura, sostenible y verificable.
-                </p>
-
-                <p>
-                    La evidencia sobre productividad muestra precisamente esta
-                    necesidad de evitar conclusiones absolutas. Algunos estudios
-                    registran mejoras significativas al utilizar asistentes de IA,
-                    mientras que otros encuentran que, en determinadas tareas y con
-                    desarrolladores experimentados, la revisión de las propuestas
-                    puede aumentar el tiempo requerido.
-                </p>
-
-                <p>
-                    Lo mismo ocurre con la escalabilidad. Poder atender más usuarios
-                    representa una ventaja únicamente si el crecimiento del consumo
-                    de tokens, infraestructura y almacenamiento continúa siendo
-                    económicamente viable.
-                </p>
-
-                <p>
-                    Finalmente, problemas como el Prompt Injection, los sesgos y las
-                    alucinaciones muestran que una aplicación AI-Native necesita
-                    controles adicionales. Los Guardrails, el principio de mínimo
-                    privilegio, la validación de entradas y salidas, el grounding con
-                    fuentes confiables, la capacidad de abstención y la supervisión
-                    humana deben entenderse como elementos de una estrategia de
-                    defensa en profundidad.
-                </p>
-
-                <p>
-                    En consecuencia, el verdadero valor de una plataforma AI-Native
-                    no consiste simplemente en utilizar un modelo de inteligencia
-                    artificial. Su valor aparece cuando la tecnología logra
-                    <strong>
-                        resolver un problema de manera eficiente sin sacrificar
-                        seguridad, privacidad, calidad, sostenibilidad económica ni
-                        control humano.
-                    </strong>
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BIBLIOGRAFÍA APA 7
-        ====================================================== -->
-
-        <section id="bibliografia" class="seccion">
-
-            <h1>Bibliografía</h1>
-
-            <div class="bibliografia">
-
-                <p>
-                    Autio, C., Schwartz, R., Dunietz, J., Jain, S.,
-                    Stanley, M., Tabassi, E., Hall, P., &amp; Roberts, K.
-                    (2024).
-                    <em>
-                        Artificial Intelligence Risk Management Framework:
-                        Generative Artificial Intelligence Profile
-                    </em>
-                    (NIST AI 600-1).
-                    National Institute of Standards and Technology.
-                    <br>
-                    <a href="https://doi.org/10.6028/NIST.AI.600-1"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.6028/NIST.AI.600-1
-                    </a>
-                </p>
-
-
-                <p>
-                    Becker, J., Rush, N., Barnes, E., &amp; Rein, D. (2025).
-                    <em>
-                        Measuring the impact of early-2025 AI on experienced
-                        open-source developer productivity
-                    </em>.
-                    <em>arXiv</em>.
-                    <br>
-                    <a href="https://doi.org/10.48550/arXiv.2507.09089"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.48550/arXiv.2507.09089
-                    </a>
-                </p>
-
-
-                <p>
-                    Carlini, N., Tramèr, F., Wallace, E., Jagielski, M.,
-                    Herbert-Voss, A., Lee, K., Roberts, A., Brown, T.,
-                    Song, D., Erlingsson, Ú., Oprea, A., &amp; Raffel, C.
-                    (2021).
-                    Extracting training data from large language models.
-                    <em>
-                        30th USENIX Security Symposium
-                        (USENIX Security 21)
-                    </em>, 2633–2650.
-                    <br>
-                    <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting
-                    </a>
-                </p>
-
-
-                <p>
-                    Gallegos, I. O., Rossi, R. A., Barrow, J.,
-                    Tanjim, M. M., Kim, S., Dernoncourt, F., Yu, T.,
-                    Zhang, R., &amp; Ahmed, N. K. (2024).
-                    Bias and fairness in large language models: A survey.
-                    <em>Computational Linguistics, 50</em>(3), 1097–1179.
-                    <br>
-                    <a href="https://doi.org/10.1162/coli_a_00524"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.1162/coli_a_00524
-                    </a>
-                </p>
-
-
-                <p>
-                    Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z.,
-                    Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B.,
-                    &amp; Liu, T. (2025).
-                    A survey on hallucination in large language models:
-                    Principles, taxonomy, challenges, and open questions.
-                    <em>ACM Transactions on Information Systems, 43</em>(2),
-                    Article 42.
-                    <br>
-                    <a href="https://doi.org/10.1145/3703155"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.1145/3703155
-                    </a>
-                </p>
-
-
-                <p>
-                    Lewis, P., Perez, E., Piktus, A., Petroni, F.,
-                    Karpukhin, V., Goyal, N., Küttler, H., Lewis, M.,
-                    Yih, W.-t., Rocktäschel, T., Riedel, S., &amp; Kiela, D.
-                    (2020).
-                    Retrieval-augmented generation for knowledge-intensive
-                    NLP tasks.
-                    <em>
-                        Advances in Neural Information Processing Systems, 33
-                    </em>, 9459–9474.
-                    <br>
-                    <a href="https://arxiv.org/abs/2005.11401"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://arxiv.org/abs/2005.11401
-                    </a>
-                </p>
-
-
-                <p>
-                    Liu, Y., Deng, G., Li, Y., Wang, K., Wang, Z.,
-                    Wang, X., Zhang, T., Liu, Y., Wang, H., Zheng, Y.,
-                    &amp; Liu, Y. (2023).
-                    <em>
-                        Prompt injection attack against LLM-integrated
-                        applications
-                    </em>.
-                    <em>arXiv</em>.
-                    <br>
-                    <a href="https://doi.org/10.48550/arXiv.2306.05499"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.48550/arXiv.2306.05499
-                    </a>
-                </p>
-
-
-                <p>
-                    Opara-Martins, J., Sahandi, R., &amp; Tian, F. (2016).
-                    Critical analysis of vendor lock-in and its impact on
-                    cloud computing migration: A business perspective.
-                    <em>Journal of Cloud Computing, 5</em>, Article 4.
-                    <br>
-                    <a href="https://doi.org/10.1186/s13677-016-0054-z"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.1186/s13677-016-0054-z
-                    </a>
-                </p>
-
-
-                <p>
-                    Paradis, E., Grey, K., Madison, Q., Nam, D.,
-                    Macvean, A., Meimand, V., Zhang, N.,
-                    Ferrari-Church, B., &amp; Chandra, S. (2024).
-                    <em>
-                        How much does AI impact development speed?
-                        An enterprise-based randomized controlled trial
-                    </em>.
-                    <em>arXiv</em>.
-                    <br>
-                    <a href="https://arxiv.org/abs/2410.12944"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://arxiv.org/abs/2410.12944
-                    </a>
-                </p>
-
-
-                <p>
-                    Peng, S., Kalliamvakou, E., Cihon, P.,
-                    &amp; Demirer, M. (2023).
-                    <em>
-                        The impact of AI on developer productivity:
-                        Evidence from GitHub Copilot
-                    </em>.
-                    <em>arXiv</em>.
-                    <br>
-                    <a href="https://doi.org/10.48550/arXiv.2302.06590"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.48550/arXiv.2302.06590
-                    </a>
-                </p>
-
-
-                <p>
-                    Rawte, V., Sheth, A., &amp; Das, A. (2023).
-                    <em>
-                        A survey of hallucination in large foundation models
-                    </em>.
-                    <em>arXiv</em>.
-                    <br>
-                    <a href="https://doi.org/10.48550/arXiv.2309.05922"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.48550/arXiv.2309.05922
-                    </a>
-                </p>
-
-
-                <p>
-                    Samsi, S., Zhao, D., McDonald, J., Li, B.,
-                    Michaleas, A., Jones, M., Bergeron, W., Kepner, J.,
-                    Tiwari, D., &amp; Gadepally, V. (2023).
-                    <em>
-                        From words to watts: Benchmarking the energy costs
-                        of large language model inference
-                    </em>.
-                    <em>arXiv</em>.
-                    <br>
-                    <a href="https://doi.org/10.48550/arXiv.2310.03003"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.48550/arXiv.2310.03003
-                    </a>
-                </p>
-
-
-                <p>
-                    Yao, Y., Duan, J., Xu, K., Cai, Y., Sun, Z.,
-                    &amp; Zhang, Y. (2024).
-                    A survey on large language model (LLM) security and
-                    privacy: The good, the bad, and the ugly.
-                    <em>High-Confidence Computing, 4</em>(2), 100211.
-                    <br>
-                    <a href="https://doi.org/10.1016/j.hcc.2024.100211"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        https://doi.org/10.1016/j.hcc.2024.100211
-                    </a>
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
+    </section>
 
 
     <!-- =========================================================
-         FOOTER
+         VENTAJAS
     ========================================================== -->
 
-    <footer class="footer">
+    <section id="ventajas" class="seccion">
 
-        <p>
-            AI Platforms — Plataformas de desarrollo nativas de IA
-        </p>
-
-    </footer>
+        <h1>Ventajas</h1>
 
 
-    <!-- Script general utilizado por el proyecto -->
-    <script src="../js/script.js"></script>
+        <!-- MAYOR PRODUCTIVIDAD -->
+
+        <article class="plataforma">
+
+            <h2>Mayor productividad</h2>
+
+            <p>
+                La eficiencia es uno de los argumentos más recurrentes al hablar de
+                herramientas de IA aplicadas al software. Esto responde a que
+                existen tareas rutinarias pero indispensables que absorben parte
+                significativa de la jornada laboral.
+            </p>
+
+            <p>
+                Un asistente puede generar estructuras base, explicar fragmentos de
+                código, armar pruebas unitarias, redactar documentación o sugerir
+                soluciones ante fallos comunes. Al delegar estas actividades, el
+                programador dispone de más tiempo para aspectos analíticos, como
+                comprender el problema de fondo, evaluar la arquitectura o tomar
+                decisiones técnicas críticas.
+            </p>
+
+            <h3>¿Qué muestran los estudios?</h3>
+
+            <p>
+                El estudio de Peng, Kalliamvakou, Cihon y Demirer (2023) ilustra
+                este impacto: en un experimento controlado, los participantes que
+                utilizaron GitHub Copilot completaron una tarea de programación
+                aproximadamente un <strong>55,8 % más rápido</strong> en
+                comparación con quienes no lo emplearon.
+            </p>
+
+            <p>
+                Sin embargo, este rendimiento no es uniforme en todos los escenarios.
+                Paradis et al. (2024), por ejemplo, observaron en un entorno
+                corporativo una reducción del tiempo de desarrollo más moderada,
+                cercana al <strong>21 %</strong>.
+            </p>
+
+            <p>
+                También se registran dinámicas opuestas. Becker, Rush, Barnes y
+                Rein (2025) analizaron a desarrolladores experimentados trabajando
+                en repositorios familiares y detectaron que, en ese caso particular,
+                el uso de asistentes de IA incrementó cerca de un
+                <strong>19 %</strong> el tiempo requerido para finalizar las tareas.
+            </p>
+
+            <p>
+                Estas variaciones confirman que el impacto en la productividad
+                depende en gran medida del entorno. Una tarea acotada y bien
+                definida resulta idónea para un asistente; en cambio, en una
+                aplicación robusta con años de evolución y múltiples dependencias,
+                revisar las sugerencias del modelo exige un esfuerzo considerable.
+            </p>
+
+            <p>
+                Por ello, la productividad no debe calcularse únicamente por el
+                volumen de código generado, sino evaluando factores como la tasa
+                de errores, el trabajo duplicado, la calidad de las pruebas, la
+                mantenibilidad del sistema y el tiempo destinado a la revisión de
+                respuestas.
+            </p>
+
+        </article>
+
+
+        <!-- AUTOMATIZACIÓN -->
+
+        <article class="plataforma">
+
+            <h2>Automatización</h2>
+
+            <p>
+                Otra ventaja destacada reside en la automatización. Los modelos
+                actuales procesan lenguaje natural y datos no estructurados, lo
+                que amplía la diversidad de procesos automatizables.
+            </p>
+
+            <p>
+                Una aplicación puede clasificar documentos, extraer información
+                clave de textos extensos, generar resúmenes, elaborar borradores,
+                gestionar respuestas iniciales en servicios de atención o dar
+                soporte en la creación de pruebas de software.
+            </p>
+
+            <p>
+                Esto permite procesar volúmenes más altos de datos sin aumentar de
+                forma proporcional la carga de trabajo manual, aportando eficiencia
+                a la organización.
+            </p>
+
+            <h3>La supervisión humana sigue siendo necesaria</h3>
+
+            <p>
+                No obstante, automatizar no implica eliminar la supervisión humana.
+                En sectores críticos como salud, educación, finanzas, seguridad o
+                recursos humanos, un fallo en el sistema puede afectar directamente
+                a personas.
+            </p>
+
+            <p>
+                En tales escenarios conviene adoptar esquemas
+                <em>Human-in-the-Loop</em>, donde la IA asume el procesamiento
+                inicial pero un profesional mantiene la responsabilidad de validar
+                y aprobar las decisiones relevantes.
+            </p>
+
+            <p>
+                La meta no es sustituir al tomador de decisiones, sino reducir las
+                tareas repetitivas para concentrar el criterio humano en los puntos
+                neurálgicos.
+            </p>
+
+        </article>
+
+
+        <!-- ESCALABILIDAD -->
+
+        <article class="plataforma">
+
+            <h2>Escalabilidad</h2>
+
+            <p>
+                La escalabilidad es un atributo clave de las plataformas
+                <em>AI-Native</em>. Un desarrollo puede iniciar como un prototipo
+                a pequeña escala y expandirse progresivamente si los resultados
+                son favorables.
+            </p>
+
+            <p>
+                Un asistente virtual, por ejemplo, puede arrancar atendiendo a un
+                grupo de diez personas e incrementarse hasta cubrir miles de
+                usuarios.
+            </p>
+
+            <p>
+                Las soluciones en la nube simplifican este crecimiento al permitir
+                ajustar recursos según la demanda, evitando que la organización
+                deba invertir en infraestructura pesada desde el principio.
+            </p>
+
+            <h3>Capacidad técnica y sostenibilidad financiera</h3>
+
+            <p>
+                Sin embargo, existe una diferencia entre la viabilidad técnica de
+                escalar y su sostenibilidad financiera.
+            </p>
+
+            <p>
+                Samsi et al. (2023) señalan que la inferencia en grandes modelos de
+                lenguaje demanda recursos computacionales y energéticos
+                considerables, condicionados por variables como el tamaño del
+                modelo, el hardware utilizado y la cantidad de peticiones.
+            </p>
+
+            <p>
+                En consecuencia, una aplicación puede ser capaz de soportar más
+                tráfico pero disparar sus costos operativos. Por esta razón, el
+                diseño de una arquitectura escalable debe contemplar tanto la
+                capacidad técnica como el presupuesto.
+            </p>
+
+        </article>
+
+
+        <!-- INTEGRACIÓN SENCILLA -->
+
+        <article class="plataforma">
+
+            <h2>Integración sencilla</h2>
+
+            <p>
+                Incorporar capacidades de IA en una aplicación es hoy un proceso
+                mucho más directo que en años anteriores.
+            </p>
+
+            <p>
+                Un equipo no requiere entrenar modelos desde cero, ya que diversos
+                servicios ofrecen integración mediante APIs y SDKs para conectar
+                modelos preentrenados a sistemas existentes.
+            </p>
+
+            <p>
+                Esto agiliza el despliegue de funcionalidades como generación de
+                texto, clasificación de información, análisis documental o
+                interfaces conversacionales sin necesidad de construir la
+                infraestructura base.
+            </p>
+
+            <p>
+                Esta simplicidad resulta valiosa durante la fase de prototipado.
+                Pese a ello, recibir una respuesta correcta durante una demostración
+                no equivale a contar con una aplicación lista para producción.
+            </p>
+
+            <p>
+                Un sistema en entorno real requiere mecanismos de autenticación,
+                gestión de excepciones, monitoreo, trazabilidad, control de accesos,
+                protección de datos y planes de contingencia ante fallos del servicio
+                externo.
+            </p>
+
+            <p>
+                La facilidad de integración debe complementarse con una arquitectura
+                sólida que garantice la evolución del software en el tiempo.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- =========================================================
+         DESAFÍOS
+    ========================================================== -->
+
+    <section id="desafios" class="seccion">
+
+        <h1>Desafíos</h1>
+
+
+        <!-- COSTOS -->
+
+        <article class="plataforma">
+
+            <h2>Costos y consumo de tokens</h2>
+
+            <p>
+                Un aspecto que suele pasarse por alto en las fases iniciales es el
+                costo real de operación.
+            </p>
+
+            <p>
+                Con pocos usuarios en pruebas, el gasto resulta marginal; el problema
+                surge cuando el sistema gestiona cientos o miles de solicitudes
+                diarias.
+            </p>
+
+            <p>
+                En la mayoría de las plataformas, la tarifa se calcula en función de
+                los <em>tokens</em> procesados, entendidos como fragmentos de texto
+                que entran y salen del modelo.
+            </p>
+
+            <p>
+                Si las aplicaciones envían contextos extensos, documentos completos
+                o solicitan respuestas prolongadas, el consumo escala rápidamente.
+            </p>
+
+            <h3>El costo no se limita al modelo</h3>
+
+            <p>
+                Además, el costo global no se limita a la llamada del modelo.
+                Existen gastos derivados del almacenamiento, la generación de
+                <em>embeddings</em>, las bases de datos vectoriales, las herramientas
+                de monitoreo, la infraestructura general y el personal técnico a
+                cargo.
+            </p>
+
+            <p>
+                Evaluar únicamente el valor de una llamada a la API resulta
+                insuficiente; es más preciso calcular el
+                <strong>costo por tarea completada con éxito</strong>.
+            </p>
+
+            <p>
+                Un modelo de bajo costo pero con respuestas deficientes puede
+                resultar más costoso si exige repetir consultas o requiere constante
+                corrección humana.
+            </p>
+
+            <h3>Estrategias para controlar el gasto</h3>
+
+            <ul>
+                <li>
+                    Limitar la longitud de las respuestas.
+                </li>
+
+                <li>
+                    Eliminar información superflua en los <em>prompts</em>.
+                </li>
+
+                <li>
+                    Utilizar mecanismos de caché cuando resulte adecuado.
+                </li>
+
+                <li>
+                    Establecer cuotas y límites de consumo por usuario.
+                </li>
+
+                <li>
+                    Monitorear el consumo de tokens.
+                </li>
+
+                <li>
+                    Utilizar modelos compactos para consultas sencillas.
+                </li>
+
+                <li>
+                    Reservar los modelos de mayor capacidad para tareas realmente
+                    complejas.
+                </li>
+            </ul>
+
+        </article>
+
+
+        <!-- PRIVACIDAD -->
+
+        <article class="plataforma">
+
+            <h2>Privacidad</h2>
+
+            <p>
+                El tratamiento de la privacidad es delicado cuando las aplicaciones
+                envían información a servicios administrados por terceros.
+            </p>
+
+            <p>
+                Este factor representa un riesgo explícito al manipular datos
+                personales, expedientes médicos, información financiera,
+                documentación institucional, contratos o código fuente propietario.
+            </p>
+
+            <p>
+                Yao et al. (2024) abordan diversos riesgos de seguridad y privacidad
+                asociados a los modelos de lenguaje, mientras que Carlini et al.
+                (2021) demostraron que ciertos modelos son capaces de memorizar y
+                reproducir fragmentos de información presentes en sus conjuntos de
+                entrenamiento.
+            </p>
+
+            <p>
+                Estos hallazgos confirman que la privacidad debe ser un componente
+                estructural del diseño.
+            </p>
+
+            <h3>Medidas recomendadas</h3>
+
+            <ul>
+                <li>
+                    Enviar únicamente los datos estrictamente necesarios.
+                </li>
+
+                <li>
+                    Aplicar técnicas de anonimización.
+                </li>
+
+                <li>
+                    Implementar cifrado.
+                </li>
+
+                <li>
+                    Restringir accesos.
+                </li>
+
+                <li>
+                    Definir políticas de retención de datos.
+                </li>
+
+                <li>
+                    Revisar detenidamente las condiciones del proveedor.
+                </li>
+
+                <li>
+                    Evaluar modelos privados o desplegados en infraestructura propia
+                    cuando se maneje información sensible.
+                </li>
+            </ul>
+
+        </article>
+
+
+        <!-- SEGURIDAD -->
+
+        <article class="plataforma">
+
+            <h2>Seguridad</h2>
+
+            <p>
+                Las soluciones basadas en modelos de lenguaje introducen
+                vulnerabilidades distintas a las del software tradicional.
+            </p>
+
+            <p>
+                Un ejemplo es el <em>Prompt Injection</em>, una técnica mediante la
+                cual se introducen instrucciones manipuladas para alterar la lógica
+                del modelo.
+            </p>
+
+            <p>
+                Liu et al. (2023) evidencian la vulnerabilidad de las aplicaciones
+                integradas con modelos de lenguaje ante este tipo de manipulaciones.
+            </p>
+
+            <h3>Cuando la IA puede ejecutar acciones</h3>
+
+            <p>
+                El riesgo se incrementa cuando el modelo tiene capacidad de ejecución.
+                No es lo mismo que un chatbot emita un texto erróneo a que un agente
+                posea permisos para enviar correos, modificar registros o consultar
+                bases de datos internas.
+            </p>
+
+            <p>
+                En tales casos, la salida de la IA no debe asumir el rol de una
+                autorización automática.
+            </p>
+
+            <p>
+                La seguridad exige aplicar el principio de
+                <strong>mínimo privilegio</strong>, garantizando que el modelo acceda
+                solo a las herramientas e información indispensables.
+            </p>
+
+            <p>
+                Asimismo, se deben validar los parámetros antes de ejecutar
+                operaciones, conservar registros de auditoría y requerir confirmación
+                humana previa a acciones críticas.
+            </p>
+
+            <p>
+                El perfil de gestión de riesgos para IA generativa del NIST subraya
+                la importancia de auditar estos vectores durante todo el ciclo de
+                vida del sistema (Autio et al., 2024).
+            </p>
+
+        </article>
+
+
+        <!-- SESGOS -->
+
+        <article class="plataforma">
+
+            <h2>Sesgos</h2>
+
+            <p>
+                Los modelos se entrenan con grandes volúmenes de datos que pueden
+                contener estereotipos, desigualdades o sesgos informativos.
+            </p>
+
+            <p>
+                Gallegos et al. (2024) analizan cómo estas desviaciones se
+                manifiestan en los grandes modelos de lenguaje, pudiendo reproducir
+                o amplificar dichos patrones.
+            </p>
+
+            <p>
+                Este factor cobra gravedad cuando la aplicación interviene en
+                procesos con impacto en las personas, tales como selección de
+                personal, evaluaciones académicas, asignación de subsidios o
+                análisis crediticios.
+            </p>
+
+            <p>
+                Por ello, no basta con verificar el funcionamiento técnico del
+                software; es preciso evaluar si genera resultados dispares o
+                inequitativos entre diferentes grupos.
+            </p>
+
+            <h3>Medidas de mitigación</h3>
+
+            <ul>
+                <li>
+                    Emplear conjuntos de prueba diversos.
+                </li>
+
+                <li>
+                    Comparar métricas entre segmentos de usuarios.
+                </li>
+
+                <li>
+                    Registrar patrones de error.
+                </li>
+
+                <li>
+                    Mantener supervisión humana en decisiones de alto impacto.
+                </li>
+
+                <li>
+                    Repetir las auditorías cuando cambie el modelo.
+                </li>
+
+                <li>
+                    Repetir las evaluaciones ante modificaciones de los
+                    <em>prompts</em> o de las fuentes de información.
+                </li>
+            </ul>
+
+        </article>
+
+
+        <!-- ALUCINACIONES -->
+
+        <article class="plataforma">
+
+            <h2>Alucinaciones</h2>
+
+            <p>
+                Las alucinaciones representan uno de los fenómenos más estudiados
+                en IA generativa.
+            </p>
+
+            <p>
+                Ocurren cuando el modelo produce información inexacta o inventada,
+                pero redactada con tono convincente.
+            </p>
+
+            <p>
+                Esto abarca desde la creación de referencias bibliográficas
+                inexistentes o citas legales falsas, hasta la atribución errónea de
+                fuentes o la generación de código con fallos lógicos sutiles.
+            </p>
+
+            <p>
+                Huang et al. (2025) señalan que la alucinación se mantiene como un
+                desafío central en estos modelos, mientras que Rawte, Sheth y Das
+                (2023) examinan sus tipologías y métodos de mitigación.
+            </p>
+
+            <h3>RAG como mecanismo de apoyo</h3>
+
+            <p>
+                Una estrategia habitual para reducir este margen de error es RAG
+                (<em>Retrieval-Augmented Generation</em>), técnica que recupera
+                información de fuentes externas verificadas para fundamentar la
+                respuesta del modelo antes de su generación.
+            </p>
+
+            <p>
+                Lewis et al. (2020) demostraron cómo esta arquitectura integra la
+                capacidad generativa con datos recuperados de repositorios externos.
+            </p>
+
+            <p>
+                Sin embargo, RAG no elimina el riesgo por completo: si el proceso de
+                recuperación obtiene datos erróneos o irrelevantes, la salida puede
+                mantener el fallo.
+            </p>
+
+            <p>
+                Debido a esto, en entornos de producción se requiere la combinación
+                de múltiples mecanismos de control.
+            </p>
+
+        </article>
+
+
+        <!-- GUARDRAILS -->
+
+        <article class="plataforma">
+
+            <h2>Guardrails</h2>
+
+            <p>
+                Los <em>Guardrails</em> son capas de control dispuestas alrededor
+                del modelo para supervisar las entradas, restringir las acciones
+                ejecutables y validar los resultados antes de entregarlos al usuario.
+            </p>
+
+            <p>
+                No corresponden a un único software, sino a una arquitectura de
+                protección por capas.
+            </p>
+
+            <h3>Primera capa: validación de entrada</h3>
+
+            <p>
+                Analiza las peticiones del usuario para identificar contenido no
+                permitido, datos sensibles o intentos de manipulación antes de que
+                la información llegue al modelo.
+            </p>
+
+            <h3>Segunda capa: fuentes verificadas</h3>
+
+            <p>
+                Restringe el contexto del modelo y busca que sus respuestas se
+                fundamenten en fuentes documentales verificadas.
+            </p>
+
+            <p>
+                En esta capa puede utilizarse RAG cuando el caso de uso requiera
+                consultar información externa o conocimiento específico.
+            </p>
+
+            <h3>Tercera capa: validación de salida</h3>
+
+            <p>
+                Evalúa la respuesta antes de entregarla al usuario y comprueba que
+                cumpla con el formato requerido, no exponga información confidencial
+                y mantenga coherencia con las fuentes utilizadas.
+            </p>
+
+            <h3>Capacidad de abstención</h3>
+
+            <p>
+                Un control indispensable consiste en configurar el sistema para
+                declarar su falta de información cuando no cuente con evidencia
+                suficiente, evitando así respuestas especulativas presentadas como
+                hechos.
+            </p>
+
+            <p>
+                En lugar de inventar una respuesta, el sistema debería poder indicar:
+            </p>
+
+            <p>
+                <strong>
+                    “No existe información verificable suficiente para responder
+                    esta consulta con seguridad.”
+                </strong>
+            </p>
+
+            <h3>Control de permisos</h3>
+
+            <p>
+                Si la IA interactúa con herramientas externas, cada integración debe
+                contar con esquemas de permisos independientes donde el sistema
+                valide si la acción propuesta por el modelo está autorizada.
+            </p>
+
+            <p>
+                La IA puede proponer una operación, pero esa propuesta no debe
+                convertirse automáticamente en autorización para ejecutarla.
+            </p>
+
+            <h3>Evaluación periódica</h3>
+
+            <p>
+                Finalmente, los propios <em>Guardrails</em> deben ser evaluados
+                periódicamente.
+            </p>
+
+            <p>
+                Controles excesivamente restrictivos pueden bloquear solicitudes
+                legítimas, mientras que reglas demasiado flexibles pueden permitir
+                comportamientos de riesgo.
+            </p>
+
+            <p>
+                La práctica aconsejable es implementar esquemas de
+                <strong>defensa en profundidad</strong> que combinen:
+            </p>
+
+            <ul>
+                <li>RAG cuando corresponda.</li>
+                <li>Validaciones de entrada.</li>
+                <li>Validaciones de salida.</li>
+                <li>Principio de mínimo privilegio.</li>
+                <li>Control de herramientas.</li>
+                <li>Monitoreo.</li>
+                <li>Capacidad de abstención.</li>
+                <li>Supervisión humana.</li>
+            </ul>
+
+        </article>
+
+
+        <!-- DEPENDENCIA DEL PROVEEDOR -->
+
+        <article class="plataforma">
+
+            <h2>Dependencia del proveedor</h2>
+
+            <p>
+                La inmediatez que ofrecen las plataformas comerciales puede derivar
+                en un inconveniente a largo plazo: el acoplamiento con el proveedor
+                o <em>Vendor Lock-in</em>.
+            </p>
+
+            <p>
+                Una solución puede quedar supeditada a una API, SDK, formato o
+                funcionalidad específica.
+            </p>
+
+            <p>
+                Si el proveedor modifica sus tarifas, altera la API, retira un
+                modelo o ajusta los términos del servicio, migrar hacia otra
+                alternativa puede requerir un esfuerzo técnico y económico elevado.
+            </p>
+
+            <p>
+                Opara-Martins, Sahandi y Tian (2016) analizaron este fenómeno en
+                infraestructuras <em>cloud</em> y enfatizaron la relevancia de
+                priorizar la interoperabilidad y la portabilidad.
+            </p>
+
+            <h3>¿Cómo disminuir esta dependencia?</h3>
+
+            <ul>
+                <li>
+                    Desacoplar la lógica del negocio de los componentes del
+                    proveedor.
+                </li>
+
+                <li>
+                    Utilizar capas de abstracción.
+                </li>
+
+                <li>
+                    Almacenar la información en formatos estándar.
+                </li>
+
+                <li>
+                    Mantener la posibilidad de evaluar modelos alternativos.
+                </li>
+
+                <li>
+                    Evitar que funciones centrales dependan exclusivamente de una
+                    tecnología propietaria.
+                </li>
+            </ul>
+
+            <p>
+                El uso de servicios comerciales no es desaconsejable en sí mismo,
+                pero requiere evitar arquitecturas que dificulten eventuales cambios
+                de infraestructura.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- =========================================================
+         TABLA RESUMEN
+    ========================================================== -->
+
+    <section id="resumen" class="seccion">
+
+        <h1>Resumen de ventajas y desafíos</h1>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Aporte o beneficio</th>
+                    <th>Riesgo asociado</th>
+                    <th>Medida recomendada</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td><strong>Productividad</strong></td>
+                    <td>
+                        Reduce parte del tiempo dedicado a tareas repetitivas.
+                    </td>
+                    <td>
+                        Errores, retrabajo o dependencia excesiva de las sugerencias.
+                    </td>
+                    <td>
+                        Evaluar tiempo, calidad, errores y mantenibilidad.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Automatización</strong></td>
+                    <td>
+                        Permite procesar más información y actividades.
+                    </td>
+                    <td>
+                        Automatización de decisiones incorrectas.
+                    </td>
+                    <td>
+                        Mantener Human-in-the-Loop en procesos sensibles.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Escalabilidad</strong></td>
+                    <td>
+                        Permite atender una demanda creciente.
+                    </td>
+                    <td>
+                        Incremento de consumo y costos.
+                    </td>
+                    <td>
+                        Monitorear capacidad técnica y presupuesto.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Integración</strong></td>
+                    <td>
+                        Facilita incorporar IA mediante APIs y SDKs.
+                    </td>
+                    <td>
+                        Acoplamiento con una tecnología específica.
+                    </td>
+                    <td>
+                        Utilizar arquitectura desacoplada.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Costos</strong></td>
+                    <td>
+                        Permite ajustar el consumo según las necesidades.
+                    </td>
+                    <td>
+                        Crecimiento inesperado del gasto por tokens.
+                    </td>
+                    <td>
+                        Cuotas, caché, monitoreo y selección adecuada del modelo.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Privacidad</strong></td>
+                    <td>
+                        Permite procesar grandes volúmenes de información.
+                    </td>
+                    <td>
+                        Exposición de datos sensibles.
+                    </td>
+                    <td>
+                        Minimización, anonimización, cifrado y control de accesos.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Seguridad</strong></td>
+                    <td>
+                        Posibilita automatización mediante herramientas externas.
+                    </td>
+                    <td>
+                        Prompt Injection o acciones no autorizadas.
+                    </td>
+                    <td>
+                        Mínimo privilegio, validación y auditoría.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Sesgos</strong></td>
+                    <td>
+                        Facilita análisis y personalización.
+                    </td>
+                    <td>
+                        Resultados discriminatorios o inequitativos.
+                    </td>
+                    <td>
+                        Evaluación de equidad y supervisión humana.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Alucinaciones</strong></td>
+                    <td>
+                        Generación rápida de respuestas.
+                    </td>
+                    <td>
+                        Información falsa presentada como verdadera.
+                    </td>
+                    <td>
+                        RAG, fuentes verificadas, Guardrails y validación.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Proveedor</strong></td>
+                    <td>
+                        Acceso rápido a servicios e infraestructura avanzada.
+                    </td>
+                    <td>
+                        Vendor Lock-in.
+                    </td>
+                    <td>
+                        Abstracción, interoperabilidad y portabilidad.
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONCLUSIÓN
+    ========================================================== -->
+
+    <section id="conclusion" class="seccion">
+
+        <h1>Conclusión</h1>
+
+        <div class="introduccion">
+
+            <p>
+                Las plataformas <em>AI-Native</em> aportan ventajas tangibles al
+                agilizar el desarrollo de software, automatizar tareas repetitivas,
+                facilitar la escalabilidad y simplificar la integración de
+                capacidades avanzadas en las aplicaciones.
+            </p>
+
+            <p>
+                Sin embargo, estos beneficios no se obtienen de forma automática por
+                el solo hecho de incorporar un modelo sofisticado.
+            </p>
+
+            <p>
+                La productividad debe ponderarse según el contexto y la calidad del
+                código final. La automatización exige mantener mecanismos de
+                supervisión en entornos sensibles. La escalabilidad debe conciliar
+                el rendimiento técnico con la viabilidad económica.
+            </p>
+
+            <p>
+                Asimismo, el despliegue en entornos reales requiere gestionar riesgos
+                asociados a privacidad, seguridad, sesgos y alucinaciones.
+            </p>
+
+            <p>
+                Por todo ello, la adopción de estas tecnologías demanda controles
+                como la gestión de <em>tokens</em>, la implementación de
+                <em>Guardrails</em>, el principio de mínimo privilegio, la validación
+                de salidas y la supervisión humana.
+            </p>
+
+            <p>
+                El criterio central para evaluar una plataforma
+                <em>AI-Native</em> no radica en la velocidad con la que genera una
+                respuesta, sino en su capacidad para resolver problemas de manera
+                <strong>
+                    eficiente, segura, sostenible y mantenible en el tiempo.
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         BIBLIOGRAFÍA
+    ========================================================== -->
+
+    <section id="bibliografia" class="seccion">
+
+        <h1>Bibliografía</h1>
+
+        <div class="bibliografia">
+
+
+            <p>
+                Autio, C., Schwartz, R., Dunietz, J., Jain, S.,
+                Stanley, M., Tabassi, E., Hall, P., &amp; Roberts, K.
+                (2024).
+                <em>
+                    Artificial Intelligence Risk Management Framework:
+                    Generative Artificial Intelligence Profile
+                </em>
+                (NIST AI 600-1).
+                National Institute of Standards and Technology.
+                <br>
+                <a href="https://doi.org/10.6028/NIST.AI.600-1"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.6028/NIST.AI.600-1
+                </a>
+            </p>
+
+
+            <p>
+                Becker, J., Rush, N., Barnes, E., &amp; Rein, D. (2025).
+                <em>
+                    Measuring the impact of early-2025 AI on experienced
+                    open-source developer productivity
+                </em>.
+                arXiv.
+                <br>
+                <a href="https://doi.org/10.48550/arXiv.2507.09089"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.48550/arXiv.2507.09089
+                </a>
+            </p>
+
+
+            <p>
+                Carlini, N., Tramèr, F., Wallace, E., Jagielski, M.,
+                Herbert-Voss, A., Lee, K., Roberts, A., Brown, T.,
+                Song, D., Erlingsson, Ú., Oprea, A., &amp; Raffel, C.
+                (2021).
+                Extracting training data from large language models.
+                <em>
+                    30th USENIX Security Symposium
+                    (USENIX Security 21)
+                </em>, 2633–2650.
+                <br>
+                <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting
+                </a>
+            </p>
+
+
+            <p>
+                Gallegos, I. O., Rossi, R. A., Barrow, J.,
+                Tanjim, M. M., Kim, S., Dernoncourt, F., Yu, T.,
+                Zhang, R., &amp; Ahmed, N. K. (2024).
+                Bias and fairness in large language models: A survey.
+                <em>Computational Linguistics, 50</em>(3), 1097–1179.
+                <br>
+                <a href="https://doi.org/10.1162/coli_a_00524"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.1162/coli_a_00524
+                </a>
+            </p>
+
+
+            <p>
+                Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z.,
+                Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B.,
+                &amp; Liu, T. (2025).
+                A survey on hallucination in large language models:
+                Principles, taxonomy, challenges, and open questions.
+                <em>ACM Transactions on Information Systems, 43</em>(2),
+                Article 42.
+                <br>
+                <a href="https://doi.org/10.1145/3703155"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.1145/3703155
+                </a>
+            </p>
+
+
+            <p>
+                Lewis, P., Perez, E., Piktus, A., Petroni, F.,
+                Karpukhin, V., Goyal, N., Küttler, H., Lewis, M.,
+                Yih, W.-t., Rocktäschel, T., Riedel, S.,
+                &amp; Kiela, D. (2020).
+                Retrieval-augmented generation for knowledge-intensive
+                NLP tasks.
+                <em>
+                    Advances in Neural Information Processing Systems, 33
+                </em>, 9459–9474.
+                <br>
+                <a href="https://arxiv.org/abs/2005.11401"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://arxiv.org/abs/2005.11401
+                </a>
+            </p>
+
+
+            <p>
+                Liu, Y., Deng, G., Li, Y., Wang, K., Wang, Z.,
+                Wang, X., Zhang, T., Liu, Y., Wang, H., Zheng, Y.,
+                &amp; Liu, Y. (2023).
+                <em>
+                    Prompt injection attack against LLM-integrated
+                    applications
+                </em>.
+                arXiv.
+                <br>
+                <a href="https://doi.org/10.48550/arXiv.2306.05499"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.48550/arXiv.2306.05499
+                </a>
+            </p>
+
+
+            <p>
+                Opara-Martins, J., Sahandi, R., &amp; Tian, F. (2016).
+                Critical analysis of vendor lock-in and its impact on
+                cloud computing migration: A business perspective.
+                <em>Journal of Cloud Computing, 5</em>, Article 4.
+                <br>
+                <a href="https://doi.org/10.1186/s13677-016-0054-z"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.1186/s13677-016-0054-z
+                </a>
+            </p>
+
+
+            <p>
+                Paradis, E., Grey, K., Madison, Q., Nam, D.,
+                Macvean, A., Meimand, V., Zhang, N.,
+                Ferrari-Church, B., &amp; Chandra, S. (2024).
+                <em>
+                    How much does AI impact development speed?
+                    An enterprise-based randomized controlled trial
+                </em>.
+                arXiv.
+                <br>
+                <a href="https://arxiv.org/abs/2410.12944"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://arxiv.org/abs/2410.12944
+                </a>
+            </p>
+
+
+            <p>
+                Peng, S., Kalliamvakou, E., Cihon, P.,
+                &amp; Demirer, M. (2023).
+                <em>
+                    The impact of AI on developer productivity:
+                    Evidence from GitHub Copilot
+                </em>.
+                arXiv.
+                <br>
+                <a href="https://doi.org/10.48550/arXiv.2302.06590"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.48550/arXiv.2302.06590
+                </a>
+            </p>
+
+
+            <p>
+                Rawte, V., Sheth, A., &amp; Das, A. (2023).
+                <em>
+                    A survey of hallucination in large foundation models
+                </em>.
+                arXiv.
+                <br>
+                <a href="https://doi.org/10.48550/arXiv.2309.05922"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.48550/arXiv.2309.05922
+                </a>
+            </p>
+
+
+            <p>
+                Samsi, S., Zhao, D., McDonald, J., Li, B.,
+                Michaleas, A., Jones, M., Bergeron, W., Kepner, J.,
+                Tiwari, D., &amp; Gadepally, V. (2023).
+                <em>
+                    From words to watts: Benchmarking the energy costs
+                    of large language model inference
+                </em>.
+                arXiv.
+                <br>
+                <a href="https://doi.org/10.48550/arXiv.2310.03003"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.48550/arXiv.2310.03003
+                </a>
+            </p>
+
+
+            <p>
+                Yao, Y., Duan, J., Xu, K., Cai, Y., Sun, Z.,
+                &amp; Zhang, Y. (2024).
+                A survey on large language model (LLM) security and
+                privacy: The good, the bad, and the ugly.
+                <em>High-Confidence Computing, 4</em>(2), 100211.
+                <br>
+                <a href="https://doi.org/10.1016/j.hcc.2024.100211"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    https://doi.org/10.1016/j.hcc.2024.100211
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <p>
+        AI Platforms — Plataformas de desarrollo nativas de IA
+    </p>
+
+</footer>
+
+
+<script src="../js/script.js"></script>
 
 </body>
 
