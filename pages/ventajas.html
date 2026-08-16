@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,3342 +7,1453 @@
 
     <title>Ventajas y desafíos | AI-Native Development Platforms</title>
 
-    <meta
-        name="description"
-        content="Análisis académico de las ventajas, desafíos, riesgos, métricas y estrategias de mitigación en plataformas de desarrollo nativas de inteligencia artificial."
-    >
-
-    <!--
-        Se conserva la hoja de estilos general del proyecto.
-        Los estilos de esta página están aislados con el prefijo ai6-
-        para evitar conflictos con las demás secciones del blog.
-    -->
+    <!-- CSS general del proyecto -->
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
-        :root {
-            --ai6-primary: #174ea6;
-            --ai6-primary-dark: #0b3978;
-            --ai6-secondary: #2563eb;
-            --ai6-success: #15803d;
-            --ai6-success-soft: #f0fdf4;
-            --ai6-warning: #b45309;
-            --ai6-warning-soft: #fffbeb;
-            --ai6-danger: #b91c1c;
-            --ai6-danger-soft: #fef2f2;
-            --ai6-info-soft: #eff6ff;
-            --ai6-purple-soft: #faf5ff;
-            --ai6-text: #1f2937;
-            --ai6-muted: #5f6b7a;
-            --ai6-border: #dbe3ee;
-            --ai6-background: #f5f7fb;
-            --ai6-card: #ffffff;
-            --ai6-code: #111827;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background: var(--ai6-background);
-            color: var(--ai6-text);
+        .vd-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
             font-family: Arial, Helvetica, sans-serif;
+            color: #263238;
             line-height: 1.75;
         }
 
-        .ai6-main {
-            width: min(1120px, calc(100% - 32px));
-            margin: 38px auto 70px;
-            padding: 0;
-            background: transparent;
-            box-shadow: none;
-        }
-
-        .ai6-article {
-            background: var(--ai6-card);
-            border: 1px solid var(--ai6-border);
+        .vd-hero {
+            background: linear-gradient(135deg, #0b3d91, #2563eb);
+            color: white;
+            padding: 45px;
             border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+            margin-bottom: 35px;
         }
 
-        .ai6-content {
-            padding: 38px 48px 50px;
-        }
-
-        .ai6-hero {
-            padding: 52px 48px;
-            color: #ffffff;
-            background:
-                radial-gradient(circle at top right, rgba(96,165,250,.32), transparent 35%),
-                linear-gradient(135deg, #0b3978 0%, #174ea6 55%, #2563eb 100%);
-        }
-
-        .ai6-badge {
-            display: inline-block;
-            margin-bottom: 14px;
-            padding: 7px 12px;
-            border: 1px solid rgba(255,255,255,.25);
-            border-radius: 999px;
-            background: rgba(255,255,255,.10);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-        }
-
-        .ai6-hero h1 {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            color: #ffffff;
-            font-size: clamp(32px, 5vw, 50px);
-            line-height: 1.12;
-        }
-
-        .ai6-hero p {
-            max-width: 880px;
-            margin: 18px 0 0;
-            color: #e8f0ff;
-            font-size: 18px;
-            text-align: left;
-        }
-
-        .ai6-author {
-            margin-top: 24px;
+        .vd-hero span {
             font-size: 13px;
-            color: #dbeafe;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #bfdbfe;
         }
 
-        .ai6-section {
-            margin-top: 52px;
-            scroll-margin-top: 110px;
+        .vd-hero h1 {
+            color: white;
+            border: none;
+            margin: 10px 0;
+            font-size: 38px;
+            line-height: 1.2;
         }
 
-        .ai6-section:first-child {
-            margin-top: 0;
+        .vd-hero p {
+            color: #eaf2ff;
+            margin-bottom: 0;
+            font-size: 17px;
         }
 
-        .ai6-section h2 {
-            margin: 0 0 18px;
-            padding-bottom: 10px;
+        .vd-intro {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 22px 25px;
+            border-radius: 10px;
+            margin-bottom: 35px;
+        }
+
+        .vd-section {
+            margin-top: 45px;
+        }
+
+        .vd-section > h2 {
+            color: #0b3d91;
             border-bottom: 2px solid #dbeafe;
-            color: var(--ai6-primary);
-            font-size: 29px;
-            line-height: 1.25;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
 
-        .ai6-section h3 {
-            margin: 34px 0 12px;
-            color: var(--ai6-primary-dark);
-            font-size: 22px;
-            line-height: 1.35;
+        .vd-card {
+            background: white;
+            border: 1px solid #dbe3ee;
+            border-radius: 14px;
+            padding: 25px 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 5px 16px rgba(15, 23, 42, 0.06);
         }
 
-        .ai6-section h4 {
-            margin: 24px 0 10px;
+        .vd-card h3 {
+            margin-top: 0;
+            color: #174ea6;
+        }
+
+        .vd-card h4 {
             color: #334155;
-            font-size: 18px;
+            margin-top: 23px;
         }
 
-        .ai6-section p {
-            margin: 0 0 17px;
-            color: #374151;
+        .vd-card p {
             text-align: justify;
         }
 
-        .ai6-lead {
-            font-size: 17px;
-            color: #334155;
+        .evidencia {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            border-radius: 9px;
+            padding: 18px 20px;
+            margin: 20px 0;
         }
 
-        .ai6-summary {
-            margin: 0 0 36px;
-            padding: 25px 27px;
-            border: 1px solid #bfdbfe;
-            border-left: 6px solid var(--ai6-primary);
-            border-radius: 12px;
-            background: var(--ai6-info-soft);
-        }
-
-        .ai6-summary h2 {
-            margin: 0 0 10px;
-            padding: 0;
-            border: 0;
-            font-size: 22px;
-        }
-
-        .ai6-summary p:last-child {
-            margin-bottom: 0;
-        }
-
-        .ai6-toc {
-            margin: 32px 0 40px;
-            padding: 24px 28px;
-            border: 1px solid var(--ai6-border);
-            border-radius: 14px;
-            background: #f8fafc;
-        }
-
-        .ai6-toc h2 {
-            margin: 0 0 14px;
-            padding: 0;
-            border: 0;
-            font-size: 21px;
-        }
-
-        .ai6-toc ol {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px 30px;
-            margin: 0;
-            padding-left: 22px;
-        }
-
-        .ai6-toc li {
-            margin: 0;
-        }
-
-        .ai6-toc a {
-            color: var(--ai6-primary);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .ai6-toc a:hover {
-            text-decoration: underline;
-        }
-
-        .ai6-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-            margin: 22px 0;
-        }
-
-        .ai6-card {
-            padding: 22px;
-            border: 1px solid var(--ai6-border);
-            border-radius: 14px;
-            background: #ffffff;
-            box-shadow: 0 5px 16px rgba(15,23,42,.05);
-        }
-
-        .ai6-card h3,
-        .ai6-card h4 {
-            margin-top: 0;
-        }
-
-        .ai6-card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .ai6-evidence {
-            margin: 22px 0;
-            padding: 20px 22px;
-            border-left: 5px solid var(--ai6-secondary);
-            border-radius: 10px;
-            background: var(--ai6-info-soft);
-        }
-
-        .ai6-evidence strong {
-            color: #1d4ed8;
-        }
-
-        .ai6-evidence p:last-child {
-            margin-bottom: 0;
-        }
-
-        .ai6-caution {
-            margin: 22px 0;
-            padding: 20px 22px;
+        .advertencia {
+            background: #fffbeb;
             border-left: 5px solid #d97706;
+            border-radius: 9px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .seguridad {
+            background: #fef2f2;
+            border-left: 5px solid #dc2626;
+            border-radius: 9px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .buena-practica {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            border-radius: 9px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .guardrails {
+            background: #faf5ff;
+            border: 1px solid #ddd6fe;
+            border-left: 5px solid #7c3aed;
             border-radius: 10px;
-            background: var(--ai6-warning-soft);
-        }
-
-        .ai6-caution p:last-child {
-            margin-bottom: 0;
-        }
-
-        .ai6-danger-box {
+            padding: 22px;
             margin: 22px 0;
-            padding: 20px 22px;
-            border-left: 5px solid var(--ai6-danger);
-            border-radius: 10px;
-            background: var(--ai6-danger-soft);
         }
 
-        .ai6-success-box {
-            margin: 22px 0;
-            padding: 20px 22px;
-            border-left: 5px solid var(--ai6-success);
-            border-radius: 10px;
-            background: var(--ai6-success-soft);
-        }
-
-        .ai6-feedback {
-            margin: 25px 0;
-            padding: 22px 24px;
-            border: 1px solid #c4b5fd;
-            border-left: 6px solid #7c3aed;
-            border-radius: 12px;
-            background: var(--ai6-purple-soft);
-        }
-
-        .ai6-feedback .ai6-feedback-title {
-            display: block;
-            margin-bottom: 7px;
+        .guardrails h4 {
+            margin-top: 0;
             color: #6d28d9;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: .05em;
-            text-transform: uppercase;
         }
 
-        .ai6-stat-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 15px;
-            margin: 24px 0;
-        }
-
-        .ai6-stat {
-            padding: 22px 16px;
-            border: 1px solid var(--ai6-border);
-            border-radius: 12px;
-            background: #ffffff;
-            text-align: center;
-        }
-
-        .ai6-stat-number {
-            display: block;
-            color: var(--ai6-primary);
-            font-size: 31px;
-            line-height: 1.1;
-            font-weight: 800;
-        }
-
-        .ai6-stat-label {
-            display: block;
-            margin-top: 7px;
-            color: var(--ai6-muted);
-            font-size: 13px;
-            line-height: 1.4;
-        }
-
-        .ai6-list {
-            margin: 13px 0 20px;
-            padding-left: 25px;
-        }
-
-        .ai6-list li {
+        .vd-list li {
             margin-bottom: 9px;
         }
 
-        .ai6-table-wrap {
+        .vd-table-container {
             width: 100%;
-            margin: 26px 0 32px;
             overflow-x: auto;
-            border: 1px solid var(--ai6-border);
-            border-radius: 12px;
+            margin: 25px 0;
         }
 
-        .ai6-table {
+        .vd-table {
             width: 100%;
-            min-width: 760px;
-            margin: 0;
-            border: 0;
             border-collapse: collapse;
-            background: #ffffff;
+            min-width: 800px;
             font-size: 14px;
         }
 
-        .ai6-table th,
-        .ai6-table td {
-            padding: 14px 15px;
-            border: 0;
-            border-bottom: 1px solid #e5e7eb;
-            border-right: 1px solid #e5e7eb;
+        .vd-table th {
+            background: #174ea6;
+            color: white;
+            text-align: left;
+            padding: 14px;
+        }
+
+        .vd-table td {
+            padding: 14px;
+            border: 1px solid #dbe3ee;
             vertical-align: top;
+        }
+
+        .vd-table tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .vd-conclusion {
+            background: #0f172a;
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 45px;
+        }
+
+        .vd-conclusion h2 {
+            color: #93c5fd;
+            border: none;
+            margin-top: 0;
+        }
+
+        .vd-conclusion p {
+            color: #e2e8f0;
+            text-align: justify;
+        }
+
+        .bibliografia {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 2px solid #dbe3ee;
+        }
+
+        .bibliografia h2 {
+            color: #0b3d91;
+        }
+
+        .referencia {
+            padding-left: 35px;
+            text-indent: -35px;
+            margin-bottom: 18px;
             text-align: left;
         }
 
-        .ai6-table th:last-child,
-        .ai6-table td:last-child {
-            border-right: 0;
+        .referencia a {
+            color: #174ea6;
+            word-break: break-word;
         }
 
-        .ai6-table tr:last-child td {
-            border-bottom: 0;
-        }
-
-        .ai6-table th {
-            background: #eef4ff;
-            color: #173b75;
-            font-weight: 700;
-        }
-
-        .ai6-table tbody tr:nth-child(even) {
-            background: #fafcff;
-        }
-
-        .ai6-table strong {
-            color: #1e3a5f;
-        }
-
-        .ai6-code-label {
-            margin: 24px 0 0;
-            padding: 9px 14px;
-            border-radius: 10px 10px 0 0;
-            background: #334155;
-            color: #e2e8f0;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .04em;
-        }
-
-        .ai6-code {
-            margin: 0 0 28px;
-            padding: 22px;
-            overflow-x: auto;
-            border: 0;
-            border-radius: 0 0 10px 10px;
-            background: var(--ai6-code);
-            color: #e5e7eb;
-            font-family: Consolas, Monaco, "Courier New", monospace;
-            font-size: 13px;
-            line-height: 1.65;
-            white-space: pre;
-        }
-
-        .ai6-code code {
-            padding: 0;
-            background: transparent;
-            color: inherit;
-            font-size: inherit;
-        }
-
-        .ai6-formula {
-            margin: 20px 0;
-            padding: 18px;
-            border: 1px dashed #94a3b8;
-            border-radius: 10px;
-            background: #f8fafc;
-            color: #1e293b;
-            font-family: Consolas, Monaco, monospace;
-            font-size: 14px;
-            text-align: center;
-            overflow-wrap: anywhere;
-        }
-
-        .ai6-citation {
-            white-space: nowrap;
-        }
-
-        .ai6-citation a {
-            color: var(--ai6-primary);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .ai6-citation a:hover {
-            text-decoration: underline;
-        }
-
-        .ai6-reference-list {
-            margin: 20px 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .ai6-reference-list li {
-            margin: 0 0 19px;
-            padding-left: 36px;
-            text-indent: -36px;
-            color: #374151;
-            line-height: 1.65;
-        }
-
-        .ai6-reference-list a {
-            color: var(--ai6-primary);
-            text-decoration: none;
-            overflow-wrap: anywhere;
-        }
-
-        .ai6-reference-list a:hover {
-            text-decoration: underline;
-        }
-
-        .ai6-ref-links {
-            display: inline;
-            margin-left: 5px;
-            font-size: 12px;
-            white-space: normal;
-        }
-
-        .ai6-checklist {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0,1fr));
-            gap: 12px 24px;
-            margin: 20px 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .ai6-checklist li {
-            position: relative;
-            margin: 0;
-            padding: 13px 14px 13px 42px;
-            border: 1px solid #dbe3ee;
-            border-radius: 10px;
-            background: #ffffff;
-        }
-
-        .ai6-checklist li::before {
-            content: "✓";
-            position: absolute;
-            top: 12px;
-            left: 15px;
-            color: var(--ai6-success);
-            font-weight: 900;
-        }
-
-        .ai6-small {
-            color: var(--ai6-muted);
-            font-size: 13px;
-        }
-
-        .ai6-footer-note {
-            margin-top: 50px;
-            padding: 25px;
-            border-radius: 12px;
-            background: #f1f5f9;
-            color: #475569;
-            font-size: 13px;
-        }
-
-        .ai6-footer-note p:last-child {
-            margin-bottom: 0;
-        }
-
-        .ai6-back {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--ai6-primary);
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .ai6-back:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 850px) {
-            .ai6-content,
-            .ai6-hero {
-                padding-left: 28px;
-                padding-right: 28px;
+        @media (max-width: 700px) {
+            .vd-hero {
+                padding: 30px 22px;
             }
 
-            .ai6-grid,
-            .ai6-stat-grid,
-            .ai6-checklist,
-            .ai6-toc ol {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .ai6-main {
-                width: calc(100% - 18px);
-                margin-top: 15px;
+            .vd-hero h1 {
+                font-size: 29px;
             }
 
-            .ai6-content {
-                padding: 26px 18px 36px;
-            }
-
-            .ai6-hero {
-                padding: 38px 20px;
-            }
-
-            .ai6-hero p {
-                font-size: 16px;
-            }
-
-            .ai6-section h2 {
-                font-size: 25px;
-            }
-
-            .ai6-section h3 {
-                font-size: 20px;
-            }
-
-            .ai6-summary,
-            .ai6-toc,
-            .ai6-card,
-            .ai6-evidence,
-            .ai6-caution,
-            .ai6-danger-box,
-            .ai6-success-box,
-            .ai6-feedback {
-                padding-left: 18px;
-                padding-right: 18px;
-            }
-        }
-
-        /*
-            VERSIÓN IMPRIMIBLE
-            Permite imprimir o exportar esta sección como PDF
-            directamente desde el navegador.
-        */
-        @media print {
-
-            @page {
-                size: A4;
-                margin: 1.5cm;
-            }
-
-            header,
-            .navbar,
-            .ai6-back,
-            script {
-                display: none !important;
-            }
-
-            * {
-                box-shadow: none !important;
-            }
-
-            body {
-                background: #ffffff !important;
-                color: #111111 !important;
-                font-size: 10.5pt;
-            }
-
-            .ai6-main {
-                width: 100%;
-                max-width: none;
-                margin: 0;
-            }
-
-            .ai6-article {
-                border: 0;
-                border-radius: 0;
-            }
-
-            .ai6-hero {
-                padding: 20px 0 25px;
-                background: #ffffff !important;
-                color: #111111 !important;
-                border-bottom: 2px solid #333333;
-            }
-
-            .ai6-hero h1,
-            .ai6-hero p,
-            .ai6-author,
-            .ai6-badge {
-                color: #111111 !important;
-            }
-
-            .ai6-badge {
-                padding: 0;
-                border: 0;
-                background: transparent;
-            }
-
-            .ai6-content {
-                padding: 25px 0 0;
-            }
-
-            .ai6-section {
-                margin-top: 28px;
-            }
-
-            .ai6-section h2,
-            .ai6-section h3,
-            .ai6-section h4 {
-                color: #111111 !important;
-            }
-
-            .ai6-card,
-            .ai6-summary,
-            .ai6-toc,
-            .ai6-evidence,
-            .ai6-caution,
-            .ai6-danger-box,
-            .ai6-success-box,
-            .ai6-feedback,
-            .ai6-footer-note {
-                background: #ffffff !important;
-                border-color: #999999 !important;
-            }
-
-            .ai6-table-wrap {
-                overflow: visible;
-            }
-
-            .ai6-table {
-                min-width: 0;
-                font-size: 8.5pt;
-            }
-
-            .ai6-table th {
-                background: #eeeeee !important;
-                color: #111111 !important;
-            }
-
-            .ai6-code {
-                white-space: pre-wrap;
-                background: #f3f4f6 !important;
-                color: #111111 !important;
-                border: 1px solid #bbbbbb;
-            }
-
-            .ai6-code-label {
-                background: #dddddd !important;
-                color: #111111 !important;
-            }
-
-            .ai6-card,
-            .ai6-evidence,
-            .ai6-caution,
-            .ai6-danger-box,
-            .ai6-success-box,
-            .ai6-feedback,
-            table,
-            pre {
-                break-inside: avoid;
-            }
-
-            a {
-                color: #111111 !important;
-                text-decoration: none !important;
+            .vd-card {
+                padding: 20px;
             }
         }
     </style>
 </head>
 
-<body id="inicio">
+<body>
+
+<main class="vd-container">
 
     <!-- =========================================================
-         NAVEGACIÓN GENERAL DEL BLOG
+         SECCIÓN 6
     ========================================================== -->
-    <header>
-        <nav class="navbar">
-            <a href="../index.html" class="logo">
-                AI Platforms
-            </a>
 
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="introduccion.html">Introducción</a></li>
-                <li><a href="arquitectura.html">Arquitectura</a></li>
-                <li><a href="plataformas.html">Plataformas</a></li>
-                <li><a href="herramientas.html">Herramientas</a></li>
-                <li><a href="aplicaciones.html">Aplicaciones</a></li>
-                <li><a href="ventajas.html">Ventajas y desafíos</a></li>
-                <li><a href="tendencias.html">Tendencias</a></li>
-                <li><a href="guia.html">Guía</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section id="ventajas-desafios">
+
+        <div class="vd-hero">
+
+            <span>Sección 6 · AI-Native Development Platforms</span>
+
+            <h1>Ventajas y desafíos</h1>
+
+            <p>
+                Las plataformas nativas de inteligencia artificial están
+                transformando la forma de diseñar, construir y operar software.
+                Sin embargo, adoptar IA no consiste únicamente en obtener
+                respuestas más rápido: también implica administrar nuevos
+                riesgos técnicos, económicos, éticos y de seguridad.
+            </p>
+
+        </div>
 
 
-    <main class="ai6-main">
+        <!-- INTRODUCCIÓN -->
 
-        <article class="ai6-article">
+        <div class="vd-intro">
 
-            <!-- =====================================================
-                 PORTADA DE LA SECCIÓN
-            ====================================================== -->
-            <header class="ai6-hero">
+            <strong>Una mirada equilibrada</strong>
 
-                <span class="ai6-badge">
-                    Sección 6 · AI-Native Development Platforms
-                </span>
+            <p>
+                El valor de una plataforma AI-Native aparece cuando sus
+                capacidades permiten resolver un problema de manera más
+                eficiente sin sacrificar calidad, seguridad o control.
+                Por esta razón, sus beneficios y sus riesgos deben analizarse
+                conjuntamente.
+            </p>
 
-                <h1>
-                    Ventajas y desafíos de las plataformas
-                    de desarrollo nativas de inteligencia artificial
-                </h1>
+            <p>
+                En esta sección se estudian cuatro ventajas principales:
+                <strong>productividad, automatización, escalabilidad e
+                integración</strong>; y seis desafíos:
+                <strong>costos, privacidad, seguridad, sesgos,
+                alucinaciones y dependencia del proveedor</strong>.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             VENTAJAS
+        ====================================================== -->
+
+        <section class="vd-section">
+
+            <h2>Ventajas</h2>
+
+
+            <!-- PRODUCTIVIDAD -->
+
+            <article class="vd-card">
+
+                <h3>1. Mayor productividad</h3>
 
                 <p>
-                    La incorporación de inteligencia artificial al desarrollo
-                    de software ofrece oportunidades reales de productividad,
-                    automatización y escalabilidad, pero también introduce
-                    nuevos costos, riesgos de seguridad, problemas de
-                    privacidad y desafíos de confiabilidad. El verdadero reto
-                    no consiste solamente en “usar IA”, sino en diseñar
-                    sistemas capaces de aprovecharla de manera medible,
-                    responsable y sostenible.
+                    Uno de los mayores atractivos de las plataformas AI-Native
+                    es su capacidad para disminuir el tiempo invertido en
+                    actividades repetitivas. Durante el desarrollo de software,
+                    un asistente de IA puede generar estructuras iniciales de
+                    código, explicar funciones, producir casos de prueba,
+                    elaborar documentación o ayudar a localizar errores.
                 </p>
 
-                <div class="ai6-author">
-                    Elaborado por:
-                    <strong>Elkin Ferney Rodríguez Castrillón</strong>
-                    · Sección 6
+                <p>
+                    Esto permite que el desarrollador dedique una mayor parte
+                    de su esfuerzo a actividades que requieren criterio humano:
+                    comprender el problema, diseñar la arquitectura, analizar
+                    riesgos, revisar la seguridad y validar que el software
+                    realmente satisfaga la necesidad del usuario.
+                </p>
+
+                <div class="evidencia">
+
+                    <strong>¿Qué muestran los estudios?</strong>
+
+                    <p>
+                        Peng et al. (2023) realizaron un experimento controlado
+                        en el que desarrolladores debían implementar un servidor
+                        HTTP en JavaScript. Los participantes que utilizaron
+                        GitHub Copilot completaron la tarea aproximadamente un
+                        <strong>55,8 % más rápido</strong>.
+                    </p>
+
+                    <p>
+                        Sin embargo, esta cifra no debe interpretarse como una
+                        mejora universal para cualquier proyecto.
+                    </p>
+
                 </div>
 
-            </header>
+                <p>
+                    Investigaciones posteriores ayudan a entender esa diferencia.
+                    Paradis et al. (2024), en un ensayo realizado en un entorno
+                    empresarial, estimaron una reducción cercana al
+                    <strong>21 % en el tiempo de desarrollo</strong>.
+                </p>
 
+                <p>
+                    En contraste, Becker et al. (2025) estudiaron
+                    desarrolladores experimentados trabajando sobre repositorios
+                    de código que ya conocían y observaron aproximadamente un
+                    <strong>19 % más de tiempo</strong> al utilizar herramientas
+                    de IA.
+                </p>
 
-            <div class="ai6-content">
+                <div class="advertencia">
 
-                <!-- =================================================
-                     RESUMEN EJECUTIVO
-                ================================================== -->
-                <section class="ai6-summary" aria-labelledby="resumen-ejecutivo">
-
-                    <h2 id="resumen-ejecutivo">
-                        Resumen ejecutivo
-                    </h2>
+                    <strong>¿Qué significa esta diferencia?</strong>
 
                     <p>
-                        Las plataformas <em>AI-Native</em> permiten integrar
-                        modelos de lenguaje, sistemas de recuperación de
-                        información, agentes, APIs y automatizaciones como
-                        componentes centrales del software. Su principal
-                        atractivo es que pueden reducir trabajo repetitivo,
-                        acelerar ciertas tareas y facilitar la construcción de
-                        soluciones que antes exigían equipos especializados.
+                        La IA no produce automáticamente el mismo nivel de
+                        productividad en todos los escenarios. El resultado
+                        depende de la complejidad de la tarea, del conocimiento
+                        del desarrollador, del contexto proporcionado al modelo
+                        y del esfuerzo necesario para revisar sus respuestas.
+                    </p>
+
+                </div>
+
+                <p>
+                    Por esta razón, la productividad no debería medirse por la
+                    cantidad de código generado. También deben analizarse
+                    indicadores como tiempo por tarea terminada, número de
+                    defectos, retrabajo, cobertura de pruebas, mantenibilidad y
+                    tiempo dedicado a revisar las propuestas generadas por IA.
+                </p>
+
+            </article>
+
+
+            <!-- AUTOMATIZACIÓN -->
+
+            <article class="vd-card">
+
+                <h3>2. Automatización</h3>
+
+                <p>
+                    La inteligencia artificial permite automatizar procesos que
+                    anteriormente requerían intervención humana continua.
+                    Una diferencia importante frente a la automatización
+                    tradicional es que un modelo generativo puede trabajar con
+                    información no estructurada y lenguaje natural.
+                </p>
+
+                <p>Entre las actividades que pueden automatizarse se encuentran:</p>
+
+                <ul class="vd-list">
+
+                    <li>
+                        Clasificación y organización de grandes cantidades de
+                        documentos.
+                    </li>
+
+                    <li>
+                        Extracción de información relevante.
+                    </li>
+
+                    <li>
+                        Elaboración de resúmenes.
+                    </li>
+
+                    <li>
+                        Generación inicial de respuestas en asistentes virtuales.
+                    </li>
+
+                    <li>
+                        Preparación de borradores de informes y documentación.
+                    </li>
+
+                    <li>
+                        Traducción y transformación de contenidos.
+                    </li>
+
+                    <li>
+                        Generación inicial de pruebas y apoyo al desarrollo de
+                        software.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Esto permite que una organización procese mayores volúmenes
+                    de información sin incrementar proporcionalmente la carga
+                    de trabajo manual.
+                </p>
+
+                <div class="advertencia">
+
+                    <strong>Automatizar no significa eliminar a la persona.</strong>
+
+                    <p>
+                        En ámbitos sensibles como salud, finanzas, educación,
+                        seguridad o selección de personal, una salida incorrecta
+                        puede afectar directamente a una persona.
                     </p>
 
                     <p>
-                        Sin embargo, la evidencia académica demuestra que sus
-                        beneficios no son automáticos. Peng et al. (2023)
-                        observaron una reducción del 55,8 % en el tiempo de
-                        desarrollo en una tarea controlada con GitHub Copilot;
-                        Paradis et al. (2024), en un ensayo con ingenieros de
-                        Google, estimaron una mejora cercana al 21 %; mientras
-                        que Becker et al. (2025), estudiando desarrolladores
-                        experimentados trabajando sobre proyectos maduros,
-                        encontraron un aumento del 19 % en el tiempo de
-                        ejecución al utilizar herramientas de IA.
+                        En estos escenarios es recomendable mantener un enfoque
+                        <em>human-in-the-loop</em>, donde las decisiones de
+                        mayor impacto requieren revisión o autorización humana.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ESCALABILIDAD -->
+
+            <article class="vd-card">
+
+                <h3>3. Escalabilidad</h3>
+
+                <p>
+                    Las plataformas AI-Native facilitan comenzar con una prueba
+                    de concepto pequeña y aumentar progresivamente la capacidad
+                    del sistema. Un asistente que inicialmente atiende diez
+                    usuarios puede evolucionar hacia una solución que procese
+                    cientos o miles de solicitudes.
+                </p>
+
+                <p>
+                    Los servicios administrados y la infraestructura en la nube
+                    permiten ajustar los recursos de acuerdo con la demanda,
+                    reduciendo la necesidad de realizar una gran inversión
+                    inicial en servidores especializados.
+                </p>
+
+                <div class="evidencia">
+
+                    <strong>Escalabilidad técnica y económica</strong>
+
+                    <p>
+                        Un sistema no es verdaderamente escalable únicamente
+                        porque pueda procesar más solicitudes.
                     </p>
 
                     <p>
-                        La conclusión práctica es importante:
-                        <strong>
-                            la productividad de la IA no debería presumirse;
-                            debería medirse.
-                        </strong>
-                        Un sistema AI-Native sólido debe evaluarse al mismo
-                        tiempo por calidad, latencia, costo, seguridad,
-                        privacidad, tasa de alucinación, capacidad de
-                        recuperación ante fallos y facilidad para migrar de
+                        También debe ser posible mantener un costo sostenible a
+                        medida que aumentan los usuarios, el procesamiento y el
+                        volumen de información.
+                    </p>
+
+                </div>
+
+                <p>
+                    Samsi et al. (2023) muestran que la inferencia de grandes
+                    modelos de lenguaje implica costos computacionales y
+                    energéticos que varían según el tamaño del modelo, el
+                    hardware utilizado y la estrategia de ejecución.
+                </p>
+
+                <p>
+                    Por esta razón, la escalabilidad debe analizarse tanto desde
+                    la infraestructura como desde la sostenibilidad financiera.
+                </p>
+
+            </article>
+
+
+            <!-- INTEGRACIÓN -->
+
+            <article class="vd-card">
+
+                <h3>4. Integración sencilla</h3>
+
+                <p>
+                    Actualmente no es necesario construir un modelo de
+                    inteligencia artificial desde cero para añadir capacidades
+                    inteligentes a una aplicación.
+                </p>
+
+                <p>
+                    Los equipos pueden utilizar modelos preentrenados mediante
+                    APIs, SDK y servicios especializados. Esto permite integrar
+                    generación de texto, análisis de documentos, clasificación,
+                    asistentes inteligentes y otras funciones utilizando
+                    tecnologías conocidas por los desarrolladores.
+                </p>
+
+                <div class="buena-practica">
+
+                    <strong>Ventaja práctica</strong>
+
+                    <p>
+                        Esta disponibilidad reduce la barrera de entrada y
+                        permite que un equipo concentre su esfuerzo en resolver
+                        el problema de negocio en lugar de construir toda la
+                        infraestructura de inteligencia artificial.
+                    </p>
+
+                </div>
+
+                <p>
+                    Sin embargo, la facilidad para crear un prototipo no
+                    significa que el sistema esté preparado para producción.
+                    Una solución real también necesita autenticación,
+                    monitoreo, auditoría, manejo de errores, seguridad,
+                    trazabilidad y control del consumo.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================================
+             DESAFÍOS
+        ====================================================== -->
+
+        <section class="vd-section">
+
+            <h2>Desafíos</h2>
+
+
+            <!-- COSTOS -->
+
+            <article class="vd-card">
+
+                <h3>1. Costos y gestión del consumo de tokens</h3>
+
+                <p>
+                    Uno de los desafíos que suele subestimarse durante la etapa
+                    de prototipo es el costo real de operar una aplicación
+                    AI-Native.
+                </p>
+
+                <p>
+                    En servicios comerciales, una parte del consumo está
+                    relacionada con los <strong>tokens de entrada y de
+                    salida</strong>. Una conversación extensa, documentos
+                    demasiado grandes o respuestas innecesariamente largas
+                    incrementan la cantidad de información procesada.
+                </p>
+
+                <p>Además del modelo, pueden existir costos asociados con:</p>
+
+                <ul class="vd-list">
+
+                    <li>Generación de embeddings.</li>
+                    <li>Bases de datos vectoriales.</li>
+                    <li>Almacenamiento.</li>
+                    <li>Procesamiento de documentos.</li>
+                    <li>Monitoreo y trazabilidad.</li>
+                    <li>Guardrails y evaluaciones automáticas.</li>
+                    <li>Transferencia de datos.</li>
+                    <li>Infraestructura.</li>
+                    <li>Personal especializado.</li>
+
+                </ul>
+
+                <div class="advertencia">
+
+                    <strong>El costo por llamada no representa todo el costo.</strong>
+
+                    <p>
+                        Un modelo económico que produzca resultados deficientes
+                        puede requerir nuevas consultas, mayor contexto y más
+                        correcciones humanas. Por ello, resulta más útil evaluar
+                        el <strong>costo por tarea correctamente resuelta</strong>.
+                    </p>
+
+                </div>
+
+                <h4>¿Cómo controlar el consumo en producción?</h4>
+
+                <ul class="vd-list">
+
+                    <li>
+                        Registrar los tokens consumidos por usuario, proceso,
+                        modelo y tipo de tarea.
+                    </li>
+
+                    <li>
+                        Definir presupuestos y alertas automáticas.
+                    </li>
+
+                    <li>
+                        Limitar la longitud máxima de las respuestas.
+                    </li>
+
+                    <li>
+                        No enviar historiales completos cuando no sean
+                        necesarios.
+                    </li>
+
+                    <li>
+                        Implementar caché para consultas repetidas cuando sea
+                        técnicamente apropiado.
+                    </li>
+
+                    <li>
+                        Utilizar modelos pequeños para tareas simples y reservar
+                        modelos más costosos para problemas complejos.
+                    </li>
+
+                    <li>
+                        Recuperar solamente la información necesaria en lugar de
+                        adjuntar documentos completos.
+                    </li>
+
+                    <li>
+                        Monitorear continuamente costo, calidad y latencia.
+                    </li>
+
+                </ul>
+
+                <div class="buena-practica">
+
+                    <strong>Principio recomendado:</strong>
+
+                    <p>
+                        No utilizar automáticamente el modelo más grande.
+                        Debe utilizarse el modelo más pequeño que alcance el
+                        nivel de calidad y seguridad requerido para la tarea.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRIVACIDAD -->
+
+            <article class="vd-card">
+
+                <h3>2. Privacidad</h3>
+
+                <p>
+                    Utilizar servicios externos de inteligencia artificial
+                    puede implicar que información de una organización sea
+                    procesada fuera de su infraestructura.
+                </p>
+
+                <p>
+                    Esto es especialmente importante cuando la aplicación
+                    trabaja con historias clínicas, información financiera,
+                    datos personales, código fuente propietario, documentos
+                    institucionales o cualquier información clasificada como
+                    sensible.
+                </p>
+
+                <p>
+                    Yao et al. (2024) analizan diferentes riesgos de seguridad
+                    y privacidad relacionados con los grandes modelos de
+                    lenguaje. Además, Carlini et al. (2021) demostraron que
+                    ciertos modelos podían memorizar y posteriormente revelar
+                    fragmentos de información presentes en sus datos de
+                    entrenamiento.
+                </p>
+
+                <h4>Medidas recomendadas</h4>
+
+                <ul class="vd-list">
+
+                    <li>Minimizar la información enviada al modelo.</li>
+
+                    <li>
+                        Anonimizar o seudonimizar los datos cuando sea posible.
+                    </li>
+
+                    <li>Aplicar cifrado en tránsito y en reposo.</li>
+
+                    <li>Definir políticas de retención de información.</li>
+
+                    <li>
+                        Revisar las condiciones de tratamiento de datos del
                         proveedor.
-                    </p>
+                    </li>
 
-                </section>
+                    <li>Aplicar controles de acceso.</li>
 
+                    <li>
+                        Considerar modelos privados o locales cuando la
+                        sensibilidad de la información lo justifique.
+                    </li>
 
-                <!-- =================================================
-                     TABLA DE CONTENIDOS
-                ================================================== -->
-                <nav class="ai6-toc" aria-label="Tabla de contenidos">
+                </ul>
 
-                    <h2>Contenido de la sección</h2>
-
-                    <ol>
-                        <li><a href="#contexto">Contexto: oportunidad y responsabilidad</a></li>
-                        <li><a href="#ventajas">Ventajas principales</a></li>
-                        <li><a href="#rag">RAG y ciclo de vida de los datos</a></li>
-                        <li><a href="#embeddings">Embeddings estáticos, contextuales y dinámicos</a></li>
-                        <li><a href="#desafios">Desafíos principales</a></li>
-                        <li><a href="#guardrails">Guardrails y control de alucinaciones</a></li>
-                        <li><a href="#comparativa">Matriz beneficio, riesgo y control</a></li>
-                        <li><a href="#metricas">Métricas para evaluar plataformas</a></li>
-                        <li><a href="#recomendaciones">Recomendaciones prácticas</a></li>
-                        <li><a href="#conclusiones">Conclusiones</a></li>
-                        <li><a href="#bibliografia">Bibliografía APA 7</a></li>
-                    </ol>
-
-                </nav>
+            </article>
 
 
-                <!-- =================================================
-                     CONTEXTO
-                ================================================== -->
-                <section id="contexto" class="ai6-section">
+            <!-- SEGURIDAD -->
 
-                    <h2>
-                        Contexto: la oportunidad no elimina la responsabilidad
-                    </h2>
+            <article class="vd-card">
 
-                    <p class="ai6-lead">
-                        Hablar de una plataforma de desarrollo nativa de IA
-                        implica algo más que conectar una aplicación con un
-                        chatbot. En estos sistemas, la inteligencia artificial
-                        puede participar en la búsqueda de información, la
-                        generación de contenido, la clasificación de datos,
-                        la programación, la toma de decisiones asistida y la
-                        ejecución de herramientas externas.
+                <h3>3. Seguridad</h3>
+
+                <p>
+                    Las aplicaciones construidas alrededor de modelos de
+                    lenguaje introducen nuevos vectores de ataque.
+                </p>
+
+                <p>
+                    Uno de los más importantes es el
+                    <strong>prompt injection</strong>. En este tipo de ataque,
+                    una persona introduce instrucciones diseñadas para modificar
+                    el comportamiento esperado del modelo, ignorar restricciones
+                    o manipular las acciones de una aplicación.
+                </p>
+
+                <p>
+                    El riesgo aumenta cuando el modelo puede utilizar
+                    herramientas externas, consultar bases de datos, acceder a
+                    archivos o ejecutar acciones.
+                </p>
+
+                <div class="seguridad">
+
+                    <strong>La IA no debe controlar los permisos.</strong>
+
+                    <p>
+                        Que un modelo determine que una acción debería
+                        ejecutarse no significa que tenga autorización para
+                        realizarla.
                     </p>
 
                     <p>
-                        Esta capacidad modifica el papel tradicional del
-                        software. Una aplicación determinista suele ejecutar
-                        instrucciones definidas explícitamente por el
-                        programador; en cambio, una solución basada en un
-                        modelo generativo introduce componentes probabilísticos.
-                        Esto significa que dos solicitudes similares pueden
-                        producir resultados diferentes y que una respuesta
-                        lingüísticamente convincente no necesariamente es una
-                        respuesta correcta.
+                        La autenticación y autorización deben aplicarse mediante
+                        mecanismos deterministas externos al modelo.
+                    </p>
+
+                </div>
+
+                <h4>Principios de protección</h4>
+
+                <ul class="vd-list">
+
+                    <li>Aplicar mínimo privilegio.</li>
+
+                    <li>
+                        Autorizar únicamente las herramientas necesarias.
+                    </li>
+
+                    <li>
+                        Validar todos los parámetros antes de ejecutar una acción.
+                    </li>
+
+                    <li>
+                        Separar las decisiones del modelo de los controles de
+                        seguridad.
+                    </li>
+
+                    <li>
+                        Solicitar aprobación humana para operaciones de alto
+                        impacto.
+                    </li>
+
+                    <li>
+                        Mantener registros y trazabilidad de las operaciones.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- SESGOS -->
+
+            <article class="vd-card">
+
+                <h3>4. Sesgos</h3>
+
+                <p>
+                    Los modelos de lenguaje son entrenados utilizando grandes
+                    cantidades de información y pueden aprender patrones,
+                    estereotipos y desigualdades presentes en dichos datos.
+                </p>
+
+                <p>
+                    Gallegos et al. (2024) explican que los modelos pueden
+                    reproducir o amplificar diferentes tipos de sesgos, por lo
+                    que la evaluación de equidad debe realizarse de acuerdo con
+                    el contexto concreto donde será utilizada la aplicación.
+                </p>
+
+                <p>
+                    El problema adquiere especial importancia cuando la IA
+                    participa en selección de personal, evaluación académica,
+                    asignación de beneficios, servicios financieros o cualquier
+                    otro proceso que pueda tener consecuencias sobre las
+                    personas.
+                </p>
+
+                <h4>Medidas de mitigación</h4>
+
+                <ul class="vd-list">
+
+                    <li>Utilizar conjuntos de prueba diversos.</li>
+
+                    <li>
+                        Evaluar resultados entre diferentes grupos de usuarios.
+                    </li>
+
+                    <li>
+                        Mantener revisión humana en decisiones importantes.
+                    </li>
+
+                    <li>
+                        Registrar y analizar patrones de error.
+                    </li>
+
+                    <li>
+                        Repetir las evaluaciones cuando se cambie de modelo,
+                        prompt o fuente de datos.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- ALUCINACIONES -->
+
+            <article class="vd-card">
+
+                <h3>5. Alucinaciones y uso de Guardrails</h3>
+
+                <p>
+                    Una <strong>alucinación</strong> ocurre cuando un modelo
+                    genera contenido falso, incorrecto o no sustentado, pero lo
+                    presenta utilizando un lenguaje coherente y aparentemente
+                    confiable.
+                </p>
+
+                <p>
+                    Un sistema puede, por ejemplo, inventar referencias
+                    bibliográficas, generar una norma inexistente, atribuir
+                    información a una fuente que nunca la mencionó o producir
+                    código que parece correcto pero contiene un error difícil de
+                    detectar.
+                </p>
+
+                <p>
+                    Huang et al. (2025) distinguen diferentes formas de
+                    alucinación y muestran que este continúa siendo uno de los
+                    principales problemas de los grandes modelos de lenguaje.
+                    Rawte et al. (2023) también documentan técnicas de detección
+                    y mitigación.
+                </p>
+
+                <div class="guardrails">
+
+                    <h4>Guardrails: barreras de seguridad</h4>
+
+                    <p>
+                        Una de las observaciones más importantes al diseñar
+                        sistemas AI-Native es que no basta con escribir un buen
+                        prompt y confiar en que el modelo siempre respetará las
+                        instrucciones.
                     </p>
 
                     <p>
-                        Por esta razón, evaluar una plataforma AI-Native exige
-                        observar simultáneamente dos dimensiones:
-                        <strong>el valor que aporta</strong> y
-                        <strong>el riesgo que introduce</strong>.
-                        La velocidad de desarrollo es relevante, pero también
-                        lo son la calidad del resultado, la trazabilidad, la
-                        seguridad, la privacidad y el costo de mantener el
-                        sistema durante meses o años.
+                        Los <strong>Guardrails</strong> son mecanismos de
+                        control colocados alrededor del modelo para validar lo
+                        que entra, lo que el modelo intenta hacer y el
+                        resultado que finalmente se entrega.
                     </p>
 
-                </section>
+                </div>
+
+                <h4>1. Validación de entrada</h4>
+
+                <p>
+                    La aplicación puede inspeccionar la solicitud antes de
+                    enviarla al modelo para detectar contenido no permitido,
+                    intentos de manipulación o entradas que no corresponden al
+                    propósito del sistema.
+                </p>
 
 
-                <!-- =================================================
-                     VENTAJAS
-                ================================================== -->
-                <section id="ventajas" class="ai6-section">
+                <h4>2. Grounding y fuentes verificables</h4>
 
-                    <h2>
-                        Ventajas de las plataformas AI-Native
-                    </h2>
+                <p>
+                    Cuando una respuesta depende de conocimiento institucional
+                    o actualizado, puede proporcionarse al modelo información
+                    recuperada desde fuentes verificables.
+                </p>
+
+                <p>
+                    Una arquitectura RAG puede ayudar en esta tarea recuperando
+                    fragmentos relevantes antes de generar la respuesta.
+                    Sin embargo, RAG
+                    <strong>reduce ciertos tipos de alucinaciones, pero no
+                    garantiza que desaparezcan</strong>.
+                </p>
 
 
-                    <!-- PRODUCTIVIDAD -->
-                    <h3>Mayor productividad</h3>
+                <h4>3. Validación de salida</h4>
+
+                <p>
+                    Antes de presentar una respuesta al usuario pueden
+                    ejecutarse controles para comprobar formato, contenido
+                    sensible, existencia de referencias o consistencia con las
+                    fuentes utilizadas.
+                </p>
+
+
+                <h4>4. Capacidad de abstención</h4>
+
+                <p>
+                    Un sistema responsable debe poder reconocer cuándo no
+                    dispone de información suficiente.
+                </p>
+
+                <p>
+                    En lugar de inventar una respuesta, puede indicar:
+                </p>
+
+                <div class="evidencia">
+
+                    <em>
+                        “No existe suficiente información verificable para
+                        responder esta consulta con confianza.”
+                    </em>
+
+                </div>
+
+
+                <h4>5. Supervisión humana</h4>
+
+                <p>
+                    Las respuestas con impacto jurídico, médico, financiero,
+                    académico, administrativo o de seguridad deberían
+                    escalarse a una persona cuando el nivel de confianza sea
+                    insuficiente.
+                </p>
+
+
+                <h4>6. Control de herramientas y permisos</h4>
+
+                <p>
+                    Si el modelo puede ejecutar acciones, cada herramienta debe
+                    disponer de sus propios permisos. Un modelo nunca debería
+                    tener acceso ilimitado a sistemas críticos simplemente
+                    porque una instrucción textual lo solicita.
+                </p>
+
+
+                <h4>7. Evaluación y monitoreo continuo</h4>
+
+                <p>
+                    Los Guardrails también deben ser evaluados. Un control
+                    demasiado permisivo puede dejar pasar contenido peligroso,
+                    mientras que uno demasiado restrictivo puede bloquear
+                    solicitudes legítimas.
+                </p>
+
+                <p>
+                    Por ello deben medirse tanto los
+                    <strong>falsos positivos</strong> como los
+                    <strong>falsos negativos</strong>.
+                </p>
+
+                <div class="buena-practica">
+
+                    <strong>Defensa en profundidad</strong>
 
                     <p>
-                        Uno de los beneficios más visibles de la IA aplicada al
-                        desarrollo consiste en delegar parte del trabajo
-                        mecánico o repetitivo: generar estructuras iniciales
-                        de código, redactar pruebas, resumir documentación,
-                        proponer consultas, localizar errores o explicar
-                        componentes desconocidos de una aplicación.
+                        La estrategia más segura no depende de una sola técnica.
+                        Combina fuentes confiables, RAG cuando sea pertinente,
+                        validación de entradas y salidas, controles de acceso,
+                        mínimo privilegio, monitoreo y revisión humana.
                     </p>
 
-                    <p>
-                        Esto puede liberar tiempo para actividades de mayor
-                        valor, como la definición de arquitectura, la
-                        comprensión del problema, la revisión de seguridad,
-                        las pruebas y el diseño de la experiencia del usuario.
-                        No obstante, medir productividad solamente por la
-                        cantidad de código generado sería insuficiente. Una
-                        solución que produce más líneas de código, pero
-                        incrementa las revisiones, errores o deuda técnica,
-                        puede estar trasladando el trabajo en lugar de
-                        eliminarlo.
-                    </p>
+                </div>
 
-                    <div class="ai6-stat-grid">
+            </article>
 
-                        <div class="ai6-stat">
-                            <span class="ai6-stat-number">55,8 %</span>
-                            <span class="ai6-stat-label">
-                                menos tiempo en una tarea controlada con
-                                GitHub Copilot<br>
-                                <strong>Peng et al. (2023)</strong>
-                            </span>
-                        </div>
 
-                        <div class="ai6-stat">
-                            <span class="ai6-stat-number">≈21 %</span>
-                            <span class="ai6-stat-label">
-                                reducción estimada del tiempo en un RCT con
-                                96 ingenieros de Google<br>
-                                <strong>Paradis et al. (2024)</strong>
-                            </span>
-                        </div>
+            <!-- DEPENDENCIA -->
 
-                        <div class="ai6-stat">
-                            <span class="ai6-stat-number">+19 %</span>
-                            <span class="ai6-stat-label">
-                                tiempo de finalización en un RCT con
-                                desarrolladores expertos<br>
-                                <strong>Becker et al. (2025)</strong>
-                            </span>
-                        </div>
+            <article class="vd-card">
 
-                    </div>
+                <h3>6. Dependencia del proveedor</h3>
 
-                    <div class="ai6-evidence">
+                <p>
+                    Integrar directamente una aplicación con las herramientas
+                    propietarias de un único proveedor puede generar
+                    <em>vendor lock-in</em>.
+                </p>
 
-                        <strong>¿Qué nos enseñan estos resultados?</strong>
-
-                        <p>
-                            No existe una contradicción obligatoria entre los
-                            estudios. Las tareas, los equipos, el nivel de
-                            experiencia, las herramientas y los proyectos son
-                            diferentes. La evidencia sugiere que el impacto de
-                            la IA depende fuertemente del contexto de uso.
-                            Por eso, una empresa no debería asumir un porcentaje
-                            universal de productividad a partir de un solo
-                            estudio.
-                        </p>
-
-                    </div>
-
-                    <p>
-                        En la práctica, conviene medir indicadores que vayan
-                        más allá de “cuánto código produjo la IA”: tiempo hasta
-                        completar una tarea aceptada, defectos detectados,
-                        porcentaje de código que debe rehacerse, tiempo de
-                        revisión humana, cobertura de pruebas y cumplimiento de
-                        criterios de seguridad.
-                    </p>
-
-
-                    <!-- AUTOMATIZACIÓN -->
-                    <h3>Automatización</h3>
-
-                    <p>
-                        Las plataformas nativas de IA permiten automatizar
-                        tareas que contienen información poco estructurada y
-                        que resultan difíciles de resolver únicamente con
-                        reglas tradicionales. Por ejemplo, pueden clasificar
-                        documentos, resumir expedientes, extraer campos,
-                        generar borradores, traducir contenido, enrutar
-                        solicitudes o combinar información procedente de varias
-                        fuentes.
-                    </p>
-
-                    <p>
-                        La diferencia frente a una automatización convencional
-                        es que el modelo puede trabajar con lenguaje natural y
-                        con entradas que no siguen exactamente la misma
-                        estructura. Esta flexibilidad amplía el conjunto de
-                        procesos automatizables, aunque también obliga a
-                        introducir controles adicionales.
-                    </p>
-
-                    <div class="ai6-caution">
-                        <p>
-                            <strong>Automatizar no significa eliminar toda
-                            intervención humana.</strong>
-                            Cuando una decisión puede afectar derechos,
-                            dinero, salud, seguridad, calificaciones o acceso
-                            a servicios, resulta recomendable definir puntos
-                            explícitos de aprobación humana y mecanismos para
-                            escalar los casos inciertos.
-                        </p>
-                    </div>
-
-                    <p>
-                        La mejor automatización no es necesariamente la que
-                        elimina a la persona del proceso, sino la que utiliza
-                        la IA para reducir carga operativa mientras conserva
-                        supervisión proporcional al riesgo.
-                    </p>
-
-
-                    <!-- ESCALABILIDAD -->
-                    <h3>Escalabilidad</h3>
-
-                    <p>
-                        Las arquitecturas basadas en servicios de IA permiten
-                        comenzar con un prototipo y posteriormente atender una
-                        mayor demanda sin tener que entrenar un modelo
-                        fundacional desde cero. Un asistente que inicialmente
-                        procesa unas pocas consultas puede evolucionar hacia
-                        una aplicación con múltiples usuarios, documentos,
-                        herramientas y flujos de negocio.
-                    </p>
-
-                    <p>
-                        Sin embargo, existen dos formas diferentes de hablar de
-                        escalabilidad. La primera es
-                        <strong>escalabilidad técnica</strong>: poder procesar
-                        más solicitudes manteniendo una latencia y
-                        disponibilidad aceptables. La segunda es
-                        <strong>escalabilidad económica</strong>: lograr que el
-                        costo por usuario o por tarea continúe siendo
-                        sostenible a medida que aumenta el tráfico.
-                    </p>
-
-                    <p>
-                        Samsi et al. (2023) muestran por qué esta segunda
-                        dimensión no puede ignorarse: la inferencia de modelos
-                        de lenguaje posee costos computacionales y energéticos
-                        relevantes, que varían según el tamaño del modelo, el
-                        hardware y la estrategia de ejecución. Por tanto,
-                        escalar no consiste únicamente en disponer de más
-                        capacidad; también exige optimizarla.
-                    </p>
-
-
-                    <!-- INTEGRACIÓN -->
-                    <h3>Integración sencilla y desarrollo acelerado</h3>
-
-                    <p>
-                        Hoy es posible incorporar capacidades de IA mediante
-                        APIs, SDK, modelos alojados, modelos locales, bases
-                        vectoriales y frameworks de orquestación sin construir
-                        cada componente desde cero. Esto reduce la barrera de
-                        entrada y permite crear pruebas de concepto en periodos
-                        mucho menores que los requeridos para entrenar modelos
-                        propios de gran escala.
-                    </p>
-
-                    <p>
-                        Pero la sencillez inicial puede ocultar complejidad
-                        futura. Una llamada directa a la API de un proveedor
-                        puede ser suficiente para una demostración; en
-                        producción se necesitan control de errores,
-                        autenticación, registro de eventos, límites de
-                        consumo, evaluación, observabilidad, seguridad y una
-                        estrategia para reemplazar componentes sin reescribir
-                        toda la aplicación.
-                    </p>
-
-                    <div class="ai6-success-box">
-                        <p>
-                            <strong>Buena práctica arquitectónica:</strong>
-                            encapsular la conexión con el modelo detrás de una
-                            capa propia —por ejemplo,
-                            <code>AIProvider</code> o
-                            <code>ModelGateway</code>— disminuye el
-                            acoplamiento del código de negocio a un SDK
-                            específico.
-                        </p>
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     RAG
-                ================================================== -->
-                <section id="rag" class="ai6-section">
-
-                    <h2>
-                        RAG: conectar el modelo con conocimiento verificable
-                    </h2>
-
-                    <div class="ai6-feedback">
-                        <span class="ai6-feedback-title">
-                            Relación con la retroalimentación académica
-                        </span>
-
-                        <p>
-                            Comprender RAG es importante también para analizar
-                            los desafíos de la Sección 6, porque muchas
-                            estrategias de reducción de alucinaciones,
-                            actualización de conocimiento y trazabilidad
-                            dependen de cómo se recupera y administra la
-                            información externa.
-                        </p>
-                    </div>
-
-                    <p>
-                        Lewis et al. (2020) propusieron
-                        <em>Retrieval-Augmented Generation</em> como una
-                        arquitectura que combina la memoria paramétrica del
-                        modelo generativo con una memoria no paramétrica
-                        recuperable. En términos prácticos, una aplicación no
-                        obliga al modelo a responder solamente con aquello que
-                        “recuerda” de su entrenamiento: primero busca
-                        información relevante y después entrega ese contexto
-                        al modelo para construir la respuesta.
-                    </p>
-
-
-                    <h3>Ciclo de vida de los datos en una arquitectura RAG</h3>
-
-                    <div class="ai6-grid">
-
-                        <article class="ai6-card">
-                            <h4>Fase de ingestión e indexación</h4>
-
-                            <ol class="ai6-list">
-                                <li>Seleccionar fuentes autorizadas.</li>
-                                <li>Extraer y normalizar documentos.</li>
-                                <li>Dividirlos en fragmentos o <em>chunks</em>.</li>
-                                <li>Generar embeddings.</li>
-                                <li>Guardar vector, texto y metadatos.</li>
-                                <li>Versionar y actualizar el índice.</li>
-                            </ol>
-                        </article>
-
-                        <article class="ai6-card">
-                            <h4>Fase de consulta y generación</h4>
-
-                            <ol class="ai6-list">
-                                <li>Recibir la pregunta del usuario.</li>
-                                <li>Generar el embedding de la consulta.</li>
-                                <li>Recuperar los fragmentos relevantes.</li>
-                                <li>Filtrar por permisos y metadatos.</li>
-                                <li>Construir el contexto para el LLM.</li>
-                                <li>Generar y validar la respuesta.</li>
-                                <li>Entregar fuentes y registrar trazabilidad.</li>
-                            </ol>
-                        </article>
-
-                    </div>
-
-
-                    <div class="ai6-code-label">
-                        Pseudocódigo · Flujo RAG con trazabilidad
-                    </div>
-
-                    <pre class="ai6-code"><code># ==========================================
-# FASE 1: INDEXACIÓN
-# ==========================================
-
-for documento in fuentes_aprobadas:
-
-    texto = extraer_y_normalizar(documento)
-
-    chunks = segmentar(
-        texto,
-        tamano_objetivo = 700,
-        solapamiento = 100
-    )
-
-    for chunk in chunks:
-
-        vector = modelo_embeddings.embed(chunk.texto)
-
-        vector_db.upsert(
-            vector = vector,
-            texto = chunk.texto,
-            metadatos = {
-                "fuente": documento.url,
-                "version": documento.version,
-                "fecha": documento.fecha,
-                "clasificacion": documento.clasificacion,
-                "estado": "aprobado"
-            }
-        )
-
-
-# ==========================================
-# FASE 2: CONSULTA
-# ==========================================
-
-pregunta = recibir_consulta()
-
-vector_consulta = modelo_embeddings.embed(pregunta)
-
-resultados = vector_db.buscar(
-    vector = vector_consulta,
-    top_k = 5,
-    filtros = {
-        "estado": "aprobado",
-        "usuario_tiene_permiso": True
-    }
-)
-
-contexto = construir_contexto(resultados)
-
-prompt = construir_prompt(
-    instrucciones = """
-    Responde únicamente con información sustentada
-    por el contexto recuperado.
-    Cita las fuentes utilizadas.
-    Si el contexto es insuficiente, indícalo.
-    """,
-    pregunta = pregunta,
-    contexto = contexto
-)
-
-respuesta = modelo.generar(prompt)
-
-resultado_validacion = validar_fidelidad(
-    respuesta,
-    contexto
-)
-
-if resultado_validacion.es_insuficiente:
-    escalar_a_revision_humana()
-
-return respuesta, resultados.fuentes</code></pre>
-
-                    <p>
-                        Este esquema introduce una diferencia importante:
-                        <strong>
-                            recuperar una fuente no equivale a demostrar que la
-                            respuesta final sea correcta.
-                        </strong>
-                        El recuperador puede seleccionar documentos poco
-                        relevantes, el contexto puede ser insuficiente o el
-                        modelo puede interpretar mal la evidencia. Huang et al.
-                        (2025) señalan precisamente que, aunque RAG tiene un
-                        potencial considerable para reducir alucinaciones,
-                        estos sistemas conservan limitaciones propias.
-                    </p>
-
-                </section>
-
-
-                <!-- =================================================
-                     EMBEDDINGS
-                ================================================== -->
-                <section id="embeddings" class="ai6-section">
-
-                    <h2>
-                        Embeddings estáticos, contextuales y “dinámicos”
-                    </h2>
-
-                    <p>
-                        En este punto conviene hacer una precisión conceptual.
-                        En la literatura clásica, la distinción más clara es
-                        entre <strong>representaciones estáticas</strong> y
-                        <strong>representaciones contextuales</strong>.
-                        El término “embedding dinámico” se usa de distintas
-                        maneras en la industria y puede generar confusión si no
-                        se define.
-                    </p>
-
-                    <div class="ai6-table-wrap">
-                        <table class="ai6-table">
-
-                            <thead>
-                                <tr>
-                                    <th>Concepto</th>
-                                    <th>Cómo funciona</th>
-                                    <th>Ejemplo</th>
-                                    <th>Implicación en RAG</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td>
-                                        <strong>Embedding estático de palabra</strong>
-                                    </td>
-                                    <td>
-                                        Una palabra mantiene esencialmente la
-                                        misma representación vectorial sin
-                                        importar la oración donde aparezca.
-                                    </td>
-                                    <td>
-                                        Word2Vec
-                                        (Mikolov et al., 2013).
-                                    </td>
-                                    <td>
-                                        Es eficiente, pero representa peor la
-                                        polisemia y el contexto complejo.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <strong>Representación contextual</strong>
-                                    </td>
-                                    <td>
-                                        La representación depende de las
-                                        palabras que rodean al término.
-                                    </td>
-                                    <td>
-                                        BERT
-                                        (Devlin et al., 2019).
-                                    </td>
-                                    <td>
-                                        Mejora la capacidad de distinguir
-                                        significados según el contexto.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <strong>Vector almacenado en un RAG</strong>
-                                    </td>
-                                    <td>
-                                        Se calcula al indexar un fragmento y
-                                        posteriormente se conserva en la base
-                                        vectorial.
-                                    </td>
-                                    <td>
-                                        Embedding de un párrafo almacenado
-                                        junto con sus metadatos.
-                                    </td>
-                                    <td>
-                                        Aunque el modelo usado sea avanzado,
-                                        el vector guardado es una
-                                        <em>instantánea</em> hasta que se
-                                        reindexa.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <strong>Embedding dinámico en sentido operacional</strong>
-                                    </td>
-                                    <td>
-                                        El sistema vuelve a calcular embeddings
-                                        cuando cambian los documentos, el
-                                        modelo de embeddings o la estrategia
-                                        de fragmentación.
-                                    </td>
-                                    <td>
-                                        Pipeline que detecta una actualización
-                                        documental y reindexa solamente los
-                                        fragmentos modificados.
-                                    </td>
-                                    <td>
-                                        Mantiene el índice sincronizado con el
-                                        conocimiento vigente y evita mezclar
-                                        versiones incompatibles.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-                    </div>
-
-                    <div class="ai6-evidence">
-                        <p>
-                            <strong>Idea clave:</strong>
-                            “contextual” describe cómo se obtiene la
-                            representación; “dinámico”, cuando se utiliza en
-                            una arquitectura RAG de producción, debería
-                            explicarse como una política de actualización o
-                            reindexación. No es correcto asumir que cualquier
-                            embedding moderno almacenado en una base vectorial
-                            cambia automáticamente cada vez que cambia el
-                            conocimiento.
-                        </p>
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     DESAFÍOS
-                ================================================== -->
-                <section id="desafios" class="ai6-section">
-
-                    <h2>
-                        Desafíos de las plataformas AI-Native
-                    </h2>
-
-
-                    <!-- COSTOS -->
-                    <h3>Costos: del precio por token al costo real de operación</h3>
-
-                    <p>
-                        En una demostración pequeña, el costo de una aplicación
-                        generativa puede parecer mínimo. En producción, sin
-                        embargo, la inferencia es solamente una parte del gasto.
-                        También pueden intervenir embeddings, almacenamiento,
-                        bases vectoriales, herramientas externas, evaluadores,
-                        guardrails, observabilidad, transferencia de datos,
-                        infraestructura, soporte y horas de ingeniería.
-                    </p>
-
-                    <p>
-                        Samsi et al. (2023) analizaron la utilización
-                        computacional y energética de la inferencia con
-                        modelos LLaMA en diferentes tamaños, GPU y
-                        configuraciones. Su trabajo refuerza una idea
-                        fundamental: el tamaño del modelo y la estrategia de
-                        inferencia tienen consecuencias operacionales.
-                    </p>
-
-                    <div class="ai6-formula">
-                        Costo total ≈ inferencia + embeddings + recuperación +
-                        almacenamiento + guardrails/evaluación + observabilidad +
-                        red + infraestructura + personal
-                    </div>
-
-                    <p>
-                        Por ello, comparar plataformas únicamente mediante el
-                        precio publicado de un token puede conducir a decisiones
-                        deficientes. Resulta más útil calcular
-                        <strong>costo por tarea útil o correcta</strong>.
-                        Un modelo barato que obliga a repetir la consulta,
-                        recuperar más documentos o corregir manualmente muchas
-                        respuestas puede ser más costoso que otro con un precio
-                        unitario superior.
-                    </p>
-
-
-                    <div class="ai6-feedback">
-                        <span class="ai6-feedback-title">
-                            Mejora solicitada · Gestión de costos por tokens
-                        </span>
-
-                        <p>
-                            Una arquitectura de producción debería registrar
-                            tokens de entrada y salida por flujo, usuario,
-                            modelo y tipo de tarea. A partir de esos datos se
-                            pueden establecer presupuestos, alertas, límites de
-                            longitud, caché, enrutamiento hacia modelos más
-                            pequeños y mecanismos de degradación controlada.
-                        </p>
-                    </div>
-
-
-                    <h4>Estrategias para controlar el gasto</h4>
-
-                    <ul class="ai6-list">
-                        <li>
-                            Usar el modelo más pequeño que alcance el umbral de
-                            calidad requerido, en lugar de utilizar siempre el
-                            modelo más grande.
-                        </li>
-
-                        <li>
-                            Limitar contexto y salida a lo realmente necesario.
-                        </li>
-
-                        <li>
-                            Evitar enviar historiales completos cuando no
-                            aportan valor a la tarea.
-                        </li>
-
-                        <li>
-                            Implementar caché para operaciones repetibles.
-                        </li>
-
-                        <li>
-                            Aplicar RAG selectivo en lugar de adjuntar grandes
-                            documentos completos.
-                        </li>
-
-                        <li>
-                            Enrutar tareas: clasificación simple a modelos
-                            pequeños y razonamiento complejo a modelos más
-                            capaces.
-                        </li>
-
-                        <li>
-                            Medir costo por respuesta aprobada, no solamente
-                            costo por llamada.
-                        </li>
-
-                        <li>
-                            Establecer presupuestos y alertas automáticas por
-                            aplicación, equipo o usuario.
-                        </li>
-                    </ul>
-
-
-                    <!-- PRIVACIDAD -->
-                    <h3>Privacidad y manejo de información sensible</h3>
-
-                    <p>
-                        Una aplicación AI-Native puede procesar conversaciones,
-                        expedientes, código fuente, documentos internos o
-                        información personal. El riesgo no se limita al
-                        proveedor de infraestructura: los datos pueden aparecer
-                        también en registros, herramientas de observabilidad,
-                        historiales, bases vectoriales, cachés y sistemas de
-                        terceros conectados al flujo.
-                    </p>
-
-                    <p>
-                        Yao et al. (2024) revisan la relación entre LLM,
-                        seguridad y privacidad, incluyendo vulnerabilidades y
-                        mecanismos de defensa. Además, Carlini et al. (2021)
-                        demostraron experimentalmente que era posible extraer
-                        del modelo GPT-2 fragmentos literales memorizados de
-                        sus datos de entrenamiento, incluyendo información
-                        personal públicamente disponible. El resultado no
-                        significa que todo modelo revele automáticamente datos,
-                        pero sí demuestra que la memorización y extracción son
-                        amenazas técnicas reales.
-                    </p>
-
-                    <h4>Controles de privacidad recomendados</h4>
-
-                    <ul class="ai6-list">
-                        <li>
-                            Minimizar los datos enviados al modelo.
-                        </li>
-                        <li>
-                            Anonimizar o seudonimizar información cuando el
-                            objetivo pueda cumplirse sin identificadores.
-                        </li>
-                        <li>
-                            Cifrar datos en tránsito y en reposo.
-                        </li>
-                        <li>
-                            Definir periodos de retención.
-                        </li>
-                        <li>
-                            Separar información por organización o
-                            <em>tenant</em>.
-                        </li>
-                        <li>
-                            Verificar políticas de tratamiento, residencia y
-                            entrenamiento con datos del cliente.
-                        </li>
-                        <li>
-                            Considerar despliegue privado o local cuando el
-                            nivel de sensibilidad lo justifique.
-                        </li>
-                    </ul>
-
-
-                    <!-- SEGURIDAD -->
-                    <h3>Seguridad y prompt injection</h3>
-
-                    <p>
-                        Una aplicación basada en LLM no debería tratar todo el
-                        texto que recibe como una instrucción confiable. En un
-                        ataque de <em>prompt injection</em>, contenido
-                        controlado por un atacante intenta modificar las
-                        prioridades del sistema, revelar instrucciones,
-                        manipular la respuesta o provocar acciones no
-                        autorizadas.
-                    </p>
-
-                    <p>
-                        Liu et al. (2023) probaron su ataque HouYi sobre 36
-                        aplicaciones reales integradas con LLM y reportaron
-                        que 31 eran susceptibles al ataque. El problema se
-                        vuelve especialmente relevante en agentes, porque una
-                        salida manipulada puede dejar de ser solamente texto:
-                        podría intentar activar una herramienta, consultar una
-                        base de datos o realizar una operación externa.
-                    </p>
-
-                    <div class="ai6-danger-box">
-                        <p>
-                            <strong>Principio esencial:</strong>
-                            el LLM no debe convertirse en el mecanismo de
-                            autorización. Que el modelo “decida” ejecutar una
-                            herramienta no significa que tenga permiso para
-                            hacerlo. Los permisos deben verificarse mediante
-                            controles deterministas fuera del modelo.
-                        </p>
-                    </div>
-
-
-                    <!-- SESGOS -->
-                    <h3>Sesgos y equidad</h3>
-
-                    <p>
-                        Los modelos pueden aprender, reproducir o amplificar
-                        patrones sociales problemáticos presentes en los datos.
-                        Gallegos et al. (2024), en una revisión extensa sobre
-                        sesgo y equidad en LLM, muestran que la evaluación de
-                        este problema requiere distinguir tipos de daño y
-                        analizar el desempeño en tareas reales, no depender
-                        exclusivamente de una métrica abstracta.
-                    </p>
-
-                    <p>
-                        En una aplicación educativa, financiera o de selección
-                        de personal, por ejemplo, no basta con afirmar que el
-                        modelo fue “alineado”. El equipo debería construir
-                        pruebas representativas de las poblaciones afectadas,
-                        comparar resultados entre grupos y revisar los errores
-                        más relevantes para el contexto.
-                    </p>
-
-                    <p>
-                        Esto implica que la equidad no puede validarse una sola
-                        vez antes del lanzamiento. Los prompts, modelos,
-                        fuentes y comportamientos pueden cambiar, por lo que se
-                        requiere evaluación periódica.
-                    </p>
-
-
-                    <!-- ALUCINACIONES -->
-                    <h3>Alucinaciones: respuestas plausibles que pueden ser falsas</h3>
-
-                    <p>
-                        Huang et al. (2025) diferencian, entre otras categorías,
-                        problemas de <strong>factualidad</strong> —contenido
-                        incompatible con hechos verificables— y problemas de
-                        <strong>fidelidad</strong> —contenido que se desvía de
-                        las instrucciones, del contexto suministrado o de su
-                        propia lógica—. Rawte et al. (2023) también revisan
-                        taxonomías, mecanismos de evaluación y estrategias de
-                        mitigación para este fenómeno.
-                    </p>
-
-                    <p>
-                        En un blog, una alucinación puede producir un dato
-                        incorrecto. En un sistema conectado a herramientas, el
-                        riesgo aumenta: una información inventada puede
-                        convertirse en una acción incorrecta. Por esa razón,
-                        las respuestas de alto impacto deberían estar
-                        respaldadas por evidencia, reglas de validación y,
-                        cuando corresponda, supervisión humana.
-                    </p>
-
-                    <div class="ai6-caution">
-                        <p>
-                            <strong>RAG no significa “cero alucinaciones”.</strong>
-                            Recuperar documentos confiables puede reducir
-                            ciertos errores de conocimiento, pero todavía
-                            pueden fallar la recuperación, la selección del
-                            contexto, la interpretación y la generación final.
-                        </p>
-                    </div>
-
-
-                    <!-- LOCK-IN -->
-                    <h3>Dependencia del proveedor y portabilidad</h3>
-
-                    <p>
-                        La dependencia del proveedor aparece cuando cambiar de
-                        plataforma exige modificar una parte significativa del
-                        sistema, migrar datos en formatos propietarios,
-                        reemplazar herramientas, reconstruir evaluaciones o
-                        adaptar procesos completos.
-                    </p>
-
-                    <p>
-                        Opara-Martins, Sahandi y Tian (2016) estudiaron el
-                        problema del <em>vendor lock-in</em> en computación en
-                        la nube y destacaron la importancia de la
-                        interoperabilidad, la portabilidad, los formatos
-                        estandarizados y las APIs. Aunque su trabajo antecede
-                        al auge actual de los LLM, estos principios son
-                        directamente relevantes para arquitecturas AI-Native.
-                    </p>
-
-                    <h4>Estrategias de reducción de dependencia</h4>
-
-                    <ul class="ai6-list">
-                        <li>
-                            Crear una capa de abstracción entre aplicación y
-                            proveedor.
-                        </li>
-                        <li>
-                            Mantener prompts y lógica de negocio fuera del SDK
-                            específico cuando sea posible.
-                        </li>
-                        <li>
-                            Conservar los documentos originales y metadatos en
-                            formatos portables.
-                        </li>
-                        <li>
-                            Automatizar pruebas contra más de un modelo.
-                        </li>
-                        <li>
-                            Diseñar un procedimiento real de exportación y
-                            migración.
-                        </li>
-                        <li>
-                            Considerar modelos locales u open source como
-                            alternativa para determinadas cargas.
-                        </li>
-                    </ul>
-
-                </section>
-
-
-                <!-- =================================================
-                     GUARDRAILS
-                ================================================== -->
-                <section id="guardrails" class="ai6-section">
-
-                    <h2>
-                        Guardrails: barreras de seguridad y control
-                    </h2>
-
-                    <div class="ai6-feedback">
-                        <span class="ai6-feedback-title">
-                            Mejora solicitada por la retroalimentación
-                        </span>
-
-                        <p>
-                            El control de alucinaciones no debe quedarse en la
-                            recomendación genérica de “revisar la respuesta”.
-                            Una arquitectura profesional necesita controles
-                            antes, durante y después de la interacción con el
-                            modelo.
-                        </p>
-                    </div>
-
-                    <p>
-                        Un <em>guardrail</em> es una capa de control que intenta
-                        restringir o validar la interacción con el sistema de
-                        IA. Puede detectar entradas sospechosas, aplicar
-                        políticas, limitar herramientas, verificar formatos,
-                        revisar afirmaciones o bloquear una salida antes de
-                        entregarla al usuario.
-                    </p>
-
-                    <p>
-                        Sin embargo, los guardrails tampoco son infalibles.
-                        Li et al. (2025), al estudiar defensas contra prompt
-                        injection, muestran que los modelos de protección
-                        pueden caer en <em>over-defense</em>: detectar como
-                        maliciosas entradas legítimas por contener palabras
-                        asociadas a ataques. Por tanto, un buen sistema debe
-                        medir tanto los ataques que deja pasar como los
-                        usuarios legítimos que bloquea por error.
-                    </p>
-
-
-                    <h3>Defensa en profundidad</h3>
-
-                    <div class="ai6-table-wrap">
-                        <table class="ai6-table">
-
-                            <thead>
-                                <tr>
-                                    <th>Capa</th>
-                                    <th>Control</th>
-                                    <th>Objetivo</th>
-                                    <th>Métrica útil</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td>Entrada</td>
-                                    <td>
-                                        Clasificación de solicitudes,
-                                        validación de tamaño, detección de
-                                        prompt injection y políticas.
-                                    </td>
-                                    <td>
-                                        Reducir entradas maliciosas o no
-                                        permitidas.
-                                    </td>
-                                    <td>
-                                        Recall, falsos positivos y falsos
-                                        negativos.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Contexto RAG</td>
-                                    <td>
-                                        Lista de fuentes autorizadas,
-                                        metadatos, permisos y filtros.
-                                    </td>
-                                    <td>
-                                        Evitar recuperar contenido que el
-                                        usuario no debería consultar.
-                                    </td>
-                                    <td>
-                                        Recall@k, precisión de recuperación y
-                                        violaciones de acceso.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Modelo</td>
-                                    <td>
-                                        Instrucciones del sistema,
-                                        delimitación de contenido no confiable
-                                        y límites de generación.
-                                    </td>
-                                    <td>
-                                        Orientar el comportamiento esperado.
-                                    </td>
-                                    <td>
-                                        Cumplimiento de instrucciones.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Herramientas</td>
-                                    <td>
-                                        Lista permitida, mínimo privilegio,
-                                        autenticación independiente y límites.
-                                    </td>
-                                    <td>
-                                        Impedir acciones fuera del alcance del
-                                        usuario.
-                                    </td>
-                                    <td>
-                                        Attack Success Rate y acciones
-                                        bloqueadas.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Salida</td>
-                                    <td>
-                                        Validación de esquema, detección de
-                                        datos sensibles, groundedness y
-                                        verificación de reglas.
-                                    </td>
-                                    <td>
-                                        Evitar entregar contenido inválido o
-                                        inseguro.
-                                    </td>
-                                    <td>
-                                        Tasa de alucinación y violaciones de
-                                        política.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Acción crítica</td>
-                                    <td>
-                                        Confirmación o aprobación humana.
-                                    </td>
-                                    <td>
-                                        Evitar que un fallo probabilístico
-                                        produzca una acción irreversible.
-                                    </td>
-                                    <td>
-                                        Incidentes evitados y tasa de
-                                        escalamiento.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Operación</td>
-                                    <td>
-                                        Logs, auditoría, alertas, pruebas
-                                        adversariales y mecanismo de apagado.
-                                    </td>
-                                    <td>
-                                        Detectar cambios y responder a
-                                        incidentes.
-                                    </td>
-                                    <td>
-                                        Tiempo de detección y recuperación.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-                    </div>
-
-
-                    <div class="ai6-code-label">
-                        Pseudocódigo · Guardrails en una aplicación con herramientas
-                    </div>
-
-                    <pre class="ai6-code"><code>def responder(usuario, pregunta):
-
-    # 1. Autorización determinista
-    if not usuario.esta_autenticado:
-        return error("Acceso no autorizado")
-
-    # 2. Control de entrada
-    riesgo = detector_prompt_injection(pregunta)
-
-    if riesgo &gt; UMBRAL_BLOQUEO:
-        registrar_incidente(usuario, pregunta)
-        return respuesta_segura(
-            "La solicitud requiere revisión."
-        )
-
-    # 3. Recuperación con control de acceso
-    documentos = recuperar_contexto(
-        pregunta,
-        fuentes = FUENTES_APROBADAS,
-        permisos = usuario.permisos
-    )
-
-    # 4. Generación
-    borrador = llm.generar(
-        pregunta = pregunta,
-        contexto = documentos,
-        regla = "No inventar información ausente."
-    )
-
-    # 5. Guardrail de salida
-    if contiene_datos_sensibles_no_autorizados(borrador):
-        return escalar_a_humano()
-
-    if not respuesta_sustentada(borrador, documentos):
-        return solicitar_mas_contexto()
-
-    # 6. Las acciones externas requieren política propia
-    if borrador.propone_accion_critica:
-
-        if not usuario.puede_ejecutar(borrador.accion):
-            return error("Permiso insuficiente")
-
-        return solicitar_aprobacion_humana(
-            borrador.accion
-        )
-
-    # 7. Trazabilidad
-    registrar_auditoria(
-        usuario = usuario,
-        consulta = pregunta,
-        fuentes = documentos.fuentes,
-        resultado = borrador
-    )
-
-    return borrador</code></pre>
-
-                    <div class="ai6-danger-box">
-                        <p>
-                            <strong>Un guardrail reduce riesgo; no lo elimina.</strong>
-                            La defensa adecuada combina controles
-                            deterministas, evaluación automática, límites de
-                            permisos, observabilidad y revisión humana de
-                            acuerdo con el impacto de cada operación.
-                        </p>
-                    </div>
-
-                    <p>
-                        Este enfoque es coherente con la filosofía del
-                        <em>AI Risk Management Framework</em> y el perfil
-                        específico para IA generativa publicado por NIST,
-                        que plantea el manejo del riesgo como una actividad
-                        que atraviesa el diseño, desarrollo, despliegue,
-                        evaluación y operación del sistema, no como una prueba
-                        única realizada al final del proyecto.
-                    </p>
-
-                </section>
-
-
-                <!-- =================================================
-                     TABLA BENEFICIO - RIESGO - CONTROL
-                ================================================== -->
-                <section id="comparativa" class="ai6-section">
-
-                    <h2>
-                        Matriz comparativa: beneficio, riesgo y medida recomendada
-                    </h2>
-
-                    <p>
-                        La siguiente matriz resume la relación entre los
-                        principales beneficios estudiados y los controles
-                        necesarios para que esos beneficios sean sostenibles en
-                        producción.
-                    </p>
-
-                    <div class="ai6-table-wrap">
-
-                        <table class="ai6-table">
-
-                            <thead>
-                                <tr>
-                                    <th>Aspecto</th>
-                                    <th>Beneficio esperado</th>
-                                    <th>Riesgo asociado</th>
-                                    <th>Medida recomendada</th>
-                                    <th>Métrica de control</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td><strong>Productividad</strong></td>
-                                    <td>
-                                        Menos tiempo en tareas repetitivas y
-                                        mayor asistencia al desarrollo.
-                                    </td>
-                                    <td>
-                                        Dependencia excesiva, revisión adicional
-                                        o falsa percepción de velocidad.
-                                    </td>
-                                    <td>
-                                        Pruebas A/B o pilotos y revisión humana.
-                                    </td>
-                                    <td>
-                                        Tiempo por tarea aceptada,
-                                        defectos y retrabajo.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Automatización</strong></td>
-                                    <td>
-                                        Procesamiento de grandes volúmenes de
-                                        información.
-                                    </td>
-                                    <td>
-                                        Ejecución automática de decisiones
-                                        incorrectas.
-                                    </td>
-                                    <td>
-                                        Human-in-the-loop para procesos críticos.
-                                    </td>
-                                    <td>
-                                        Tasa de error y tasa de escalamiento.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Escalabilidad</strong></td>
-                                    <td>
-                                        Adaptación del servicio a una mayor
-                                        demanda.
-                                    </td>
-                                    <td>
-                                        Incremento no previsto del costo y
-                                        latencia bajo carga.
-                                    </td>
-                                    <td>
-                                        Presupuestos, cuotas, caché,
-                                        enrutamiento y pruebas de carga.
-                                    </td>
-                                    <td>
-                                        Costo/tarea, p95 de latencia y
-                                        throughput.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Integración</strong></td>
-                                    <td>
-                                        Desarrollo rápido mediante API, SDK y
-                                        modelos preentrenados.
-                                    </td>
-                                    <td>
-                                        Acoplamiento técnico a un proveedor.
-                                    </td>
-                                    <td>
-                                        Gateway de modelos y contratos de
-                                        interfaz propios.
-                                    </td>
-                                    <td>
-                                        Esfuerzo estimado de migración.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Privacidad</strong></td>
-                                    <td>
-                                        Capacidad para analizar información
-                                        compleja.
-                                    </td>
-                                    <td>
-                                        Exposición, retención o filtración de
-                                        datos sensibles.
-                                    </td>
-                                    <td>
-                                        Minimización, anonimización, cifrado,
-                                        control de acceso y evaluación del
-                                        proveedor.
-                                    </td>
-                                    <td>
-                                        Incidentes, datos enviados y
-                                        cumplimiento de retención.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Seguridad</strong></td>
-                                    <td>
-                                        IA capaz de asistir en operaciones y
-                                        uso de herramientas.
-                                    </td>
-                                    <td>
-                                        Prompt injection, abuso de herramientas
-                                        y escalamiento de privilegios.
-                                    </td>
-                                    <td>
-                                        Guardrails, mínimo privilegio,
-                                        allowlists y autorización externa al LLM.
-                                    </td>
-                                    <td>
-                                        Attack Success Rate, FP y FN.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Sesgos</strong></td>
-                                    <td>
-                                        Personalización y análisis flexible.
-                                    </td>
-                                    <td>
-                                        Trato desigual, estereotipos o desempeño
-                                        diferente entre grupos.
-                                    </td>
-                                    <td>
-                                        Evaluaciones por población,
-                                        auditorías y revisión del caso de uso.
-                                    </td>
-                                    <td>
-                                        Diferencia de desempeño entre grupos.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Alucinaciones</strong></td>
-                                    <td>
-                                        Generación rápida y flexible de
-                                        respuestas.
-                                    </td>
-                                    <td>
-                                        Información incorrecta presentada con
-                                        apariencia de seguridad.
-                                    </td>
-                                    <td>
-                                        RAG, fuentes, groundedness, validación y
-                                        escalamiento cuando falte evidencia.
-                                    </td>
-                                    <td>
-                                        Tasa de afirmaciones no sustentadas.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Proveedor</strong></td>
-                                    <td>
-                                        Acceso inmediato a infraestructura y
-                                        modelos avanzados.
-                                    </td>
-                                    <td>
-                                        Cambios de precio, API, disponibilidad
-                                        o modelo.
-                                    </td>
-                                    <td>
-                                        Abstracción, formatos portables,
-                                        exportación y pruebas multi-modelo.
-                                    </td>
-                                    <td>
-                                        Tiempo/costo estimado de migración.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     MÉTRICAS DE EVALUACIÓN DE PLATAFORMAS
-                ================================================== -->
-                <section id="metricas" class="ai6-section">
-
-                    <h2>
-                        Cómo comparar OpenAI, Vertex AI, Anthropic y una alternativa local
-                    </h2>
-
-                    <div class="ai6-feedback">
-                        <span class="ai6-feedback-title">
-                            Mejora solicitada · Secciones 3 y 4
-                        </span>
-
-                        <p>
-                            Una comparación académicamente sólida no debería
-                            limitarse a enumerar características de los
-                            proveedores. Debe establecer un conjunto de tareas
-                            iguales y medir cada alternativa bajo las mismas
-                            condiciones.
-                        </p>
-                    </div>
-
-                    <p>
-                        OpenAI, Google Vertex AI, Anthropic o una solución local
-                        basada en modelos ejecutados mediante herramientas como
-                        Ollama no deberían evaluarse preguntando simplemente
-                        “¿cuál es mejor?”. La respuesta depende del caso de uso,
-                        la calidad mínima requerida, el nivel de privacidad,
-                        la infraestructura disponible y el presupuesto.
-                    </p>
-
-                    <p>
-                        Para comparar de manera justa, se recomienda construir
-                        un <strong>conjunto de evaluación fijo</strong> con
-                        preguntas y tareas representativas del problema real,
-                        mantener constantes los documentos RAG, los límites de
-                        salida y la concurrencia, y ejecutar cada alternativa
-                        bajo las mismas condiciones.
-                    </p>
-
-
-                    <h3>Métricas mínimas recomendadas</h3>
-
-                    <div class="ai6-table-wrap">
-
-                        <table class="ai6-table">
-
-                            <thead>
-                                <tr>
-                                    <th>Dimensión</th>
-                                    <th>Métrica</th>
-                                    <th>Cómo medirla</th>
-                                    <th>Por qué importa</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td><strong>Calidad</strong></td>
-                                    <td>Tasa de éxito de tarea</td>
-                                    <td>
-                                        Porcentaje de casos del conjunto de
-                                        prueba que cumplen la rúbrica definida.
-                                    </td>
-                                    <td>
-                                        Evita escoger un modelo solo por
-                                        velocidad o precio.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Factualidad</strong></td>
-                                    <td>Tasa de alucinación</td>
-                                    <td>
-                                        Respuestas con al menos una afirmación
-                                        no sustentada / respuestas evaluadas.
-                                    </td>
-                                    <td>
-                                        Mide confiabilidad en tareas de
-                                        conocimiento.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>RAG</strong></td>
-                                    <td>Groundedness / fidelidad</td>
-                                    <td>
-                                        Verificar si las afirmaciones de la
-                                        respuesta están respaldadas por los
-                                        documentos recuperados.
-                                    </td>
-                                    <td>
-                                        Distingue una respuesta bien redactada
-                                        de una respuesta realmente sustentada.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Recuperación</strong></td>
-                                    <td>Recall@k</td>
-                                    <td>
-                                        Porcentaje de consultas donde el
-                                        documento relevante aparece entre los
-                                        primeros k resultados.
-                                    </td>
-                                    <td>
-                                        Permite separar un problema del
-                                        recuperador de uno del generador.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Latencia</strong></td>
-                                    <td>p50 y p95</td>
-                                    <td>
-                                        Tiempo total desde la solicitud hasta
-                                        la respuesta, registrando mediana y
-                                        percentil 95.
-                                    </td>
-                                    <td>
-                                        El promedio puede ocultar respuestas
-                                        excepcionalmente lentas.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Experiencia</strong></td>
-                                    <td>TTFT</td>
-                                    <td>
-                                        Tiempo hasta recibir el primer token.
-                                    </td>
-                                    <td>
-                                        Influye en la percepción de rapidez en
-                                        aplicaciones conversacionales.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Capacidad</strong></td>
-                                    <td>Throughput</td>
-                                    <td>
-                                        Solicitudes/segundo o tokens/segundo a
-                                        una concurrencia determinada.
-                                    </td>
-                                    <td>
-                                        Permite estimar capacidad bajo carga.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Costo</strong></td>
-                                    <td>Costo por tarea correcta</td>
-                                    <td>
-                                        Costo total del experimento dividido
-                                        entre las tareas que superaron el
-                                        umbral de calidad.
-                                    </td>
-                                    <td>
-                                        Relaciona gasto con valor producido.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Tokens</strong></td>
-                                    <td>Costo de entrada/salida</td>
-                                    <td>
-                                        Registrar tokens consumidos por
-                                        operación y aplicar la tarifa vigente.
-                                    </td>
-                                    <td>
-                                        Facilita estimar presupuesto.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Seguridad</strong></td>
-                                    <td>Attack Success Rate</td>
-                                    <td>
-                                        Ataques exitosos / ataques ejecutados
-                                        en una batería de pruebas.
-                                    </td>
-                                    <td>
-                                        Cuantifica resistencia ante ataques
-                                        conocidos.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Guardrails</strong></td>
-                                    <td>FPR y FNR</td>
-                                    <td>
-                                        Falsos positivos y falsos negativos del
-                                        detector.
-                                    </td>
-                                    <td>
-                                        Evita que un guardrail seguro sea
-                                        inutilizable por exceso de bloqueo.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Privacidad</strong></td>
-                                    <td>Control del dato</td>
-                                    <td>
-                                        Retención, residencia, cifrado,
-                                        entrenamiento con datos del cliente,
-                                        red privada y posibilidad local.
-                                    </td>
-                                    <td>
-                                        Determina la idoneidad para información
-                                        sensible.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Portabilidad</strong></td>
-                                    <td>Esfuerzo de migración</td>
-                                    <td>
-                                        Horas o componentes que deben cambiar
-                                        al sustituir modelo/proveedor.
-                                    </td>
-                                    <td>
-                                        Hace visible el riesgo de lock-in.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Operación</strong></td>
-                                    <td>Tasa de error/disponibilidad</td>
-                                    <td>
-                                        Solicitudes fallidas, timeouts y
-                                        disponibilidad durante la prueba.
-                                    </td>
-                                    <td>
-                                        Un modelo de gran calidad no sirve si
-                                        el servicio no es confiable.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-
-                    <h3>
-                        Comparación conceptual: servicio administrado frente a IA local
-                    </h3>
-
-                    <div class="ai6-table-wrap">
-
-                        <table class="ai6-table">
-
-                            <thead>
-                                <tr>
-                                    <th>Criterio</th>
-                                    <th>Plataformas administradas</th>
-                                    <th>Modelo local / Ollama</th>
-                                    <th>Decisión recomendada</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td><strong>Inicio del proyecto</strong></td>
-                                    <td>
-                                        Generalmente rápido mediante API y
-                                        servicios administrados.
-                                    </td>
-                                    <td>
-                                        Requiere preparar hardware, modelo,
-                                        memoria y operación local.
-                                    </td>
-                                    <td>
-                                        Medir tiempo real de puesta en marcha.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Escalado</strong></td>
-                                    <td>
-                                        Parte importante de la infraestructura
-                                        es gestionada por el proveedor.
-                                    </td>
-                                    <td>
-                                        El equipo debe dimensionar y operar su
-                                        propia capacidad.
-                                    </td>
-                                    <td>
-                                        Comparar costo total a la concurrencia
-                                        esperada.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Privacidad</strong></td>
-                                    <td>
-                                        Depende de contrato, configuración,
-                                        región y políticas del servicio.
-                                    </td>
-                                    <td>
-                                        Permite mantener el procesamiento en
-                                        infraestructura propia si está
-                                        correctamente configurada.
-                                    </td>
-                                    <td>
-                                        Seleccionar según clasificación del
-                                        dato, no por preferencia personal.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Modelo de costo</strong></td>
-                                    <td>
-                                        Frecuentemente asociado al consumo del
-                                        servicio y funcionalidades utilizadas.
-                                    </td>
-                                    <td>
-                                        Mayor peso en hardware, energía,
-                                        mantenimiento y personal.
-                                    </td>
-                                    <td>
-                                        Comparar TCO, no solo tarifa por token.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Calidad</strong></td>
-                                    <td colspan="2">
-                                        No debe suponerse. Se mide con el mismo
-                                        conjunto de evaluación y la misma
-                                        rúbrica para cada modelo.
-                                    </td>
-                                    <td>
-                                        Escoger la alternativa que alcance la
-                                        calidad requerida al costo y riesgo
-                                        aceptables.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Lock-in</strong></td>
-                                    <td>
-                                        Puede aumentar si la lógica depende de
-                                        APIs o servicios propietarios.
-                                    </td>
-                                    <td>
-                                        Puede reducir ciertas dependencias,
-                                        pero introduce dependencia de modelos,
-                                        formatos e infraestructura propios.
-                                    </td>
-                                    <td>
-                                        Diseñar portabilidad desde el inicio.
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-
-                    <h3>Ejemplo de evaluación reproducible</h3>
-
-                    <div class="ai6-code-label">
-                        Pseudocódigo · Benchmark multi-plataforma
-                    </div>
-
-                    <pre class="ai6-code"><code>plataformas = [
-    "proveedor_A",
-    "proveedor_B",
-    "proveedor_C",
-    "modelo_local"
-]
-
-dataset = cargar_dataset_validado(
-    "evaluacion_ai_native.json"
-)
-
-for plataforma in plataformas:
-
-    resultados = []
-
-    for caso in dataset:
-
-        inicio = reloj()
-
-        respuesta = ejecutar(
-            plataforma = plataforma,
-            prompt = caso.prompt,
-            contexto = caso.contexto,
-            max_tokens = 600,
-            temperatura = 0
-        )
-
-        latencia = reloj() - inicio
-
-        calidad = evaluar_con_rubrica(
-            respuesta,
-            referencia = caso.referencia
-        )
-
-        alucinacion = detectar_afirmaciones_no_sustentadas(
-            respuesta,
-            caso.contexto
-        )
-
-        resultados.append({
-            "latencia": latencia,
-            "calidad": calidad,
-            "alucinacion": alucinacion,
-            "tokens_in": respuesta.tokens_entrada,
-            "tokens_out": respuesta.tokens_salida,
-            "costo": respuesta.costo
-        })
-
-    generar_reporte(
-        plataforma,
-        calidad_promedio = promedio(resultados.calidad),
-        alucinacion = promedio(resultados.alucinacion),
-        latencia_p50 = percentil(resultados.latencia, 50),
-        latencia_p95 = percentil(resultados.latencia, 95),
-        costo_total = suma(resultados.costo)
-    )</code></pre>
-
-                    <div class="ai6-success-box">
-                        <p>
-                            <strong>Regla de decisión:</strong>
-                            primero se establece un umbral mínimo de calidad y
-                            seguridad. Solo después se comparan costo y
-                            rendimiento entre las opciones que superen ese
-                            umbral. De esta manera se evita elegir un servicio
-                            “barato” que no resuelve adecuadamente la tarea.
-                        </p>
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     RECOMENDACIONES
-                ================================================== -->
-                <section id="recomendaciones" class="ai6-section">
-
-                    <h2>
-                        Recomendaciones prácticas para llevar IA a producción
-                    </h2>
-
-                    <p>
-                        El paso de una demostración a una aplicación en
-                        producción requiere cambiar la pregunta de
-                        “¿el modelo puede hacerlo?” por
-                        “¿el sistema puede hacerlo de forma repetible,
-                        medible, segura y económicamente sostenible?”.
-                    </p>
-
-                    <ul class="ai6-checklist">
-
-                        <li>
-                            Definir un conjunto de evaluación antes de escoger
-                            definitivamente el modelo.
-                        </li>
-
-                        <li>
-                            Medir calidad, latencia y costo con solicitudes
-                            representativas del uso real.
-                        </li>
-
-                        <li>
-                            Registrar consumo de tokens por tipo de tarea.
-                        </li>
-
-                        <li>
-                            Establecer presupuestos, límites y alertas.
-                        </li>
-
-                        <li>
-                            Utilizar RAG solo con fuentes autorizadas y
-                            versionadas.
-                        </li>
-
-                        <li>
-                            Exigir evidencia o citas en respuestas donde la
-                            factualidad sea importante.
-                        </li>
-
-                        <li>
-                            Aplicar mínimo privilegio a herramientas utilizadas
-                            por agentes.
-                        </li>
-
-                        <li>
-                            Mantener la autorización fuera del LLM.
-                        </li>
-
-                        <li>
-                            Evaluar prompt injection mediante pruebas
-                            adversariales.
-                        </li>
-
-                        <li>
-                            Medir falsos positivos y negativos de los
-                            guardrails.
-                        </li>
-
-                        <li>
-                            Minimizar datos sensibles enviados a terceros.
-                        </li>
-
-                        <li>
-                            Establecer procesos de revisión humana para
-                            decisiones de alto impacto.
-                        </li>
-
-                        <li>
-                            Crear una capa que desacople el código del proveedor.
-                        </li>
-
-                        <li>
-                            Probar periódicamente que los datos y configuraciones
-                            pueden exportarse.
-                        </li>
-
-                        <li>
-                            Volver a ejecutar el benchmark al cambiar de modelo,
-                            prompt, RAG o versión.
-                        </li>
-
-                        <li>
-                            Conservar logs y trazabilidad suficientes para
-                            investigar incidentes sin registrar datos
-                            innecesarios.
-                        </li>
-
-                    </ul>
-
-
-                    <h3>Una regla sencilla para decidir</h3>
-
-                    <div class="ai6-formula">
-                        Mejor plataforma ≠ modelo más grande
-                        <br><br>
-                        Mejor plataforma =
-                        calidad suficiente + riesgo aceptable +
-                        rendimiento adecuado + costo sostenible +
-                        portabilidad razonable
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     CONCLUSIONES
-                ================================================== -->
-                <section id="conclusiones" class="ai6-section">
-
-                    <h2>Conclusiones</h2>
-
-                    <p>
-                        Las plataformas de desarrollo nativas de inteligencia
-                        artificial representan un cambio importante en la forma
-                        de construir software. Hacen posible automatizar tareas
-                        basadas en lenguaje, incorporar conocimiento externo,
-                        generar código y conectar modelos con herramientas
-                        utilizando componentes que hace pocos años requerían
-                        desarrollos mucho más especializados.
-                    </p>
-
-                    <p>
-                        Sin embargo, la evidencia examinada obliga a adoptar una
-                        visión más madura que el simple entusiasmo tecnológico.
-                        La IA puede acelerar ciertas tareas, pero su efecto no
-                        es uniforme. La productividad varía según el contexto;
-                        la escalabilidad puede aumentar el gasto; una
-                        integración sencilla puede terminar produciendo
-                        dependencia; y una respuesta convincente puede seguir
-                        siendo falsa.
-                    </p>
-
-                    <p>
-                        Por eso, una arquitectura AI-Native profesional no debe
-                        confiar exclusivamente en la capacidad del modelo.
-                        Necesita mecanismos de recuperación, evaluación,
-                        guardrails, autorización, monitoreo, control de costos,
-                        trazabilidad y supervisión humana proporcional al
-                        impacto de la aplicación.
-                    </p>
-
-                    <p>
-                        La principal conclusión de esta sección es que
-                        <strong>
-                            adoptar IA de manera responsable no significa
-                            reducir su potencial, sino crear las condiciones
-                            técnicas para aprovecharlo con confianza.
-                        </strong>
-                        Una organización obtiene mayor valor cuando puede
-                        demostrar con datos que su solución es útil, segura,
-                        sustentada, económicamente viable y suficientemente
-                        portable para evolucionar junto con la tecnología.
-                    </p>
-
-                </section>
-
-
-                <!-- =================================================
-                     BIBLIOGRAFÍA APA 7
-                ================================================== -->
-                <section id="bibliografia" class="ai6-section">
-
-                    <h2>Bibliografía en formato APA Séptima Edición</h2>
-
-                    <p>
-                        Se priorizan artículos originales, publicaciones
-                        académicas revisadas por pares, conferencias
-                        reconocidas y documentos técnicos institucionales.
-                        Para facilitar la verificación, se incluye el enlace
-                        al artículo o DOI y una búsqueda directa en
-                        Google Scholar.
-                    </p>
-
-
-                    <ol class="ai6-reference-list">
-
-                        <li id="ref-becker">
-                            Becker, J., Rush, N., Barnes, E., &amp; Rein, D.
-                            (2025).
-                            <em>
-                                Measuring the impact of early-2025 AI on
-                                experienced open-source developer productivity
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://doi.org/10.48550/arXiv.2507.09089"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.48550/arXiv.2507.09089
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Measuring+the+Impact+of+Early-2025+AI+on+Experienced+Open-Source+Developer+Productivity"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-carlini">
-                            Carlini, N., Tramèr, F., Wallace, E., Jagielski, M.,
-                            Herbert-Voss, A., Lee, K., Roberts, A., Brown, T.,
-                            Song, D., Erlingsson, Ú., Oprea, A., &amp;
-                            Raffel, C. (2021).
-                            Extracting training data from large language
-                            models.
-                            <em>
-                                30th USENIX Security Symposium
-                                (USENIX Security 21)
-                            </em>.
-                            <a
-                                href="https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                USENIX Security
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Extracting+Training+Data+from+Large+Language+Models+Carlini"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-devlin">
-                            Devlin, J., Chang, M.-W., Lee, K., &amp;
-                            Toutanova, K. (2019).
-                            BERT: Pre-training of deep bidirectional
-                            transformers for language understanding.
-                            <em>
-                                Proceedings of the 2019 Conference of the
-                                North American Chapter of the Association for
-                                Computational Linguistics: Human Language
-                                Technologies
-                            </em>, 4171–4186.
-                            <a
-                                href="https://doi.org/10.18653/v1/N19-1423"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.18653/v1/N19-1423
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=BERT+Pre-training+of+Deep+Bidirectional+Transformers+for+Language+Understanding"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-gallegos">
-                            Gallegos, I. O., Rossi, R. A., Barrow, J.,
-                            Tanjim, M. M., Kim, S., Dernoncourt, F., Yu, T.,
-                            Zhang, R., &amp; Ahmed, N. K. (2024).
-                            Bias and fairness in large language models:
-                            A survey.
-                            <em>Computational Linguistics, 50</em>(3),
-                            1097–1179.
-                            <a
-                                href="https://doi.org/10.1162/coli_a_00524"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.1162/coli_a_00524
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Bias+and+Fairness+in+Large+Language+Models+A+Survey"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-huang">
-                            Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z.,
-                            Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B.,
-                            &amp; Liu, T. (2025).
-                            A survey on hallucination in large language models:
-                            Principles, taxonomy, challenges, and open
-                            questions.
-                            <em>
-                                ACM Transactions on Information Systems,
-                                43
-                            </em>(2), Article 42.
-                            <a
-                                href="https://doi.org/10.1145/3703155"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.1145/3703155
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=A+Survey+on+Hallucination+in+Large+Language+Models+Principles+Taxonomy+Challenges+Open+Questions"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-lewis">
-                            Lewis, P., Perez, E., Piktus, A., Petroni, F.,
-                            Karpukhin, V., Goyal, N., Küttler, H., Lewis, M.,
-                            Yih, W.-t., Rocktäschel, T., Riedel, S., &amp;
-                            Kiela, D. (2020).
-                            Retrieval-augmented generation for
-                            knowledge-intensive NLP tasks.
-                            <em>
-                                Advances in Neural Information Processing
-                                Systems, 33
-                            </em>, 9459–9474.
-                            <a
-                                href="https://arxiv.org/abs/2005.11401"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Artículo
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Retrieval-Augmented+Generation+for+Knowledge-Intensive+NLP+Tasks"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-li-guard">
-                            Li, H., Liu, X., Zhang, N., &amp; Xiao, C.
-                            (2025).
-                            PIGuard: Prompt injection guardrail via mitigating
-                            overdefense for free.
-                            <em>
-                                Proceedings of the 63rd Annual Meeting of the
-                                Association for Computational Linguistics
-                                (Volume 1: Long Papers)
-                            </em>, 30420–30437.
-                            <a
-                                href="https://doi.org/10.18653/v1/2025.acl-long.1468"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.18653/v1/2025.acl-long.1468
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=PIGuard+Prompt+Injection+Guardrail+via+Mitigating+Overdefense+for+Free"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-liu-prompt">
-                            Liu, Y., Deng, G., Li, Y., Wang, K., Wang, Z.,
-                            Wang, X., Zhang, T., Liu, Y., Wang, H.,
-                            Zheng, Y., &amp; Liu, Y. (2023).
-                            <em>
-                                Prompt injection attack against
-                                LLM-integrated applications
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://doi.org/10.48550/arXiv.2306.05499"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.48550/arXiv.2306.05499
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Prompt+Injection+Attack+Against+LLM-Integrated+Applications"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-mikolov">
-                            Mikolov, T., Chen, K., Corrado, G., &amp;
-                            Dean, J. (2013).
-                            <em>
-                                Efficient estimation of word representations
-                                in vector space
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://doi.org/10.48550/arXiv.1301.3781"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.48550/arXiv.1301.3781
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Efficient+Estimation+of+Word+Representations+in+Vector+Space"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-nist">
-                            Autio, C., Schwartz, R., Dunietz, J., Jain, S.,
-                            Stanley, M., Tabassi, E., Hall, P., &amp;
-                            Roberts, K. (2024).
-                            <em>
-                                Artificial Intelligence Risk Management
-                                Framework: Generative Artificial Intelligence
-                                Profile
-                            </em>
-                            (NIST AI 600-1).
-                            National Institute of Standards and Technology.
-                            <a
-                                href="https://doi.org/10.6028/NIST.AI.600-1"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.6028/NIST.AI.600-1
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=NIST+Artificial+Intelligence+Risk+Management+Framework+Generative+Artificial+Intelligence+Profile"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-opara">
-                            Opara-Martins, J., Sahandi, R., &amp; Tian, F.
-                            (2016).
-                            Critical analysis of vendor lock-in and its impact
-                            on cloud computing migration: A business
-                            perspective.
-                            <em>Journal of Cloud Computing, 5</em>,
-                            Article 4.
-                            <a
-                                href="https://doi.org/10.1186/s13677-016-0054-z"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.1186/s13677-016-0054-z
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=Critical+analysis+of+vendor+lock-in+and+its+impact+on+cloud+computing+migration"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-paradis">
-                            Paradis, E., Grey, K., Madison, Q., Nam, D.,
-                            Macvean, A., Meimand, V., Zhang, N.,
-                            Ferrari-Church, B., &amp; Chandra, S. (2024).
-                            <em>
-                                How much does AI impact development speed?
-                                An enterprise-based randomized controlled trial
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://arxiv.org/abs/2410.12944"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Artículo
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=How+much+does+AI+impact+development+speed+enterprise-based+randomized+controlled+trial"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-peng">
-                            Peng, S., Kalliamvakou, E., Cihon, P., &amp;
-                            Demirer, M. (2023).
-                            <em>
-                                The impact of AI on developer productivity:
-                                Evidence from GitHub Copilot
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://doi.org/10.48550/arXiv.2302.06590"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.48550/arXiv.2302.06590
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=The+Impact+of+AI+on+Developer+Productivity+Evidence+from+GitHub+Copilot"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-rawte">
-                            Rawte, V., Sheth, A., &amp; Das, A. (2023).
-                            <em>
-                                A survey of hallucination in large foundation
-                                models
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://doi.org/10.48550/arXiv.2309.05922"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.48550/arXiv.2309.05922
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=A+Survey+of+Hallucination+in+Large+Foundation+Models"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-samsi">
-                            Samsi, S., Zhao, D., McDonald, J., Li, B.,
-                            Michaleas, A., Jones, M., Bergeron, W.,
-                            Kepner, J., Tiwari, D., &amp; Gadepally, V.
-                            (2023).
-                            <em>
-                                From words to watts: Benchmarking the energy
-                                costs of large language model inference
-                            </em>.
-                            <em>arXiv</em>.
-                            <a
-                                href="https://doi.org/10.48550/arXiv.2310.03003"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.48550/arXiv.2310.03003
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=From+Words+to+Watts+Benchmarking+the+Energy+Costs+of+Large+Language+Model+Inference"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-
-                        <li id="ref-yao">
-                            Yao, Y., Duan, J., Xu, K., Cai, Y., Sun, Z.,
-                            &amp; Zhang, Y. (2024).
-                            A survey on large language model (LLM) security
-                            and privacy: The good, the bad, and the ugly.
-                            <em>High-Confidence Computing, 4</em>(2),
-                            100211.
-                            <a
-                                href="https://doi.org/10.1016/j.hcc.2024.100211"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://doi.org/10.1016/j.hcc.2024.100211
-                            </a>
-                            <span class="ai6-ref-links">
-                                ·
-                                <a
-                                    href="https://scholar.google.com/scholar?q=A+Survey+on+Large+Language+Model+Security+and+Privacy+The+Good+The+Bad+and+The+Ugly"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Google Scholar</a>
-                            </span>
-                        </li>
-
-                    </ol>
-
-                </section>
-
-
-                <!-- =================================================
-                     NOTA DE PUBLICACIÓN
-                ================================================== -->
-                <section class="ai6-footer-note">
-
-                    <h2 style="margin-top:0;font-size:20px;">
-                        Publicación y citación
-                    </h2>
-
-                    <p>
-                        <strong>Para publicar:</strong>
-                        guarda este archivo como
-                        <code>pages/ventajas.html</code> sustituyendo la versión
-                        anterior. Como utiliza
-                        <code>../css/style.css</code>, conservará la navegación
-                        general del proyecto. Los estilos específicos de esta
-                        sección ya están incluidos dentro de
-                        <code>&lt;style&gt;</code>.
-                    </p>
-
-                    <p>
-                        Si el repositorio está conectado con GitHub y Vercel,
-                        basta con guardar el cambio, realizar
-                        <code>git add</code>, <code>git commit</code> y
-                        <code>git push</code> siguiendo el flujo del equipo.
-                        Antes de entregar, se recomienda revisar la página en
-                        computador, dispositivo móvil y mediante
-                        <strong>Imprimir → Guardar como PDF</strong>.
-                    </p>
-
-                    <p>
-                        <strong>Para citar dentro del texto:</strong>
-                        utiliza autor y año, por ejemplo:
-                        <em>(Peng et al., 2023)</em>,
-                        <em>(Gallegos et al., 2024)</em> o
-                        <em>(Huang et al., 2025)</em>. La referencia completa
-                        aparece posteriormente en esta misma página siguiendo
-                        el formato APA Séptima Edición.
-                    </p>
-
-                    <p>
-                        <strong>Nota metodológica:</strong>
-                        precios, límites de uso y características comerciales
-                        de los proveedores cambian con el tiempo. Por esta
-                        razón, esta sección propone métricas reproducibles en
-                        lugar de fijar una tabla de precios que podría quedar
-                        desactualizada rápidamente.
-                    </p>
-
-                </section>
-
-
-                <a href="#inicio" class="ai6-back">
-                    ↑ Volver al inicio de la sección
-                </a>
+                <p>
+                    Si posteriormente el proveedor modifica sus precios,
+                    cambia la API, elimina un modelo, modifica las condiciones
+                    del servicio o deja de ofrecer una característica, migrar
+                    la aplicación puede ser costoso.
+                </p>
+
+                <p>
+                    Opara-Martins, Sahandi y Tian (2016) identifican la
+                    interoperabilidad y la portabilidad como factores
+                    importantes para reducir este tipo de dependencia en
+                    servicios de computación en la nube.
+                </p>
+
+                <h4>¿Cómo reducir el riesgo?</h4>
+
+                <ul class="vd-list">
+
+                    <li>
+                        Crear una capa de abstracción entre la aplicación y el
+                        proveedor de IA.
+                    </li>
+
+                    <li>
+                        Mantener la lógica de negocio separada del SDK
+                        propietario.
+                    </li>
+
+                    <li>
+                        Conservar información en formatos portables.
+                    </li>
+
+                    <li>
+                        Mantener pruebas que puedan ejecutarse con diferentes
+                        modelos.
+                    </li>
+
+                    <li>
+                        Evaluar alternativas comerciales y modelos abiertos
+                        cuando resulte técnicamente apropiado.
+                    </li>
+
+                    <li>
+                        Definir desde el diseño cómo se realizaría una eventual
+                        migración.
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================================
+             TABLA COMPARATIVA
+        ====================================================== -->
+
+        <section class="vd-section">
+
+            <h2>Resumen: beneficio, riesgo y medida de control</h2>
+
+            <div class="vd-table-container">
+
+                <table class="vd-table">
+
+                    <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Beneficio</th>
+                        <th>Riesgo asociado</th>
+                        <th>Medida recomendada</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td><strong>Productividad</strong></td>
+                        <td>
+                            Reduce parte del trabajo repetitivo.
+                        </td>
+                        <td>
+                            Errores no detectados y falsa percepción de
+                            productividad.
+                        </td>
+                        <td>
+                            Medir tiempo, calidad, defectos, revisión y
+                            retrabajo.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Automatización</strong></td>
+                        <td>
+                            Permite procesar actividades a mayor escala.
+                        </td>
+                        <td>
+                            Decisiones incorrectas ejecutadas automáticamente.
+                        </td>
+                        <td>
+                            Human-in-the-loop para procesos críticos.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Escalabilidad</strong></td>
+                        <td>
+                            Ajusta el sistema al crecimiento de la demanda.
+                        </td>
+                        <td>
+                            Incremento inesperado de costos y recursos.
+                        </td>
+                        <td>
+                            Cuotas, presupuestos y monitoreo.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Integración</strong></td>
+                        <td>
+                            Permite incorporar IA mediante APIs y SDK.
+                        </td>
+                        <td>
+                            Acoplamiento técnico.
+                        </td>
+                        <td>
+                            Arquitectura desacoplada y capa de abstracción.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Costos</strong></td>
+                        <td>
+                            Pago flexible según utilización.
+                        </td>
+                        <td>
+                            Consumo excesivo de tokens e infraestructura.
+                        </td>
+                        <td>
+                            Presupuestos, caching, límites, routing de modelos
+                            y observabilidad.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Privacidad</strong></td>
+                        <td>
+                            Procesamiento avanzado de información.
+                        </td>
+                        <td>
+                            Exposición o retención de datos sensibles.
+                        </td>
+                        <td>
+                            Minimización, anonimización, cifrado y control de
+                            acceso.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Seguridad</strong></td>
+                        <td>
+                            Capacidad de utilizar herramientas y automatizar
+                            operaciones.
+                        </td>
+                        <td>
+                            Prompt injection y abuso de permisos.
+                        </td>
+                        <td>
+                            Guardrails, mínimo privilegio y autorización
+                            externa al modelo.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Sesgos</strong></td>
+                        <td>
+                            Personalización y análisis flexible.
+                        </td>
+                        <td>
+                            Resultados discriminatorios o inequitativos.
+                        </td>
+                        <td>
+                            Evaluación continua con conjuntos de prueba
+                            diversos.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Alucinaciones</strong></td>
+                        <td>
+                            Generación rápida de respuestas.
+                        </td>
+                        <td>
+                            Información falsa presentada como verdadera.
+                        </td>
+                        <td>
+                            Grounding, RAG, Guardrails, abstención,
+                            validación y supervisión humana.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Proveedor</strong></td>
+                        <td>
+                            Acceso rápido a infraestructura avanzada.
+                        </td>
+                        <td>
+                            Vendor lock-in y dificultad para migrar.
+                        </td>
+                        <td>
+                            Abstracción, estándares y formatos portables.
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
 
             </div>
 
-        </article>
-
-    </main>
+        </section>
 
 
-    <!-- Se conserva el script general del proyecto -->
-    <script src="../js/script.js"></script>
+        <!-- =====================================================
+             CONCLUSIÓN
+        ====================================================== -->
+
+        <section class="vd-conclusion">
+
+            <h2>Conclusión</h2>
+
+            <p>
+                Las plataformas AI-Native ofrecen oportunidades importantes
+                para mejorar la productividad, automatizar procesos, escalar
+                servicios e incorporar capacidades de inteligencia artificial
+                sin desarrollar toda la tecnología desde cero.
+            </p>
+
+            <p>
+                Sin embargo, estas ventajas no deben analizarse de manera
+                aislada. Una solución puede ser técnicamente escalable pero
+                financieramente insostenible; puede producir código con mayor
+                velocidad pero aumentar el retrabajo; o puede generar
+                respuestas convincentes que no estén respaldadas por hechos.
+            </p>
+
+            <p>
+                Por este motivo, llevar inteligencia artificial a producción
+                exige algo más que seleccionar un buen modelo. Es necesario
+                controlar el consumo de tokens, proteger la información,
+                limitar los permisos, medir sesgos, evaluar las respuestas y
+                establecer Guardrails capaces de reducir el impacto de
+                alucinaciones y comportamientos inesperados.
+            </p>
+
+            <p>
+                En conclusión, el verdadero valor de una plataforma AI-Native
+                no se encuentra simplemente en utilizar inteligencia
+                artificial, sino en
+                <strong>
+                    integrarla de forma medible, segura, responsable,
+                    sostenible y mantenible dentro del sistema.
+                </strong>
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             BIBLIOGRAFÍA
+        ====================================================== -->
+
+        <section class="bibliografia">
+
+            <h2>Bibliografía — APA 7</h2>
+
+            <p class="referencia">
+                Becker, J., Rush, N., Barnes, E., &amp; Rein, D. (2025).
+                <em>
+                    Measuring the impact of early-2025 AI on experienced
+                    open-source developer productivity
+                </em>.
+                arXiv.
+                <a href="https://doi.org/10.48550/arXiv.2507.09089"
+                   target="_blank">
+                    https://doi.org/10.48550/arXiv.2507.09089
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Carlini, N., Tramèr, F., Wallace, E., Jagielski, M.,
+                Herbert-Voss, A., Lee, K., Roberts, A., Brown, T.,
+                Song, D., Erlingsson, Ú., Oprea, A., &amp; Raffel, C.
+                (2021).
+                Extracting training data from large language models.
+                <em>
+                    30th USENIX Security Symposium
+                    (USENIX Security 21)
+                </em>.
+                <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting"
+                   target="_blank">
+                    USENIX Security
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Gallegos, I. O., Rossi, R. A., Barrow, J.,
+                Tanjim, M. M., Kim, S., Dernoncourt, F., Yu, T.,
+                Zhang, R., &amp; Ahmed, N. K. (2024).
+                Bias and fairness in large language models: A survey.
+                <em>Computational Linguistics, 50</em>(3), 1097–1179.
+                <a href="https://doi.org/10.1162/coli_a_00524"
+                   target="_blank">
+                    https://doi.org/10.1162/coli_a_00524
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z.,
+                Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B.,
+                &amp; Liu, T. (2025).
+                A survey on hallucination in large language models:
+                Principles, taxonomy, challenges, and open questions.
+                <em>
+                    ACM Transactions on Information Systems, 43
+                </em>(2), Article 42.
+                <a href="https://doi.org/10.1145/3703155"
+                   target="_blank">
+                    https://doi.org/10.1145/3703155
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Opara-Martins, J., Sahandi, R., &amp; Tian, F.
+                (2016).
+                Critical analysis of vendor lock-in and its impact on
+                cloud computing migration: A business perspective.
+                <em>Journal of Cloud Computing, 5</em>, Article 4.
+                <a href="https://doi.org/10.1186/s13677-016-0054-z"
+                   target="_blank">
+                    https://doi.org/10.1186/s13677-016-0054-z
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Paradis, E., Grey, K., Madison, Q., Nam, D.,
+                Macvean, A., Meimand, V., Zhang, N.,
+                Ferrari-Church, B., &amp; Chandra, S. (2024).
+                <em>
+                    How much does AI impact development speed?
+                    An enterprise-based randomized controlled trial
+                </em>.
+                arXiv.
+                <a href="https://arxiv.org/abs/2410.12944"
+                   target="_blank">
+                    https://arxiv.org/abs/2410.12944
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Peng, S., Kalliamvakou, E., Cihon, P.,
+                &amp; Demirer, M. (2023).
+                <em>
+                    The impact of AI on developer productivity:
+                    Evidence from GitHub Copilot
+                </em>.
+                arXiv.
+                <a href="https://doi.org/10.48550/arXiv.2302.06590"
+                   target="_blank">
+                    https://doi.org/10.48550/arXiv.2302.06590
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Rawte, V., Sheth, A., &amp; Das, A. (2023).
+                <em>
+                    A survey of hallucination in large foundation models
+                </em>.
+                arXiv.
+                <a href="https://doi.org/10.48550/arXiv.2309.05922"
+                   target="_blank">
+                    https://doi.org/10.48550/arXiv.2309.05922
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Samsi, S., Zhao, D., McDonald, J., Li, B.,
+                Michaleas, A., Jones, M., Bergeron, W.,
+                Kepner, J., Tiwari, D., &amp; Gadepally, V.
+                (2023).
+                <em>
+                    From words to watts: Benchmarking the energy
+                    costs of large language model inference
+                </em>.
+                arXiv.
+                <a href="https://doi.org/10.48550/arXiv.2310.03003"
+                   target="_blank">
+                    https://doi.org/10.48550/arXiv.2310.03003
+                </a>
+            </p>
+
+
+            <p class="referencia">
+                Yao, Y., Duan, J., Xu, K., Cai, Y., Sun, Z.,
+                &amp; Zhang, Y. (2024).
+                A survey on large language model (LLM) security
+                and privacy: The good, the bad, and the ugly.
+                <em>High-Confidence Computing, 4</em>(2), 100211.
+                <a href="https://doi.org/10.1016/j.hcc.2024.100211"
+                   target="_blank">
+                    https://doi.org/10.1016/j.hcc.2024.100211
+                </a>
+            </p>
+
+        </section>
+
+    </section>
+
+</main>
+
+<script src="../js/script.js"></script>
 
 </body>
 </html>
