@@ -11,17 +11,72 @@
     <title>Ventajas y desafíos - AI Platforms</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Estilos exclusivos para la integración multimedia -->
+    <style>
+        .recurso-multimedia {
+            max-width: 1050px;
+            margin: 2rem auto;
+        }
+
+        .recurso-multimedia img {
+            display: block;
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        .recurso-multimedia figcaption {
+            margin-top: 0.65rem;
+            color: #5c6470;
+            font-size: 0.92rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .recurso-multimedia figcaption a {
+            color: inherit;
+        }
+
+        .video-responsive {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 14px;
+            background: #101828;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .titulo-multimedia {
+            margin-bottom: 0.7rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
     <nav class="navbar">
+
         <a href="../index.html" class="logo">
             AI Platforms
         </a>
+
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
+            <li><a href="introduccion.html">Introducción</a></li>
             <li><a href="arquitectura.html">Arquitectura</a></li>
             <li><a href="plataformas.html">Plataformas</a></li>
             <li><a href="herramientas.html">Herramientas</a></li>
@@ -30,11 +85,16 @@
             <li><a href="tendencias.html">Tendencias</a></li>
             <li><a href="guia.html">Guía</a></li>
         </ul>
+
     </nav>
 </header>
 
 
 <main class="contenido">
+
+    <!-- =========================================================
+         SECCIÓN 6
+    ========================================================== -->
 
     <section id="ventajas-desafios" class="seccion">
 
@@ -67,12 +127,42 @@
 
         </div>
 
+        <figure class="recurso-multimedia">
+            <img
+                src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+                alt="Representación de una persona interactuando con tecnología de inteligencia artificial"
+                loading="eager">
+            <figcaption>
+                Las plataformas AI-Native combinan modelos de inteligencia artificial,
+                infraestructura y supervisión humana para crear soluciones de software.
+                Imagen: <a href="https://www.pexels.com/search/artificial%20intelligence%20software/"
+                target="_blank" rel="noopener noreferrer">Pexels</a>.
+            </figcaption>
+        </figure>
+
     </section>
 
+
+    <!-- =========================================================
+         VENTAJAS
+    ========================================================== -->
 
     <section id="ventajas" class="seccion">
 
         <h1>Ventajas</h1>
+
+        <figure class="recurso-multimedia">
+            <img
+                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+                alt="Desarrollador trabajando con código en varias pantallas"
+                loading="lazy">
+            <figcaption>
+                La IA puede apoyar la programación, las pruebas, la documentación y el
+                análisis de errores, siempre bajo la revisión del desarrollador.
+                Imagen: <a href="https://www.pexels.com/search/ai%20development%20tools/"
+                target="_blank" rel="noopener noreferrer">Pexels</a>.
+            </figcaption>
+        </figure>
 
 
         <!-- MAYOR PRODUCTIVIDAD -->
@@ -141,6 +231,8 @@
         </article>
 
 
+        <!-- AUTOMATIZACIÓN -->
+
         <article class="plataforma">
 
             <h2>Automatización</h2>
@@ -188,6 +280,9 @@
 
         </article>
 
+
+        <!-- ESCALABILIDAD -->
+
         <article class="plataforma">
 
             <h2>Escalabilidad</h2>
@@ -234,6 +329,9 @@
 
         </article>
 
+
+        <!-- INTEGRACIÓN SENCILLA -->
+
         <article class="plataforma">
 
             <h2>Integración sencilla</h2>
@@ -278,9 +376,27 @@
 
     </section>
 
+
+    <!-- =========================================================
+         DESAFÍOS
+    ========================================================== -->
+
     <section id="desafios" class="seccion">
 
         <h1>Desafíos</h1>
+
+        <figure class="recurso-multimedia">
+            <img
+                src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+                alt="Candado sobre un teclado como símbolo de privacidad y seguridad digital"
+                loading="lazy">
+            <figcaption>
+                La protección de datos, el control de accesos y la seguridad deben
+                incorporarse desde el diseño de toda plataforma basada en IA.
+                Imagen: <a href="https://www.pexels.com/search/cybersecurity/"
+                target="_blank" rel="noopener noreferrer">Pexels</a>.
+            </figcaption>
+        </figure>
 
 
         <!-- COSTOS -->
@@ -368,6 +484,9 @@
 
         </article>
 
+
+        <!-- PRIVACIDAD -->
+
         <article class="plataforma">
 
             <h2>Privacidad</h2>
@@ -432,6 +551,8 @@
         </article>
 
 
+        <!-- SEGURIDAD -->
+
         <article class="plataforma">
 
             <h2>Seguridad</h2>
@@ -486,6 +607,8 @@
 
         </article>
 
+
+        <!-- SESGOS -->
 
         <article class="plataforma">
 
@@ -547,6 +670,8 @@
         </article>
 
 
+        <!-- ALUCINACIONES -->
+
         <article class="plataforma">
 
             <h2>Alucinaciones</h2>
@@ -599,6 +724,9 @@
             </p>
 
         </article>
+
+
+        <!-- GUARDRAILS -->
 
         <article class="plataforma">
 
@@ -707,6 +835,9 @@
 
         </article>
 
+
+        <!-- DEPENDENCIA DEL PROVEEDOR -->
+
         <article class="plataforma">
 
             <h2>Dependencia del proveedor</h2>
@@ -767,6 +898,45 @@
             </p>
 
         </article>
+
+    </section>
+
+
+    <!-- =========================================================
+         TABLA RESUMEN
+    ========================================================== -->
+
+    <section id="video" class="seccion">
+
+        <h1>Integración multimedia</h1>
+
+        <div class="introduccion">
+            <p>
+                El siguiente video complementa el tema al presentar el marco de
+                gestión de riesgos de inteligencia artificial del NIST, una guía
+                orientada al desarrollo y uso responsable de sistemas de IA.
+            </p>
+        </div>
+
+        <div class="recurso-multimedia">
+            <h2 class="titulo-multimedia">Marco de Gestión de Riesgos de IA del NIST</h2>
+            <div class="video-responsive">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/I1Y-O1n55ww"
+                    title="Reflexiones sobre el marco de gestión de riesgos de inteligencia artificial del NIST"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="titulo-multimedia">
+                <a href="https://www.youtube.com/watch?v=I1Y-O1n55ww"
+                   target="_blank" rel="noopener noreferrer">
+                    Ver el video directamente en YouTube
+                </a>
+            </p>
+        </div>
 
     </section>
 
@@ -924,6 +1094,10 @@
     </section>
 
 
+    <!-- =========================================================
+         CONCLUSIÓN
+    ========================================================== -->
+
     <section id="conclusion" class="seccion">
 
         <h1>Conclusión</h1>
@@ -974,6 +1148,10 @@
 
     </section>
 
+
+    <!-- =========================================================
+         BIBLIOGRAFÍA
+    ========================================================== -->
 
     <section id="bibliografia" class="seccion">
 
