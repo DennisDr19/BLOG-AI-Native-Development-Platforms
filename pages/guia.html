@@ -5,7 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía para comenzar - AI Native Platforms</title>
-    <link rel="stylesheet" href="   ../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- ========================================================= -->
+    <!-- ESTILOS EXCLUSIVOS PARA ESTA PÁGINA (No afectan a otras)   -->
+    <!-- ========================================================= -->
+    <style>
+        /* Contenedor de imágenes y videos */
+        .recurso-multimedia {
+            max-width: 1050px;
+            margin: 2rem auto;
+        }
+
+        /* Imágenes */
+        .recurso-multimedia img {
+            display: block;
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        /* Pie de foto */
+        .recurso-multimedia figcaption {
+            margin-top: 0.65rem;
+            color: #5c6470;
+            font-size: 0.92rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .recurso-multimedia figcaption a {
+            color: inherit;
+        }
+
+        /* Contenedor de video responsive (16:9) */
+        .video-responsive {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 14px;
+            background: #101828;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Títulos de multimedia */
+        .titulo-multimedia {
+            margin-bottom: 0.7rem;
+            text-align: center;
+        }
+
+        /* Secciones con separación */
+        .seccion {
+            margin-bottom: 3rem;
+        }
+
+        .introduccion {
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
 
 <header>
@@ -15,7 +83,6 @@
         </a>
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="introduccion.html">Introducción</a></li>
             <li><a href="arquitectura.html">Arquitectura</a></li>
             <li><a href="plataformas.html">Plataformas</a></li>
             <li><a href="herramientas.html">Herramientas</a></li>
@@ -31,6 +98,9 @@
 
     <main>
 
+        <!-- ============================================================ -->
+        <!-- INTRODUCCIÓN                                                   -->
+        <!-- ============================================================ -->
         <h1>Guía para comenzar</h1>
 
         <p>
@@ -45,6 +115,23 @@
             el aprendizaje continuo.
         </p>
 
+        <!-- ============================================================ -->
+        <!-- IMAGEN: Desarrollo con IA                                      -->
+        <!-- ============================================================ -->
+        <figure class="recurso-multimedia">
+            <img
+                src="https://images.pexels.com/photos/36571389/pexels-photo-36571389.jpeg"
+                alt="Primer plano de la pantalla de una computadora con código de programación"
+                loading="eager">
+            <figcaption>
+                El desarrollo con IA requiere familiaridad con entornos de programación y herramientas modernas.
+                Imagen: <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>.
+            </figcaption>
+        </figure>
+
+        <!-- ============================================================ -->
+        <!-- CÓMO ELEGIR UNA PLATAFORMA                                    -->
+        <!-- ============================================================ -->
         <h1>Cómo elegir una plataforma</h1>
 
         <p>
@@ -177,6 +264,9 @@
             </li>
         </ul>
 
+        <!-- ============================================================ -->
+        <!-- REQUISITOS BÁSICOS                                             -->
+        <!-- ============================================================ -->
         <h1>Requisitos básicos</h1>
 
         <h3>Conocimientos previos</h3>
@@ -304,7 +394,22 @@
             </li>
 
         </ul>
-
+                <!-- ============================================================ -->
+        <!-- IMAGEN: Desarrollo con IA                                      -->
+        <!-- ============================================================ -->
+        <figure class="recurso-multimedia">
+            <img
+                src="https://images.pexels.com/photos/34212916/pexels-photo-34212916.jpeg"
+                alt="Persona interactuando con tecnología de inteligencia artificial en desarrollo de software"
+                loading="lazy">
+            <figcaption>
+                Las plataformas AI-Native integran inteligencia artificial en cada etapa del ciclo de desarrollo de software.
+                Imagen: <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>.
+            </figcaption>
+        </figure>
+        <!-- ============================================================ -->
+        <!-- OBTENER UNA API KEY                                            -->
+        <!-- ============================================================ -->
         <h1>Obtener una API Key</h1>
 
         <p>
@@ -430,7 +535,41 @@
             </li>
 
         </ul>
+                <!-- ============================================================ -->
+        <!-- VIDEO: Tutorial para obtener una API Key en Claude/Anthropic   -->
+        <!-- ============================================================ -->
+        <section id="video-api-key" class="seccion">
+            <h2>🎬 Video: Cómo crear una API Key en Claude / Anthropic</h2>
 
+            <div class="introduccion">
+                <p>
+                    Este tutorial práctico muestra paso a paso cómo obtener tu API Key en la plataforma de Anthropic,
+                    un proceso similar al que se sigue en otras plataformas como OpenAI, Google AI Studio o Azure AI Foundry .
+                </p>
+            </div>
+
+            <div class="recurso-multimedia">
+                <h3 class="titulo-multimedia">Tutorial: Obtención de API Key en Claude</h3>
+                <div class="video-responsive">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/WUYQCOU7U2k"
+                        title="Cómo crear una API Key en Claude / Anthropic - Tutorial paso a paso"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="titulo-multimedia">
+                    <a href="https://www.youtube.com/watch?v=WUYQCOU7U2k" target="_blank" rel="noopener noreferrer">
+                        Ver el video directamente en YouTube
+                    </a>
+                </p>
+            </div>
+        </section>
+        <!-- ============================================================ -->
+        <!-- CREAR EL PRIMER PROYECTO                                       -->
+        <!-- ============================================================ -->
         <h1>Crear el primer proyecto</h1>
 
         <p>
@@ -570,6 +709,9 @@ while True:
 
         </ul>
 
+        <!-- ============================================================ -->
+        <!-- RECURSOS PARA APRENDER                                         -->
+        <!-- ============================================================ -->
         <h1>Recursos para aprender</h1>
 
         <h3>Documentación oficial</h3>
@@ -683,7 +825,22 @@ while True:
             </li>
 
         </ol>
-
+                <!-- ============================================================ -->
+        <!-- IMAGEN: Comunidad y aprendizaje colaborativo                   -->
+        <!-- ============================================================ -->
+        <figure class="recurso-multimedia">
+            <img
+                src="https://images.pexels.com/photos/29614944/pexels-photo-29614944.jpeg"
+                alt="Personas colaborando y aprendiendo sobre inteligencia artificial en un entorno tecnológico"
+                loading="lazy">
+            <figcaption>
+                El aprendizaje en comunidad y la colaboración son clave para dominar las plataformas de desarrollo AI-Native.
+                Imagen: <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>.
+            </figcaption>
+        </figure>
+        <!-- ============================================================ -->
+        <!-- BIBLIOGRAFÍA                                                   -->
+        <!-- ============================================================ -->
         <h1>Bibliografía</h1>
 
         <ul>

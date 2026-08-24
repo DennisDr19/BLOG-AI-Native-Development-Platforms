@@ -13,7 +13,6 @@
         </a>
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="introduccion.html">Introducción</a></li>
             <li><a href="arquitectura.html">Arquitectura</a></li>
             <li><a href="plataformas.html">Plataformas</a></li>
             <li><a href="herramientas.html">Herramientas</a></li>
@@ -25,15 +24,306 @@
     </nav>
 </header>
 <body>
-    <ul>
-        <li>LangChain</li>
-        <li>LlamaIndex</li>
-        <li>Semantic Kernel</li>
-        <li>Ollama</li>
-        <li>Docker para IA</li>
-        <li>Agentes inteligentes</li>
-        <li>Vercel AI SDK</li>
-    </ul>
+         <main class="contenido">
+        <section id="introduccion" class="seccion">
+            <h1>Herramientas para desarrollar aplicaciones con IA</h1>
+            <div class="introduccion">
+<h2>¿Qué entendemos por herramientas de desarrollo?</h2>
+
+                <p>
+                    Las herramientas de desarrollo de inteligencia artificial son un conjunto de frameworks, que en lenguaje normal serían plantillas o estructuras prefabricadas para ahorrar tiempo y mantener orden,entornos de ejecución, SDKs que son maletines de herramientas para construir softwares, e infraestructuras que permiten a los ingenieros construir con soltura, integrar y desplegar procesos para recibir, almacenar y recuperar información (capacidades cognitivas).
+                </p>
+
+                <p>
+                   A diferencia de usar modelos de lenguaje de forma aislada a través de una interfaz de chat, estas herramientas actuan como un tejido conector entre los Modelos de Lenguaje de Gran Escala (LLM) y la arquitectura de software tradicional: estos permiten conectar la inteligencia artificial con datos de empresas y proveerlos de una memoria contextual entre otros beneficios.
+                </p>
+
+            </div>
+
+        </section>
+        <section id="herramientas" class="seccion">
+    <h1>Principales herramientas para el desarrollo con IA</h1>
+
+
+            <article class="herramientas">
+
+                <h2>1. LangChain:</h2>
+
+                <p>
+                    LangChain es un framework de referencia diseñado para simplificar la construcción de aplicaciones complejas, ayuda a conectar inteligencias artificiales con sus propias fuentes de datos y herramientas externas como herramientas de cálculo, APIs externas y bases de datos. 
+</p>  
+                <p>  Para entenderlo de forma sencilla pensaremos en los modelos de lenguaje(LLMs) como cerebros muy inteligentes que se encuentran en una caja, podríamos decir que saben múchisimo sobre diversos temas del mundo, cultura general o programación por ejemplo, pero hay algo especial que estos no tienen,ellos no pueden acceder a los archivos personales que hay en el navegador del usuario, a las bases de datos privadas ni tampoco pueden realizar actividades por si solos, no tienen una voluntad propia por así decirlo, pero LangChain es la herramienta que nos ayuda a crear el "puente" y permiten accionar a ese super cerebro, sacarlo de la caja y conectarlo con partes del mundo real, toda esta maravilla con la tecnología y aplicaciones matemáticas que se verán a continuación.                        
+                </p>
+                 <h3>Arquitectura basada en grafos con LangGraph</h3>
+                <p>
+                    Lo que le da la singularidad especial a LangChain es su capacidad para coordinar flujos de trabajo dinámicos y adaptativos.Con el lanzamiento de LangGraph, el ecosistema dio un salto muy grande hacia la construcción de sistemas multiagente avanzados. Podemos ver que eso se explica oficialmente de esta manera:
+</p>  
+   <ul>
+                    <li>"LangGraph proporciona una infraestructura de soporte de bajo nivel para cualquier flujo de trabajo o agente de larga duración y con estado (stateful)... otorga un control preciso para combinar pasos deterministas programados a mano con pasos de agentes impulsados por LLM dentro del mismo grafo, permitiendo construir agentes a la medida que se comporten exactamente como lo requiere la aplicación."</li>   
+        <li>Documentación oficial de LangChain</li>
+        </ul>
+ <p>Esta arquitectura resuelve el reto de los flujos lineales rígidos,esto permite diseñar bucles de retroalimentación donde un agente puede en primer lugar, evaluar la calidad de su respuesta, corregir errores de sintaxis o lógica en tiempo de ejecución y mantener el estado de la conversación a través de múltiples interacciones sin perder el contexto.                   
+</p>  
+<h3>Componentes clave del ecosistema</h3>
+    <li>LCEL (LangChain Expression Language):</li>            
+                <p>
+Sintaxis declarativa que permite componer cadenas (chains) de manera modular, con soporte nativo para ejecución asíncrona, streaming de datos y procesamiento en paralelo.               
+</p>  
+    <li>Integración con herramientas (Agents & Tools):</li>            
+                <p>
+Permite que el modelo decida dinámicamente cuándo consultar un motor de búsqueda, ejecutar código en una sandbox o realizar consultas SQL              
+</p>
+    <li>Gestión de Memoria y Contexto:</li>            
+<p>
+Abstracciones para almacenar y estructurar el historial de conversación, optimizando el consumo de tokens en modelos de contexto amplio.            
+</p> 
+</article>  
+
+
+            
+<article class="herramienta">
+
+                <h2>2. LlamaIndex:</h2>
+                <p>
+LlamaIndex es un marco de trabajo (framework) pensado para una tarea muy específica: conectar Inteligencias Artificiales (como ChatGPT) con los propios datos privados o archivos externos, haciendo que buscar y consultar esa información sea súper rápido y preciso.                  
+                </p>
+                <p>
+                  Si LangChain es como un pulpo que puede hacer muchas cosas para construir cualquier tipo de aplicación con IA, LlamaIndex sería un especialista enfocado en ser el "bibliotecario" perfecto para los documentos.   
+                </p>
+<h3>Ingesta e indexación de datos no estructurados</h3>
+<p> El objetivo principal de LlamaIndex es convertirse en un puento eficiente entre los datos que le puede dar una organización y los modelos de lenguaje, todo esto para que el modelo no genere alucinaciones o que regrese respuestas que no tienen nada que ver con el contexto en el que se está trabajando.              
+                </p>
+<ul>
+                    <li>"LlamaIndex es un marco de trabajo de datos diseñado para potenciar la Generación Aumentada por Recuperación (RAG). Esta técnica extrae conocimiento externo y fundamenta la respuesta del LLM en ese contexto... Los conectores de datos ingieren información desde archivos, tablas SQL o páginas web, y sus mecanismos de indexación transforman esos fragmentos en vectores para realizar consultas precisas combinadas con el prompt original."</li>   
+        <li>Documentación oficial de Llamaindex</li>
+        </ul>
+    <h3>Componentes clave del ecosistema</h3>
+    <li>Conectores de Datos (LlamaHub):</li>            
+                <p>
+    Se trata de un impresionante catálogo gigante de integraciones que permite cargar información sin esfuerzo desde varias plataformas y varios formatos, puedes cargar PDFs,documentos de Notion, canales de Slack, repositorios de GitHub y bases de datos SQL/NoSQL).
+              
+</p>  
+    <li>Estructuras de Indexación Avanzada:</li>            
+                <p>
+     En este caso lo que se hace es transformar documentación sin alguna jeraquía en índices vectoriales, grafos de conocimiento o estructuras jerarquicas de arbol, esto sirve para que se pueda optimizar la forma en la que los datos son segmentados y almacenados.        
+</p>
+    <li>Motores de Búsqueda y Reranking (Query Engines):</li>            
+<p>
+Ahora se habla de algoritmos sofisticados que combinan la búsqueda semántica vectorial con la búsqueda por palabras clave, reordenando los resultados (reranking) para enviar al modelo únicamente el fragmento de texto estrictamente relevante.         
+</p> 
+</article>
+<article class="herramienta">
+
+                <h2>3. Semantic Kernel:</h2>
+                <p>
+             Se trata de un framework de código abierto creado por Microsoft que nos deja integrar Inteligencia Artificial (como OpenAI o Azure OpenAI) en aplicaciones tradicionales usando lenguajes de programación como C#, Python o Java. 
+                </p>
+                <p>
+                    En este caso Semantic Kernel es la opción creada en especial y con mucho cariño desde Microsoft para las empresas y desarrolladores de software convencional, para que estos puedan agregar funciones de IA a sus sitemas de forma estructurada, limpia y segura.
+                </p>
+<h3>Arquitectura basada en un núcleo orquestador (Kernel)</h3>
+    
+<p> Algo especial de Semantic Kernel radica en  que este se encarga de que la IA decida cuándo y cómo usar esas funciones nativas para resolver una tarea que el usuario le pida.             
+                </p>
+<ul>
+                    <li>"El Kernel es el componente central de Semantic Kernel. En su forma más simple, el kernel es un contenedor de inyección de dependencias que gestiona todos los servicios y plugins necesarios para ejecutar tu aplicación de IA... Dado que el kernel posee todos los servicios y plugins necesarios para ejecutar tanto código nativo como servicios de IA, es utilizado por casi todos los componentes dentro del SDK."</li>   
+        <li>Documentación oficial de Microsoft Learn</li>
+        </ul>
+    <h3>Componentes clave del ecosistema</h3>
+    <li>Plugins (Native & Semantic Functions):</li>            
+                <p>
+Son funciones que permiten encapsular tanto prompts presentado en Semantic Functions y Native Functions en unidades reutilizables por aplicación, o en otrasa palabras nos permite encapslar prompt presentados en lenguaje natural y también en código fuente tradicional.
+              
+</p>  
+    <li>Planners (Planificadores dinámicos):</li>            
+                <p>
+     Son módulos con la capadidad de eevaluar lo que un usuario le está pidiendo y posteriormente seeccionar automaticamente qué pluguins combinar y en que orden combinarlos para cumplir un objetivo complejo.       
+</p>
+    <li>Memoria y Conectores de Datos:</li>            
+<p>
+   En un chat normal la IA olvida de lo que se habló tan proto se cierra sesión, en cambio en este caso se tiene una memoria que recuerda conversaciones pasadas permitiendo llevar un flujo de trabajo más rápido, esta función en especial está optimizada para entornos d Microsoft Azure y arquitecturas empresariales.
+</p> 
+</article> 
+
+
+
+            
+<article class="herramienta">
+
+                <h2>4. Ollama: </h2>
+                <p>
+        En este caso tenemos una herramienta de código abierto que permite ejecutar Modelos de Lenguaje de forma directa en la computadora, es decir de forma local, gratuita y privada, en este caso ya no se depende de conexiones a internet ni servicios en la nube como Claude por ejemplo.                 
+                </p>
+                <p>
+                    Ollama se consolida como el estandar para descargar, configurar y ejecutar modelos de IA, por ejemplo Llama 3, Magistral, Gemma o DeepSeek para hardware local o servidores privados.
+                </p>
+<h3>Inferencia local e infraestructura independiente</h3>
+    
+<p> Lo especial de Ollama es que ofrece un entorno de ejecución ligero y eficiente, esto permite que los desarrolladores hacer prototipos y desplegar diferentes aplicaciones teniendo todo el control sobre la infraestructura y la privacidad de los datos. De esta forma se puede eliminar la dependecia de credenciales de pago por el uso de proveedores externos, y también resuelve el problema de conectividad. 
+</p>
+<ul>
+                    <li>"Construye con modelos abiertos, en tu computadora y en la nube... Lanza agentes desde la interfaz de línea de comandos (CLI) de Ollama, o conecta editores y frameworks a través de su API. Ejecuta completamente fuera de línea para trabajos de misión crítica."</li>   
+        <li>Documentación oficial de Ollama</li>
+        </ul>
+    <h3>Componentes clave del ecosistema</h3>
+    <li>Gestión simplificada vía CLI:</li>            
+                <p>
+        Ofrece un flujo de trabajo intuitivo inspirado en Docker (ollama run, ollama pull), permitiendo descargar y ejecutar modelos complejos mediante un único comando en la terminal.
+    
+</p>  
+    <li>Cuantización y optimización de hardware:</li>            
+                <p>
+     Utiliza bibliotecas de bajo nivel (basadas en llama.cpp) para ejecutar modelos masivos optimizando la memoria RAM y VRAM, distribuyendo la carga dinámicamente entre la CPU y la GPU.     
+</p>
+    <li>API REST compatible con OpenAI:</li>            
+<p>
+   Proporciona un endpoint local que es una  dirección que web que corre dentro de la propia computadora, trabajaría como el buzón de correo donde el código envía las preguntas, e imita las especificaciones de la API de OpenAI, es decir que Ollama "habla el mismo idioma" y acepta exactamente las mismas instrucciones y formatos JSON que OpenAI, lo que permite cambiar el motor de inferencia de una aplicación de la nube al entorno local cambiando solo la URL base en el código.
+</p> 
+</article> 
+
+
+
+
+            
+<article class="herramienta">
+
+                <h2>5 Docker para IA:</h2>
+                <p>
+           Un Docker es una herramienta que permite empacar una aplicación junto con todo lo que necesita para funcionar (código, bibliotecas, configuraciones y dependencias) dentro de un paquete estandarizado llamado contenedor.  
+                </p>
+                <p>
+                   Cuando buscamos desarrolllar e integrar soluciones basadas en Inteligencia Artificial implica gestionar dependencias complejas, versiones específicas de controladores matemáticos y aceleradores de hardware; para eso sirve el Docker, resuelve esta problemática permitiendo empaquetar la aplicación completa, sus modelos y sus librerías dentro de contenedores ligeros, aislados y completamente reproducibles.
+                </p>
+<h3>Aceleración por hardware e infraestructura unificada</h3>
+    
+<p> Además de lo mencionado, en el ámbito de IA, Docker actúa también como el puente necesario para conectar software con la potencia de cálculo qeu brindan las tarjetas gráficas físicas.           
+                </p>
+<ul>
+                    <li>"El juego de herramientas NVIDIA Container Toolkit permite a los usuarios construir y ejecutar contenedores Docker acelerados por GPU. El toolkit incluye una biblioteca en tiempo de ejecución para contenedores y utilidades para configurar automáticamente los contenedores de modo que aprovechen las GPUs de NVIDIA... sin necesidad de instalar el toolkit de CUDA en el sistema host."</li>   
+        <li>Documentación oficial de NVIDIA</li>
+        </ul>
+    <h3>Componentes clave del ecosistema</h3>
+    <li>NVIDIA Container Toolkit (nvidia-docker):</li>            
+                <p>
+    Permite a las aplicaciones dentro del contenedor acceder de forma directa y transparente a la GPU física para tareas de inferencia y entrenamiento acelerado.
+</p>  
+    <li>Orquestación con Docker Compose:</li>            
+                <p>
+     Posibilita desplegar con un solo comando la arquitectura completa del proyecto (por ejemplo, el backend en Python, un motor de inferencia local como Ollama y bases de datos vectoriales como Qdrant, Chroma o Milvus).    
+</p>
+    <li>Entornos homogéneos para CI/CD:</li>            
+<p>
+   Facilita la automatización de pruebas y despliegues continuos, evitando el clásico problema de "funciona en mi máquina" al migrar servicios a la nube.
+</p> 
+</article> 
+
+
+            
+
+<article class="herramienta">
+
+                <h2>6. Agentes inteligentes:</h2>
+                <p>
+        Un Agente Inteligente es un sistema de software que no solo responde preguntas, sino que percibe su entorno, toma decisiones de forma autónoma y ejecuta acciones utilizando herramientas para alcanzar un objetivo específico.                
+                </p>
+                <p>
+          Mientras que un chat tradicional de IA es reactivo, es decir que uno le preguntas, él te responde, un agente inteligente es proactivo y autónomo, significa que le das un objetivo, él diseña un plan paso a paso y lo ejecuta por sí solo.
+Podemos ver en especial el ejemplo de Vercel AI SDK
+                </p>
+<h2>Vercel AI SDK</h2> 
+ <p>
+     En este caso hablamos del desarrollo de la capa de cliente Vercel AI SDK es algo asi como la biblioteca de referencia en el ecosistema TypeScript y JavaScript (Next.js, React, Svelte, Vue, Node.js). Sirve para conectar la lógica de los modelos de IA con las interfaces de usuario web de forma rápida y eficiente.    
+                </p>
+<h3>Conexión fluida entre el backend y la interfaz</h3>
+    
+<p> Otro de los fines con que podemos utilizar Versel AI SDK es simplificar los dos desafios principales para desarrollo web con IA, en primer lugar, la transmisión progresiva de datos desde el servidor y la actualización en estado rela del estado del cliente           
+                </p>
+<ul>
+                    <li>"El Vercel AI SDK resuelve las dos partes complejas de este flujo: traducir la transmisión (stream) de un proveedor a un protocolo consistente en el servidor y fusionar esos eventos en el estado de React en el cliente... streamText inicia la generación del modelo y devuelve un objeto de resultado, mientras que useChat gestiona la conversación y el ciclo de vida de la petición en el frontend."</li>
+    <li>Documentación Oficial de Vercel</li>
+        </ul>
+    <h3>Componentes clave del ecosistema</h3>
+    <li>AI SDK Core:</li>            
+                <p>
+    Ahora tenemos una Interfaz unificada (generateText, streamText, generateObject) para interactuar con diversos proveedores (OpenAI, Anthropic, Google Gemini o modelos locales) mediante una misma sintaxis.
+</p>  
+    <li>AI SDK UI:</li>            
+                <p>
+     Se trata de ganchos orientados al frontend (useChat, useCompletion) que gestionan automáticamente el estado de la conversación, el envío de adjuntos y la recepción en streaming sin escribir código repetitivo.  
+</p>
+    <li>Componentes e Interfaces Generativas:</li>            
+<p>
+   Vercel brinda la capacidad para que los modelos devuelvan datos estructurados que se traducen en componentes interactivos de la interfaz (tarjetas, tablas o gráficos dinámicos) en lugar de simple texto plano.
+</p> 
+</article> 
+
+        </section>
+
+        <section id="comparativa" class="seccion">
+            <h1>Comparativa Técnica: Herramientas para Desarrollar Aplicaciones con IA</h1>
+            <p>Para comprender la selección del stack tecnológico adecuado en el desarrollo de soluciones nativas de IA, es fundamental diferenciar el enfoque principal, los casos de uso específicos y las fortalezas de cada herramienta:</p>
+            
+            <table class="tabla-comparativa">
+                <thead>
+                    <tr>
+                        <th>Herramienta</th>
+                        <th>Enfoque Principal</th>
+                        <th>Cuándo Usarla (Criterio de Selección)</th>
+                        <th>Puntos Fuertes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LangChain</strong></td>
+                        <td>Orquestación general y agentes inteligentes</td>
+                        <td>Necesitas flujos de trabajo dinámicos, coordinar múltiples herramientas/APIs o crear sistemas multiagente autónomos (LangGraph).</td>
+                        <td>Flexibilidad, enorme catálogo de integraciones y soporte para grafos de estado.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LlamaIndex</strong></td>
+                        <td>Gestión estratégica de datos y RAG</td>
+                        <td>El núcleo de tu proyecto es consultar, buscar o analizar datos privados heterogéneos (PDFs, Notion, SQL) de forma precisa.</td>
+                        <td>Conectores universales (LlamaHub), indexación avanzada y búsqueda semántica optimizada.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semantic Kernel</strong></td>
+                        <td>Integración empresarial nativa</td>
+                        <td>Desarrollas sobre arquitecturas empresariales preexistentes (.NET, C#, Java, Python) bajo el ecosistema Microsoft / Azure.</td>
+                        <td>Tipado fuerte, diseño modular con Plugins e integración fluida con entornos corporativos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ollama</strong></td>
+                        <td>Inferencia local y privacidad de datos</td>
+                        <td>Requieres ejecutar modelos de código abierto (open-source) de forma offline, proteger datos sensibles o eliminar costes de API.</td>
+                        <td>Despliegue sencillo vía CLI, optimización de VRAM/RAM y API compatible con OpenAI.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Docker para IA</strong></td>
+                        <td>Infraestructura y contenedorización</td>
+                        <td>Buscas garantizar la reproducibilidad del entorno, gestionar el acceso a GPU en producción y desplegar microservicios.</td>
+                        <td>Integración con NVIDIA Container Toolkit, entornos idénticos en dev/prod y fácil orquestación con Compose.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vercel AI SDK</strong></td>
+                        <td>Desarrollo frontend y web full-stack</td>
+                        <td>Desarrollas aplicaciones web (Next.js, React, TypeScript) que exigen interfaces interactivas con respuestas en streaming.</td>
+                        <td>Hooks listos para usar (useChat), fácil manejo de streams y soporte para UI generativa.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bibliografia" class="seccion">
+            <h1>Bibliografía</h1>
+            <ul class="lista-bibliografia">
+                <li>Google Cloud. (2026). <i>Generative AI on Vertex AI: RAG</i>. https://docs.cloud.google.com/vertex-ai/generative-ai/docs/[cite: 1]</li>
+                <li>Microsoft Learn. (2026). <i>Develop a RAG solution on Azure: Generate embeddings phase</i>. https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-generate-embeddings[cite: 1]</li>
+                <li>Microsoft Learn. (2026). <i>Develop an agentic RAG solution</i>. Azure Architecture Center. https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-agentic[cite: 1]</li>
+                <li>OpenAI. (2026). <i>Developer quickstart</i>. OpenAI API Documentation. https://platform.openai.com/docs/quickstart/make-your-first-api-request[cite: 1]</li>
+                <li>OpenAI. (2026). <i>Vector store files</i>. OpenAI API Reference. https://platform.openai.com/docs/api-reference/vector-stores-files[cite: 1]</li>
+            </ul>
+        </section>
+    </main>
 </body>
 <script src="../js/script.js"></script>
 </html>
